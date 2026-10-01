@@ -1,0 +1,3964 @@
+{
+  "version": 1,
+  "generated_at": "2026-10-01T05:04:15.384447+00:00",
+  "repository": "C:\\Users\\human-bot\\projects\\pdfeditor",
+  "fingerprints": {
+    "index.html": {
+      "size": 1991,
+      "mtime_ns": 1790827839703191700,
+      "sha256": "542c7bcf36dc1ba4dded6001e611cde209c1bcebfe1fa2aebfaa0758b5093e7c"
+    },
+    "package-lock.json": {
+      "size": 78958,
+      "mtime_ns": 1790825117803165500,
+      "sha256": "a9d6a94a35daf6eb3ae49be63b35838d6eb59bb6ee8f70df3c99b04fe119d269"
+    },
+    "package.json": {
+      "size": 522,
+      "mtime_ns": 1790825117803165500,
+      "sha256": "e20e90455b23c9dd2cefa9fb7e8a93bc1e30eaf553f9b611ab707cd682299907"
+    },
+    "vite.config.js": {
+      "size": 180,
+      "mtime_ns": 1790825117875036700,
+      "sha256": "98ad2b759aae54caecca6bf4718147a1e5bd7e30407789b55eb050cbf7a414b5"
+    },
+    "public/manifest.json": {
+      "size": 650,
+      "mtime_ns": 1790827816999307100,
+      "sha256": "429543edba9224f1f6a3ac3944aa82f35d4b3ffaba2aa3666cbe28096d16eece"
+    },
+    "public/sw.js": {
+      "size": 1210,
+      "mtime_ns": 1790827822172047500,
+      "sha256": "d180f63d74da567892a2eb5a101ec2c9a30c969d1d175ad7ab0ce769b6e38183"
+    },
+    "src/App.jsx": {
+      "size": 26664,
+      "mtime_ns": 1790828038236344600,
+      "sha256": "29fa7d3aa2297b55c6dafb25819c533985e918197747c7e22014d700ce729157"
+    },
+    "src/main.jsx": {
+      "size": 435,
+      "mtime_ns": 1790827861956375500,
+      "sha256": "c29f9f9ce4635a2732f496a53441604db5fab435a622253da6504887d0f12b76"
+    },
+    "src/store.js": {
+      "size": 6808,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "ddc2b7bb1917981105afc5cca0455b6f1f6191e833cd063933992e9981a0ac1b"
+    },
+    "src/styles.css": {
+      "size": 35139,
+      "mtime_ns": 1790829411591286700,
+      "sha256": "00894228c7d106e0839b573070fff4db7e128c0d3e54b6b28b81e8e64f73c9ae"
+    },
+    "src/tools.jsx": {
+      "size": 15767,
+      "mtime_ns": 1790827904977192500,
+      "sha256": "add3977476490d72df913ae2933dfc28ee267fccd88419a5da1075cafccaef71"
+    },
+    "src/components/BottomBar.jsx": {
+      "size": 2038,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "307b538083547c5de57e4f20250e0b3774ba0ad99a1e9b1b27df4a25e75a637b"
+    },
+    "src/components/CommandPalette.jsx": {
+      "size": 6623,
+      "mtime_ns": 1790828266456370500,
+      "sha256": "fb4480ffb65c9ce4d6d6a5bdd2d20e081989a2d71f3235244948ba418e979371"
+    },
+    "src/components/DocumentHistoryModal.jsx": {
+      "size": 4401,
+      "mtime_ns": 1790827551255402500,
+      "sha256": "066344f67290599059185b699c80c606105d7dc010a6649704c84e77d123a210"
+    },
+    "src/components/FindPanel.jsx": {
+      "size": 4390,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "ac0daa39fafe8f113297bd2c8bb3232e4f2820ac953f5abab6e4559f1283f4b1"
+    },
+    "src/components/FormatBar.jsx": {
+      "size": 9428,
+      "mtime_ns": 1790830510638607900,
+      "sha256": "3a7a4c5971b1c6e422ca1332ce39c2761935a7ca240d81cc6954bf8822ed334a"
+    },
+    "src/components/Header.jsx": {
+      "size": 1436,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "08af4846b0f01a73d924f2c7ca2c155b63b309b7e28c6b3d49b4f14f8191aeb1"
+    },
+    "src/components/Home.jsx": {
+      "size": 5590,
+      "mtime_ns": 1790829249936477800,
+      "sha256": "32d8ae7d77dd04ac90134e0ec55caa9a3a1e2eac66b653e894a4bd95bb6beb8c"
+    },
+    "src/components/Landing.jsx": {
+      "size": 3414,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "4324a8b0551c9064c5206901ddcbe2b994d6f44916666b26bc98e3c78f1479b8"
+    },
+    "src/components/Menu.jsx": {
+      "size": 6721,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "67c349b2767fc240754b5c324a8d7ff3281d5be6eff7b04351bdcb35dc1eef12"
+    },
+    "src/components/NaturalLanguageBar.jsx": {
+      "size": 9716,
+      "mtime_ns": 1790827574748634200,
+      "sha256": "7c19c4b62fd58921a8162dbe9a126e9163688c1d1a1dc3fb5ce5587e513e0a82"
+    },
+    "src/components/OcrModal.jsx": {
+      "size": 4372,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "f16f351f8696b2b6063903ec2be08ad2095fdab85c87588e42578edcf219501b"
+    },
+    "src/components/PageView.jsx": {
+      "size": 32651,
+      "mtime_ns": 1790830410830461500,
+      "sha256": "a35b4fa35b69b4193ae5192328be69852d5325c03961670fcd0cbc5c211df4b8"
+    },
+    "src/components/SignModal.jsx": {
+      "size": 6931,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "7ae0931df3381b3cb28d2924781dd3bfcaea40dad0c32d76af9697956da1f002"
+    },
+    "src/components/Thumbs.jsx": {
+      "size": 4305,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "52c6ce098d9e125cfed387e2932db76610187dca40c48246fd9334f2fa9ee906"
+    },
+    "src/components/Toolbar.jsx": {
+      "size": 8355,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "47826e661dcf004893359ac4d5631bb1adf7136ea86cc4bd2f628772c06ebce8"
+    },
+    "src/components/Workspace.jsx": {
+      "size": 2799,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "5f6928b4ceb7cd1238f6df2d88bc07081ef1febf817730d206462417bd966974"
+    },
+    "src/components/tools/AiTool.jsx": {
+      "size": 11859,
+      "mtime_ns": 1790827785736604300,
+      "sha256": "0712aad52de54891a04f879aff0f809de215b8ed38cd0fca8389f997e54c0186"
+    },
+    "src/components/tools/BatchTool.jsx": {
+      "size": 11638,
+      "mtime_ns": 1790827586612865400,
+      "sha256": "a4b7e9fbb6182c4e92e73c15aa9c905b22be9651bf6f3f8a3bdaf97e8ae27324"
+    },
+    "src/components/tools/CompareTool.jsx": {
+      "size": 16966,
+      "mtime_ns": 1790827773632898300,
+      "sha256": "36301d74b88d45dfa1af7c1ef3e5f936b664230db0ebcbd3159f196dc433be0f"
+    },
+    "src/components/tools/CompressTool.jsx": {
+      "size": 4098,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "bdea46bef8c09f4d5aca06a5e0616b1a6307222e708149ccbc581b5c8b43ea55"
+    },
+    "src/components/tools/CropTool.jsx": {
+      "size": 7016,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "2f439d55edc7228a5498fcbb7446fafe8551a5fd3b95d9d3fd0cb660ce7b806c"
+    },
+    "src/components/tools/ExcelTool.jsx": {
+      "size": 4988,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "b3579f09baa1180ca773cfb00b87bc3683a9972287b6522049f684527775b8a2"
+    },
+    "src/components/tools/ExportTool.jsx": {
+      "size": 4549,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "efc82959e0b0d47937ed5adf71755ebb4dd2dda5fcd5dfa2f52ab875f49052f8"
+    },
+    "src/components/tools/ExtractDataTool.jsx": {
+      "size": 11482,
+      "mtime_ns": 1790828158392993300,
+      "sha256": "51b414513467cc7cb945939766994125565fec98ea4524e245217eac65122e21"
+    },
+    "src/components/tools/MarkdownTool.jsx": {
+      "size": 5173,
+      "mtime_ns": 1790826994083335000,
+      "sha256": "21898ce1908bcb6894a64e2c60f03ffef5b9261f0e48f589bc0aa3b634f8732c"
+    },
+    "src/components/tools/MergeTool.jsx": {
+      "size": 4209,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "a025f967f612c945b1f943c27adf0b6bb6188ef33163c99d2c0750dba3089fcb"
+    },
+    "src/components/tools/MindMapTool.jsx": {
+      "size": 10041,
+      "mtime_ns": 1790827811392512900,
+      "sha256": "885870d529383c41f2e99201b65f37d0fed8218fc4259dce7272df4f417dc303"
+    },
+    "src/components/tools/OcrTool.jsx": {
+      "size": 7727,
+      "mtime_ns": 1790827662312479700,
+      "sha256": "36cd1ec70d8cc24f930b7da0944fe6177da3f3a1f03930b6ca22e09beffdb36a"
+    },
+    "src/components/tools/OrganiseTool.jsx": {
+      "size": 2989,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "62473ad1a81567d0a2abf1fc54587405f0272f5ce0f6522af85df681d36f2608"
+    },
+    "src/components/tools/PagesTool.jsx": {
+      "size": 2721,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "689dec4987d328bc143028cad7dd2adb66b9d228b199bc948303bc4036ae7990"
+    },
+    "src/components/tools/PageTools.jsx": {
+      "size": 23101,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "3564cc52d490a7f60cade06e78c6f68400690f128750b469b29aa0657d6e9446"
+    },
+    "src/components/tools/PdfATool.jsx": {
+      "size": 3366,
+      "mtime_ns": 1790826426995213000,
+      "sha256": "66ee59445f3ddf333216221456593c6d5a94bb0b10526edef610a03983e21edd"
+    },
+    "src/components/tools/PptTool.jsx": {
+      "size": 3265,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "beae29c0fbe985eceeb4111028311b051a14f3ae20047be0fad1ea4cb40becad"
+    },
+    "src/components/tools/RedactTool.jsx": {
+      "size": 7100,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "d9910f16a434fe6202131500185bc6011cb5e685889d9560e05721f562f7da04"
+    },
+    "src/components/tools/ScanCleanerTool.jsx": {
+      "size": 8707,
+      "mtime_ns": 1790827606619754000,
+      "sha256": "7d7b85d7fbabc74b48dfd400eff00f6b69f3aa7618a769d9d47692d6c7f31955"
+    },
+    "src/components/tools/ScanTool.jsx": {
+      "size": 13860,
+      "mtime_ns": 1790826456159020400,
+      "sha256": "da183c5ee6cb1a50fdf4d7cede505471bfe344f5314c8208d3e6cd1b0830d996"
+    },
+    "src/components/tools/SecurityTools.jsx": {
+      "size": 9728,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "de368d424bc82dd58345ebb6eff54bde863fda33d4a10e26db00bf3e2877f924"
+    },
+    "src/components/tools/shell.jsx": {
+      "size": 9451,
+      "mtime_ns": 1790827543021723500,
+      "sha256": "0ba9a99fdb39a9d9afc1a17025c0ace754c4cb2932a253a3acbdd7d12b9d18d9"
+    },
+    "src/components/tools/SigVerifyTool.jsx": {
+      "size": 7508,
+      "mtime_ns": 1790827694156459300,
+      "sha256": "19639243105131b0b021083208f876fd4b3a0eac0a934c929382f329e71e6d12"
+    },
+    "src/components/tools/SmallTools.jsx": {
+      "size": 11169,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "e30988dc1f5c318195cc354e1e70edd79699143737e4b4b3a50135377e3b8ca1"
+    },
+    "src/components/tools/SplitMoreTools.jsx": {
+      "size": 12033,
+      "mtime_ns": 1790825117845289000,
+      "sha256": "7d155abe40e8fbd844c4de69baade825f22b4d3499b0f1a679817891998b98bd"
+    },
+    "src/components/tools/SplitTool.jsx": {
+      "size": 3398,
+      "mtime_ns": 1790825117860623100,
+      "sha256": "60d103bb1cff28dce0ae26fedc9fa2a0312035e6b984d1237557a515589105bb"
+    },
+    "src/components/tools/StampTool.jsx": {
+      "size": 6896,
+      "mtime_ns": 1790825117861586700,
+      "sha256": "e33bb6a67ef0a044aa22125a6efe3b30b3a591522876526373e3bf72c3f119ce"
+    },
+    "src/components/tools/WordTool.jsx": {
+      "size": 3673,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "f201b206283782c1604d245d4493e6604e6d6c73ce6a4cd80536c0b15140a221"
+    },
+    "src/components/tools/WorkflowTool.jsx": {
+      "size": 15419,
+      "mtime_ns": 1790827680841851400,
+      "sha256": "23e87d444160638401d2bafd085286258bc5fb23c36b8fb50d4b0b4b456f41f9"
+    },
+    "src/lib/colors.js": {
+      "size": 2135,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "6953c2096dd60000c9c983b5a2fb6989eb64094eac734b6a3f7c76d5856f2cf4"
+    },
+    "src/lib/db.js": {
+      "size": 3614,
+      "mtime_ns": 1790827520964097800,
+      "sha256": "5cd4b65cf11d39a67e9c4d6e53d64a9d1d4cb0ea8b5c72602ae4d493b021a403"
+    },
+    "src/lib/docx.js": {
+      "size": 3793,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "29d0fffdc24072123821631140949720abd1aa724678fe5c0fbf11a2b9cbc726"
+    },
+    "src/lib/exporter.js": {
+      "size": 17230,
+      "mtime_ns": 1790830483809565300,
+      "sha256": "26dc8488c136eaafd2a8681e2c4dd2afe1ffb206161414017a3e7053df66dc03"
+    },
+    "src/lib/extract.js": {
+      "size": 9721,
+      "mtime_ns": 1790830849772389900,
+      "sha256": "da69aafb4a1579685bec6dbdadeab2660904967fa1bad6985499dd84e2e5e728"
+    },
+    "src/lib/fonts.js": {
+      "size": 4546,
+      "mtime_ns": 1790830260317421500,
+      "sha256": "b9c0f2e257a7a08187d8969ca536ec166b188fd1801a9f859c8e76d40118901e"
+    },
+    "src/lib/imageproc.js": {
+      "size": 4681,
+      "mtime_ns": 1790827595715790500,
+      "sha256": "b2bc14758fe9583a10bdc1800abb9e1921481b90b15ce15ee7b8613cce14c333"
+    },
+    "src/lib/markdown.js": {
+      "size": 4522,
+      "mtime_ns": 1790827114298161400,
+      "sha256": "fb65b7aa8e9de7b91791d3fae54bd4240e920f4212741248d20eef5807fa496a"
+    },
+    "src/lib/ocr.js": {
+      "size": 4207,
+      "mtime_ns": 1790827627058735300,
+      "sha256": "ac7bcef2d78827b81481fed5642876585a9afd08e1558d732c486e4845879e3a"
+    },
+    "src/lib/ocrpdf.js": {
+      "size": 8640,
+      "mtime_ns": 1790826962198330000,
+      "sha256": "b16c4ff9d637577383b6475551dcae42aa36328e54c66f799c07d3145e7611c2"
+    },
+    "src/lib/outline.js": {
+      "size": 3179,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "0f442a38c257d138863403ac6ca4edc554ed6418f9d0f3abc2cc90977e48fc41"
+    },
+    "src/lib/pdfa.js": {
+      "size": 2597,
+      "mtime_ns": 1790826416601598900,
+      "sha256": "6a51717b385a774af73932e61afbcbe38cde5bc2eecdd51046a0ab16b367de15"
+    },
+    "src/lib/pdfjs.js": {
+      "size": 186,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "a7f4215a18e45e160692345c78a6d4a55eef0f5835d4a0fd3b84e2aa19e6dace"
+    },
+    "src/lib/pdfops.js": {
+      "size": 26769,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "f32a8830d602695c2a819ad0c210beb8ebb627f7d462e6b43414e8dfc175d047"
+    },
+    "src/lib/pdfraster.js": {
+      "size": 6727,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "e1b1b41eee0b01b456f49fbb8338a65e5086315016ba90efa8b2dbc62f9fdfa3"
+    },
+    "src/lib/pptx.js": {
+      "size": 9690,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "2c1985bb349fc79ad6aea201d076927cdad54059a9f9a233236f7ab06659ac2c"
+    },
+    "src/lib/runs.js": {
+      "size": 3835,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "fae2d969810c8c4cf4c7a9765eb0a45119063760b005c7c3473db211da5140cf"
+    },
+    "src/lib/sample.js": {
+      "size": 5281,
+      "mtime_ns": 1790825304513473700,
+      "sha256": "ac52ad531f4a5761323cbccb00df7fe7f08311a3444d165120955ec4c2172d39"
+    },
+    "src/lib/security.js": {
+      "size": 1949,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "00ff48eb22e6a7a7989327ecdbdf62bff87bd5dd1edde5d59626779b589f479c"
+    },
+    "src/lib/tables.js": {
+      "size": 2532,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "83fb126713f354ed84da66fce941917b84505077e44065789b63662e85b84c4e"
+    },
+    "src/lib/textfont.js": {
+      "size": 1018,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "bd6f22413879011e9c546c626d2a9e3dc9c5ba14ac6ddf3feefbe6ab0f9fc027"
+    },
+    "src/lib/workspace.js": {
+      "size": 1528,
+      "mtime_ns": 1790828238039206900,
+      "sha256": "9055833024006cc8c46bc0ad2c1a73016ea97921016c0162646c96079529dd9c"
+    },
+    "src/lib/xlsx.js": {
+      "size": 3871,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "44395f5fd71342a50d082d8210ec84b1cc8e6b59c925ad12e0add2d23031a274"
+    },
+    "src/lib/zip.js": {
+      "size": 2911,
+      "mtime_ns": 1790825117862169200,
+      "sha256": "75c9a55393d5628a331a8ed468e8822eeccf4037e56a3b56b766c57aec79436b"
+    },
+    "src/utils/misc.js": {
+      "size": 3375,
+      "mtime_ns": 1790830351073337600,
+      "sha256": "067f1ffb72873dfb5cee33d20cc55efffd171aafa550a9905f535fb485ebe008"
+    }
+  },
+  "files": {
+    "index.html": {
+      "path": "index.html",
+      "extension": ".html",
+      "size": 1991,
+      "hash": "542c7bcf36dc1ba4dded6001e611cde209c1bcebfe1fa2aebfaa0758b5093e7c",
+      "symbols": [],
+      "routes": [],
+      "imports": []
+    },
+    "package-lock.json": {
+      "path": "package-lock.json",
+      "extension": ".json",
+      "size": 78958,
+      "hash": "a9d6a94a35daf6eb3ae49be63b35838d6eb59bb6ee8f70df3c99b04fe119d269",
+      "symbols": [],
+      "routes": [],
+      "imports": []
+    },
+    "package.json": {
+      "path": "package.json",
+      "extension": ".json",
+      "size": 522,
+      "hash": "e20e90455b23c9dd2cefa9fb7e8a93bc1e30eaf553f9b611ab707cd682299907",
+      "symbols": [],
+      "routes": [],
+      "imports": []
+    },
+    "vite.config.js": {
+      "path": "vite.config.js",
+      "extension": ".js",
+      "size": 180,
+      "hash": "98ad2b759aae54caecca6bf4718147a1e5bd7e30407789b55eb050cbf7a414b5",
+      "symbols": [],
+      "routes": [],
+      "imports": [
+        "@vitejs/plugin-react",
+        "vite"
+      ]
+    },
+    "public/manifest.json": {
+      "path": "public/manifest.json",
+      "extension": ".json",
+      "size": 650,
+      "hash": "429543edba9224f1f6a3ac3944aa82f35d4b3ffaba2aa3666cbe28096d16eece",
+      "symbols": [],
+      "routes": [],
+      "imports": []
+    },
+    "public/sw.js": {
+      "path": "public/sw.js",
+      "extension": ".js",
+      "size": 1210,
+      "hash": "d180f63d74da567892a2eb5a101ec2c9a30c969d1d175ad7ab0ce769b6e38183",
+      "symbols": [],
+      "routes": [],
+      "imports": []
+    },
+    "src/App.jsx": {
+      "path": "src/App.jsx",
+      "extension": ".jsx",
+      "size": 26664,
+      "hash": "29fa7d3aa2297b55c6dafb25819c533985e918197747c7e22014d700ce729157",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "App",
+          "line": 65
+        },
+        {
+          "kind": "function",
+          "name": "loadBytes",
+          "line": 77
+        },
+        {
+          "kind": "function",
+          "name": "importAnnotations",
+          "line": 118
+        },
+        {
+          "kind": "function",
+          "name": "toBox",
+          "line": 122
+        },
+        {
+          "kind": "function",
+          "name": "openFile",
+          "line": 172
+        },
+        {
+          "kind": "function",
+          "name": "openSample",
+          "line": 182
+        },
+        {
+          "kind": "function",
+          "name": "emptyPages",
+          "line": 227
+        },
+        {
+          "kind": "function",
+          "name": "runOcr",
+          "line": 232
+        },
+        {
+          "kind": "function",
+          "name": "dropDoc",
+          "line": 277
+        },
+        {
+          "kind": "function",
+          "name": "applyChanges",
+          "line": 282
+        },
+        {
+          "kind": "function",
+          "name": "typingInField",
+          "line": 317
+        },
+        {
+          "kind": "function",
+          "name": "onKey",
+          "line": 329
+        },
+        {
+          "kind": "function",
+          "name": "onBeforeUnload",
+          "line": 364
+        },
+        {
+          "kind": "function",
+          "name": "leaveEditor",
+          "line": 373
+        },
+        {
+          "kind": "function",
+          "name": "restart",
+          "line": 380
+        },
+        {
+          "kind": "function",
+          "name": "goHome",
+          "line": 381
+        },
+        {
+          "kind": "function",
+          "name": "openTool",
+          "line": 386
+        },
+        {
+          "kind": "function",
+          "name": "toolScreen",
+          "line": 404
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./components/CommandPalette",
+        "./components/DocumentHistoryModal",
+        "./components/FormatBar",
+        "./components/Header",
+        "./components/Home",
+        "./components/Landing",
+        "./components/NaturalLanguageBar",
+        "./components/OcrModal",
+        "./components/SignModal",
+        "./components/Toolbar",
+        "./components/Workspace",
+        "./lib/exporter",
+        "./lib/extract",
+        "./lib/ocr",
+        "./lib/pdfjs",
+        "./lib/sample",
+        "./lib/workspace",
+        "./store",
+        "./tools",
+        "./utils/misc",
+        "react"
+      ]
+    },
+    "src/main.jsx": {
+      "path": "src/main.jsx",
+      "extension": ".jsx",
+      "size": 435,
+      "hash": "c29f9f9ce4635a2732f496a53441604db5fab435a622253da6504887d0f12b76",
+      "symbols": [],
+      "routes": [],
+      "imports": [
+        "./App",
+        "react",
+        "react-dom/client"
+      ]
+    },
+    "src/store.js": {
+      "path": "src/store.js",
+      "extension": ".js",
+      "size": 6808,
+      "hash": "ddc2b7bb1917981105afc5cca0455b6f1f6191e833cd063933992e9981a0ac1b",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "reducer",
+          "line": 65
+        },
+        {
+          "kind": "function",
+          "name": "withPage",
+          "line": 58
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/styles.css": {
+      "path": "src/styles.css",
+      "extension": ".css",
+      "size": 35139,
+      "hash": "00894228c7d106e0839b573070fff4db7e128c0d3e54b6b28b81e8e64f73c9ae",
+      "symbols": [],
+      "routes": [],
+      "imports": []
+    },
+    "src/tools.jsx": {
+      "path": "src/tools.jsx",
+      "extension": ".jsx",
+      "size": 15767,
+      "hash": "add3977476490d72df913ae2933dfc28ee267fccd88419a5da1075cafccaef71",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "svg",
+          "line": 2
+        },
+        {
+          "kind": "function",
+          "name": "toolById",
+          "line": 299
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "react"
+      ]
+    },
+    "src/components/BottomBar.jsx": {
+      "path": "src/components/BottomBar.jsx",
+      "extension": ".jsx",
+      "size": 2038,
+      "hash": "307b538083547c5de57e4f20250e0b3774ba0ad99a1e9b1b27df4a25e75a637b",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "BottomBar",
+          "line": 11
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../store",
+        "react"
+      ]
+    },
+    "src/components/CommandPalette.jsx": {
+      "path": "src/components/CommandPalette.jsx",
+      "extension": ".jsx",
+      "size": 6623,
+      "hash": "fb4480ffb65c9ce4d6d6a5bdd2d20e081989a2d71f3235244948ba418e979371",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "CommandPalette",
+          "line": 3
+        },
+        {
+          "kind": "function",
+          "name": "handleKeyDown",
+          "line": 43
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../tools",
+        "react"
+      ]
+    },
+    "src/components/DocumentHistoryModal.jsx": {
+      "path": "src/components/DocumentHistoryModal.jsx",
+      "extension": ".jsx",
+      "size": 4401,
+      "hash": "066344f67290599059185b699c80c606105d7dc010a6649704c84e77d123a210",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "DocumentHistoryModal",
+          "line": 5
+        },
+        {
+          "kind": "function",
+          "name": "load",
+          "line": 9
+        },
+        {
+          "kind": "function",
+          "name": "handleRestore",
+          "line": 20
+        },
+        {
+          "kind": "function",
+          "name": "handleDelete",
+          "line": 30
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../lib/db",
+        "../lib/workspace",
+        "./tools/shell",
+        "react"
+      ]
+    },
+    "src/components/FindPanel.jsx": {
+      "path": "src/components/FindPanel.jsx",
+      "extension": ".jsx",
+      "size": 4390,
+      "hash": "ac0daa39fafe8f113297bd2c8bb3232e4f2820ac953f5abab6e4559f1283f4b1",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "matchesIn",
+          "line": 8
+        },
+        {
+          "kind": "function",
+          "name": "FindPanel",
+          "line": 37
+        },
+        {
+          "kind": "function",
+          "name": "escape",
+          "line": 3
+        },
+        {
+          "kind": "function",
+          "name": "close",
+          "line": 48
+        },
+        {
+          "kind": "function",
+          "name": "step",
+          "line": 50
+        },
+        {
+          "kind": "function",
+          "name": "replaceAll",
+          "line": 62
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../store",
+        "react"
+      ]
+    },
+    "src/components/FormatBar.jsx": {
+      "path": "src/components/FormatBar.jsx",
+      "extension": ".jsx",
+      "size": 9428,
+      "hash": "3a7a4c5971b1c6e422ca1332ce39c2761935a7ca240d81cc6954bf8822ed334a",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "FormatBar",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "patch",
+          "line": 18
+        },
+        {
+          "kind": "function",
+          "name": "selectedBox",
+          "line": 28
+        },
+        {
+          "kind": "function",
+          "name": "commitRuns",
+          "line": 35
+        },
+        {
+          "kind": "function",
+          "name": "onSelection",
+          "line": 46
+        },
+        {
+          "kind": "function",
+          "name": "cmd",
+          "line": 55
+        },
+        {
+          "kind": "function",
+          "name": "sizeSelection",
+          "line": 60
+        },
+        {
+          "kind": "function",
+          "name": "patchObj",
+          "line": 73
+        },
+        {
+          "kind": "function",
+          "name": "remove",
+          "line": 79
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../lib/runs",
+        "../store",
+        "react"
+      ]
+    },
+    "src/components/Header.jsx": {
+      "path": "src/components/Header.jsx",
+      "extension": ".jsx",
+      "size": 1436,
+      "hash": "08af4846b0f01a73d924f2c7ca2c155b63b309b7e28c6b3d49b4f14f8191aeb1",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "Header",
+          "line": 3
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../utils/misc",
+        "react"
+      ]
+    },
+    "src/components/Home.jsx": {
+      "path": "src/components/Home.jsx",
+      "extension": ".jsx",
+      "size": 5590,
+      "hash": "32d8ae7d77dd04ac90134e0ec55caa9a3a1e2eac66b653e894a4bd95bb6beb8c",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "Home",
+          "line": 3
+        },
+        {
+          "kind": "function",
+          "name": "matchesSearch",
+          "line": 9
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../tools",
+        "react"
+      ]
+    },
+    "src/components/Landing.jsx": {
+      "path": "src/components/Landing.jsx",
+      "extension": ".jsx",
+      "size": 3414,
+      "hash": "4324a8b0551c9064c5206901ddcbe2b994d6f44916666b26bc98e3c78f1479b8",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "Landing",
+          "line": 2
+        },
+        {
+          "kind": "function",
+          "name": "pick",
+          "line": 6
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "react"
+      ]
+    },
+    "src/components/Menu.jsx": {
+      "path": "src/components/Menu.jsx",
+      "extension": ".jsx",
+      "size": 6721,
+      "hash": "67c349b2767fc240754b5c324a8d7ff3281d5be6eff7b04351bdcb35dc1eef12",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "MenuBar",
+          "line": 13
+        },
+        {
+          "kind": "function",
+          "name": "Menu",
+          "line": 35
+        },
+        {
+          "kind": "function",
+          "name": "setOpen",
+          "line": 41
+        },
+        {
+          "kind": "function",
+          "name": "place",
+          "line": 61
+        },
+        {
+          "kind": "function",
+          "name": "onAway",
+          "line": 116
+        },
+        {
+          "kind": "function",
+          "name": "onKey",
+          "line": 121
+        },
+        {
+          "kind": "function",
+          "name": "onBtnEnter",
+          "line": 161
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 165
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "react-dom"
+      ]
+    },
+    "src/components/NaturalLanguageBar.jsx": {
+      "path": "src/components/NaturalLanguageBar.jsx",
+      "extension": ".jsx",
+      "size": 9716,
+      "hash": "7c19c4b62fd58921a8162dbe9a126e9163688c1d1a1dc3fb5ce5587e513e0a82",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "parseNaturalLanguageCommands",
+          "line": 9
+        },
+        {
+          "kind": "function",
+          "name": "NaturalLanguageBar",
+          "line": 112
+        },
+        {
+          "kind": "function",
+          "name": "handleParse",
+          "line": 119
+        },
+        {
+          "kind": "function",
+          "name": "handleExecute",
+          "line": 133
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../lib/pdfa",
+        "../lib/pdfops",
+        "../lib/security",
+        "../lib/workspace",
+        "./tools/shell",
+        "react"
+      ]
+    },
+    "src/components/OcrModal.jsx": {
+      "path": "src/components/OcrModal.jsx",
+      "extension": ".jsx",
+      "size": 4372,
+      "hash": "f16f351f8696b2b6063903ec2be08ad2095fdab85c87588e42578edcf219501b",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "OcrModal",
+          "line": 13
+        },
+        {
+          "kind": "function",
+          "name": "toggle",
+          "line": 19
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 22
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "react"
+      ]
+    },
+    "src/components/PageView.jsx": {
+      "path": "src/components/PageView.jsx",
+      "extension": ".jsx",
+      "size": 32651,
+      "hash": "a35b4fa35b69b4193ae5192328be69852d5325c03961670fcd0cbc5c211df4b8",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "useSyncText",
+          "line": 9
+        },
+        {
+          "kind": "function",
+          "name": "readBack",
+          "line": 21
+        },
+        {
+          "kind": "function",
+          "name": "LineBox",
+          "line": 33
+        },
+        {
+          "kind": "function",
+          "name": "ObjBox",
+          "line": 80
+        },
+        {
+          "kind": "function",
+          "name": "Widget",
+          "line": 283
+        },
+        {
+          "kind": "function",
+          "name": "caretInfo",
+          "line": 331
+        },
+        {
+          "kind": "function",
+          "name": "setCaretAt",
+          "line": 352
+        },
+        {
+          "kind": "function",
+          "name": "caretFromPoint",
+          "line": 372
+        },
+        {
+          "kind": "function",
+          "name": "PageView",
+          "line": 388
+        },
+        {
+          "kind": "function",
+          "name": "toBase",
+          "line": 447
+        },
+        {
+          "kind": "function",
+          "name": "marksOverText",
+          "line": 461
+        },
+        {
+          "kind": "function",
+          "name": "push",
+          "line": 489
+        },
+        {
+          "kind": "function",
+          "name": "bindWindow",
+          "line": 521
+        },
+        {
+          "kind": "function",
+          "name": "mv",
+          "line": 524
+        },
+        {
+          "kind": "function",
+          "name": "up",
+          "line": 542
+        },
+        {
+          "kind": "function",
+          "name": "objDown",
+          "line": 550
+        },
+        {
+          "kind": "function",
+          "name": "resizeDown",
+          "line": 563
+        },
+        {
+          "kind": "function",
+          "name": "textObjDown",
+          "line": 571
+        },
+        {
+          "kind": "function",
+          "name": "lineDown",
+          "line": 578
+        },
+        {
+          "kind": "function",
+          "name": "onFocus",
+          "line": 586
+        },
+        {
+          "kind": "function",
+          "name": "onBlur",
+          "line": 588
+        },
+        {
+          "kind": "function",
+          "name": "makeInputHandlers",
+          "line": 592
+        },
+        {
+          "kind": "function",
+          "name": "lineIndexOf",
+          "line": 604
+        },
+        {
+          "kind": "function",
+          "name": "joinRuns",
+          "line": 606
+        },
+        {
+          "kind": "function",
+          "name": "moveCaretToSibling",
+          "line": 613
+        },
+        {
+          "kind": "function",
+          "name": "ensureBg",
+          "line": 632
+        },
+        {
+          "kind": "function",
+          "name": "joinWithPrev",
+          "line": 637
+        },
+        {
+          "kind": "function",
+          "name": "joinWithNext",
+          "line": 649
+        },
+        {
+          "kind": "function",
+          "name": "onKeyDown",
+          "line": 667
+        },
+        {
+          "kind": "function",
+          "name": "onPaste",
+          "line": 718
+        },
+        {
+          "kind": "function",
+          "name": "onOverlayDown",
+          "line": 731
+        },
+        {
+          "kind": "function",
+          "name": "mv",
+          "line": 769
+        },
+        {
+          "kind": "function",
+          "name": "up",
+          "line": 774
+        },
+        {
+          "kind": "function",
+          "name": "tiny",
+          "line": 784
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../lib/colors",
+        "../lib/fonts",
+        "../lib/runs",
+        "../utils/misc",
+        "react"
+      ]
+    },
+    "src/components/SignModal.jsx": {
+      "path": "src/components/SignModal.jsx",
+      "extension": ".jsx",
+      "size": 6931,
+      "hash": "7ae0931df3381b3cb28d2924781dd3bfcaea40dad0c32d76af9697956da1f002",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "trimCanvas",
+          "line": 9
+        },
+        {
+          "kind": "function",
+          "name": "SignModal",
+          "line": 35
+        },
+        {
+          "kind": "function",
+          "name": "pos",
+          "line": 57
+        },
+        {
+          "kind": "function",
+          "name": "down",
+          "line": 62
+        },
+        {
+          "kind": "function",
+          "name": "move",
+          "line": 74
+        },
+        {
+          "kind": "function",
+          "name": "up",
+          "line": 82
+        },
+        {
+          "kind": "function",
+          "name": "clear",
+          "line": 83
+        },
+        {
+          "kind": "function",
+          "name": "fromUpload",
+          "line": 89
+        },
+        {
+          "kind": "function",
+          "name": "useDrawn",
+          "line": 102
+        },
+        {
+          "kind": "function",
+          "name": "useTyped",
+          "line": 108
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "react"
+      ]
+    },
+    "src/components/Thumbs.jsx": {
+      "path": "src/components/Thumbs.jsx",
+      "extension": ".jsx",
+      "size": 4305,
+      "hash": "52c6ce098d9e125cfed387e2932db76610187dca40c48246fd9334f2fa9ee906",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "Thumb",
+          "line": 9
+        },
+        {
+          "kind": "function",
+          "name": "Thumbs",
+          "line": 81
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "react"
+      ]
+    },
+    "src/components/Toolbar.jsx": {
+      "path": "src/components/Toolbar.jsx",
+      "extension": ".jsx",
+      "size": 8355,
+      "hash": "47826e661dcf004893359ac4d5631bb1adf7136ea86cc4bd2f628772c06ebce8",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "Toolbar",
+          "line": 24
+        },
+        {
+          "kind": "function",
+          "name": "set",
+          "line": 27
+        },
+        {
+          "kind": "function",
+          "name": "onImgFile",
+          "line": 29
+        },
+        {
+          "kind": "function",
+          "name": "plain",
+          "line": 44
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../store",
+        "./Menu",
+        "react"
+      ]
+    },
+    "src/components/Workspace.jsx": {
+      "path": "src/components/Workspace.jsx",
+      "extension": ".jsx",
+      "size": 2799,
+      "hash": "5f6928b4ceb7cd1238f6df2d88bc07081ef1febf817730d206462417bd966974",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "Workspace",
+          "line": 7
+        },
+        {
+          "kind": "function",
+          "name": "goTo",
+          "line": 11
+        },
+        {
+          "kind": "function",
+          "name": "onScroll",
+          "line": 20
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../store",
+        "./BottomBar",
+        "./FindPanel",
+        "./PageView",
+        "./Thumbs",
+        "react"
+      ]
+    },
+    "src/components/tools/AiTool.jsx": {
+      "path": "src/components/tools/AiTool.jsx",
+      "extension": ".jsx",
+      "size": 11859,
+      "hash": "0712aad52de54891a04f879aff0f809de215b8ed38cd0fca8389f997e54c0186",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "localExtractiveSummary",
+          "line": 6
+        },
+        {
+          "kind": "function",
+          "name": "searchDocumentAnswer",
+          "line": 57
+        },
+        {
+          "kind": "function",
+          "name": "AiTool",
+          "line": 91
+        },
+        {
+          "kind": "function",
+          "name": "extract",
+          "line": 115
+        },
+        {
+          "kind": "function",
+          "name": "handleAsk",
+          "line": 139
+        },
+        {
+          "kind": "function",
+          "name": "handleRegenerateSummary",
+          "line": 155
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 162
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfraster",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/BatchTool.jsx": {
+      "path": "src/components/tools/BatchTool.jsx",
+      "extension": ".jsx",
+      "size": 11638,
+      "hash": "a4b7e9fbb6182c4e92e73c15aa9c905b22be9651bf6f3f8a3bdaf97e8ae27324",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "BatchTool",
+          "line": 20
+        },
+        {
+          "kind": "function",
+          "name": "handleAddFiles",
+          "line": 28
+        },
+        {
+          "kind": "function",
+          "name": "removeFile",
+          "line": 44
+        },
+        {
+          "kind": "function",
+          "name": "clearAll",
+          "line": 46
+        },
+        {
+          "kind": "function",
+          "name": "runSingle",
+          "line": 47
+        },
+        {
+          "kind": "function",
+          "name": "runBatch",
+          "line": 100
+        },
+        {
+          "kind": "function",
+          "name": "cancelBatch",
+          "line": 134
+        },
+        {
+          "kind": "function",
+          "name": "downloadAllZip",
+          "line": 139
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/markdown",
+        "../../lib/ocrpdf",
+        "../../lib/pdfops",
+        "../../lib/pdfraster",
+        "../../lib/security",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/CompareTool.jsx": {
+      "path": "src/components/tools/CompareTool.jsx",
+      "extension": ".jsx",
+      "size": 16966,
+      "hash": "36301d74b88d45dfa1af7c1ef3e5f936b664230db0ebcbd3159f196dc433be0f",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "loadDoc",
+          "line": 6
+        },
+        {
+          "kind": "function",
+          "name": "CompareTool",
+          "line": 14
+        },
+        {
+          "kind": "function",
+          "name": "handleOpenA",
+          "line": 31
+        },
+        {
+          "kind": "function",
+          "name": "handleOpenB",
+          "line": 42
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 53
+        },
+        {
+          "kind": "function",
+          "name": "render",
+          "line": 67
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfjs",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/CompressTool.jsx": {
+      "path": "src/components/tools/CompressTool.jsx",
+      "extension": ".jsx",
+      "size": 4098,
+      "hash": "bdea46bef8c09f4d5aca06a5e0616b1a6307222e708149ccbc581b5c8b43ea55",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "CompressTool",
+          "line": 10
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 19
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 21
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfops",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/CropTool.jsx": {
+      "path": "src/components/tools/CropTool.jsx",
+      "extension": ".jsx",
+      "size": 7016,
+      "hash": "2f439d55edc7228a5498fcbb7446fafe8551a5fd3b95d9d3fd0cb660ce7b806c",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "CropTool",
+          "line": 16
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 45
+        },
+        {
+          "kind": "function",
+          "name": "startDrag",
+          "line": 49
+        },
+        {
+          "kind": "function",
+          "name": "move",
+          "line": 52
+        },
+        {
+          "kind": "function",
+          "name": "clamp",
+          "line": 54
+        },
+        {
+          "kind": "function",
+          "name": "up",
+          "line": 61
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 68
+        },
+        {
+          "kind": "function",
+          "name": "pct",
+          "line": 87
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfops",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/ExcelTool.jsx": {
+      "path": "src/components/tools/ExcelTool.jsx",
+      "extension": ".jsx",
+      "size": 4988,
+      "hash": "b3579f09baa1180ca773cfb00b87bc3683a9972287b6522049f684527775b8a2",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "ExcelTool",
+          "line": 6
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 15
+        },
+        {
+          "kind": "function",
+          "name": "load",
+          "line": 17
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 22
+        },
+        {
+          "kind": "function",
+          "name": "showPreview",
+          "line": 54
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/tables",
+        "../../lib/xlsx",
+        "../../utils/misc",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/ExportTool.jsx": {
+      "path": "src/components/tools/ExportTool.jsx",
+      "extension": ".jsx",
+      "size": 4549,
+      "hash": "efc82959e0b0d47937ed5adf71755ebb4dd2dda5fcd5dfa2f52ab875f49052f8",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "ExportTool",
+          "line": 12
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 21
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 23
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfops",
+        "../../lib/pdfraster",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/ExtractDataTool.jsx": {
+      "path": "src/components/tools/ExtractDataTool.jsx",
+      "extension": ".jsx",
+      "size": 11482,
+      "hash": "51b414513467cc7cb945939766994125565fec98ea4524e245217eac65122e21",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "extractStructuredData",
+          "line": 11
+        },
+        {
+          "kind": "function",
+          "name": "ExtractDataTool",
+          "line": 106
+        },
+        {
+          "kind": "function",
+          "name": "handleExtract",
+          "line": 112
+        },
+        {
+          "kind": "function",
+          "name": "exportJson",
+          "line": 129
+        },
+        {
+          "kind": "function",
+          "name": "exportCsv",
+          "line": 135
+        },
+        {
+          "kind": "function",
+          "name": "exportExcel",
+          "line": 141
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 147
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/xlsx",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/MarkdownTool.jsx": {
+      "path": "src/components/tools/MarkdownTool.jsx",
+      "extension": ".jsx",
+      "size": 5173,
+      "hash": "21898ce1908bcb6894a64e2c60f03ffef5b9261f0e48f589bc0aa3b634f8732c",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "MarkdownTool",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 12
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 20
+        },
+        {
+          "kind": "function",
+          "name": "handleCopy",
+          "line": 33
+        },
+        {
+          "kind": "function",
+          "name": "handleDownload",
+          "line": 52
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/markdown",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/MergeTool.jsx": {
+      "path": "src/components/tools/MergeTool.jsx",
+      "extension": ".jsx",
+      "size": 4209,
+      "hash": "a025f967f612c945b1f943c27adf0b6bb6188ef33163c99d2c0750dba3089fcb",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "MergeTool",
+          "line": 6
+        },
+        {
+          "kind": "function",
+          "name": "isImage",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 13
+        },
+        {
+          "kind": "function",
+          "name": "add",
+          "line": 15
+        },
+        {
+          "kind": "function",
+          "name": "move",
+          "line": 34
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 44
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfops",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/MindMapTool.jsx": {
+      "path": "src/components/tools/MindMapTool.jsx",
+      "extension": ".jsx",
+      "size": 10041,
+      "hash": "885870d529383c41f2e99201b65f37d0fed8218fc4259dce7272df4f417dc303",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "buildMindMapTree",
+          "line": 5
+        },
+        {
+          "kind": "function",
+          "name": "MindMapTool",
+          "line": 56
+        },
+        {
+          "kind": "function",
+          "name": "generate",
+          "line": 71
+        },
+        {
+          "kind": "function",
+          "name": "handleNodeClick",
+          "line": 88
+        },
+        {
+          "kind": "function",
+          "name": "exportMarkdown",
+          "line": 93
+        },
+        {
+          "kind": "function",
+          "name": "exportJson",
+          "line": 106
+        },
+        {
+          "kind": "function",
+          "name": "exportSvg",
+          "line": 111
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 118
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/extract",
+        "../../utils/misc",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/OcrTool.jsx": {
+      "path": "src/components/tools/OcrTool.jsx",
+      "extension": ".jsx",
+      "size": 7727,
+      "hash": "36cd1ec70d8cc24f930b7da0944fe6177da3f3a1f03930b6ca22e09beffdb36a",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "OcrTool",
+          "line": 14
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 25
+        },
+        {
+          "kind": "function",
+          "name": "toggle",
+          "line": 27
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 29
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/ocrpdf",
+        "../../lib/pdfraster",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/OrganiseTool.jsx": {
+      "path": "src/components/tools/OrganiseTool.jsx",
+      "extension": ".jsx",
+      "size": 2989,
+      "hash": "62473ad1a81567d0a2abf1fc54587405f0272f5ce0f6522af85df681d36f2608",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "OrganiseTool",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 16
+        },
+        {
+          "kind": "function",
+          "name": "spinAll",
+          "line": 18
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 25
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfops",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/PagesTool.jsx": {
+      "path": "src/components/tools/PagesTool.jsx",
+      "extension": ".jsx",
+      "size": 2721,
+      "hash": "689dec4987d328bc143028cad7dd2adb66b9d228b199bc948303bc4036ae7990",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "PagesTool",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 11
+        },
+        {
+          "kind": "function",
+          "name": "toggle",
+          "line": 13
+        },
+        {
+          "kind": "function",
+          "name": "selectAll",
+          "line": 19
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 22
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfops",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/PageTools.jsx": {
+      "path": "src/components/tools/PageTools.jsx",
+      "extension": ".jsx",
+      "size": 23101,
+      "hash": "3564cc52d490a7f60cade06e78c6f68400690f128750b469b29aa0657d6e9446",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "FlipTool",
+          "line": 20
+        },
+        {
+          "kind": "function",
+          "name": "AnnotationsTool",
+          "line": 70
+        },
+        {
+          "kind": "function",
+          "name": "ResizeTool",
+          "line": 125
+        },
+        {
+          "kind": "function",
+          "name": "GrayscaleTool",
+          "line": 177
+        },
+        {
+          "kind": "function",
+          "name": "RenameTool",
+          "line": 226
+        },
+        {
+          "kind": "function",
+          "name": "BookmarksTool",
+          "line": 283
+        },
+        {
+          "kind": "function",
+          "name": "MixTool",
+          "line": 359
+        },
+        {
+          "kind": "function",
+          "name": "BatesTool",
+          "line": 434
+        },
+        {
+          "kind": "function",
+          "name": "FileCard",
+          "line": 8
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 27
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 28
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 78
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 79
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 132
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 133
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 184
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 185
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 238
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 242
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 301
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 303
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 366
+        },
+        {
+          "kind": "function",
+          "name": "add",
+          "line": 368
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 376
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 446
+        },
+        {
+          "kind": "function",
+          "name": "add",
+          "line": 448
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 456
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/outline",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/PdfATool.jsx": {
+      "path": "src/components/tools/PdfATool.jsx",
+      "extension": ".jsx",
+      "size": 3366,
+      "hash": "66ee59445f3ddf333216221456593c6d5a94bb0b10526edef610a03983e21edd",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "PdfATool",
+          "line": 17
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 24
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 26
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfa",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/PptTool.jsx": {
+      "path": "src/components/tools/PptTool.jsx",
+      "extension": ".jsx",
+      "size": 3265,
+      "hash": "beae29c0fbe985eceeb4111028311b051a14f3ae20047be0fad1ea4cb40becad",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "PptTool",
+          "line": 5
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 13
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 15
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfraster",
+        "../../lib/pptx",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/RedactTool.jsx": {
+      "path": "src/components/tools/RedactTool.jsx",
+      "extension": ".jsx",
+      "size": 7100,
+      "hash": "d9910f16a434fe6202131500185bc6011cb5e685889d9560e05721f562f7da04",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "RedactTool",
+          "line": 6
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 36
+        },
+        {
+          "kind": "function",
+          "name": "startDrag",
+          "line": 38
+        },
+        {
+          "kind": "function",
+          "name": "clamp",
+          "line": 42
+        },
+        {
+          "kind": "function",
+          "name": "draw",
+          "line": 43
+        },
+        {
+          "kind": "function",
+          "name": "up",
+          "line": 50
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 69
+        },
+        {
+          "kind": "function",
+          "name": "pct100",
+          "line": 84
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfraster",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/ScanCleanerTool.jsx": {
+      "path": "src/components/tools/ScanCleanerTool.jsx",
+      "extension": ".jsx",
+      "size": 8707,
+      "hash": "7d7b85d7fbabc74b48dfd400eff00f6b69f3aa7618a769d9d47692d6c7f31955",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "ScanCleanerTool",
+          "line": 5
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 22
+        },
+        {
+          "kind": "function",
+          "name": "renderPreview",
+          "line": 29
+        },
+        {
+          "kind": "function",
+          "name": "runAll",
+          "line": 70
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/imageproc",
+        "../../lib/workspace",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/ScanTool.jsx": {
+      "path": "src/components/tools/ScanTool.jsx",
+      "extension": ".jsx",
+      "size": 13860,
+      "hash": "da183c5ee6cb1a50fdf4d7cede505471bfe344f5314c8208d3e6cd1b0830d996",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "applyFilterToCanvas",
+          "line": 9
+        },
+        {
+          "kind": "function",
+          "name": "ScanTool",
+          "line": 35
+        },
+        {
+          "kind": "function",
+          "name": "startCamera",
+          "line": 48
+        },
+        {
+          "kind": "function",
+          "name": "stopCamera",
+          "line": 69
+        },
+        {
+          "kind": "function",
+          "name": "capturePhoto",
+          "line": 83
+        },
+        {
+          "kind": "function",
+          "name": "handleUploadPhotos",
+          "line": 95
+        },
+        {
+          "kind": "function",
+          "name": "rotatePage",
+          "line": 108
+        },
+        {
+          "kind": "function",
+          "name": "deletePage",
+          "line": 112
+        },
+        {
+          "kind": "function",
+          "name": "generatePdf",
+          "line": 116
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 170
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/SecurityTools.jsx": {
+      "path": "src/components/tools/SecurityTools.jsx",
+      "extension": ".jsx",
+      "size": 9728,
+      "hash": "de368d424bc82dd58345ebb6eff54bde863fda33d4a10e26db00bf3e2877f924",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "ProtectTool",
+          "line": 13
+        },
+        {
+          "kind": "function",
+          "name": "UnlockTool",
+          "line": 109
+        },
+        {
+          "kind": "function",
+          "name": "RepairTool",
+          "line": 188
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 26
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 30
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 117
+        },
+        {
+          "kind": "function",
+          "name": "take",
+          "line": 119
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 124
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 194
+        },
+        {
+          "kind": "function",
+          "name": "take",
+          "line": 196
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 201
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/security",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/shell.jsx": {
+      "path": "src/components/tools/shell.jsx",
+      "extension": ".jsx",
+      "size": 9451,
+      "hash": "0ba9a99fdb39a9d9afc1a17025c0ace754c4cb2932a253a3acbdd7d12b9d18d9",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "ToolShell",
+          "line": 23
+        },
+        {
+          "kind": "function",
+          "name": "DropArea",
+          "line": 44
+        },
+        {
+          "kind": "function",
+          "name": "usePdf",
+          "line": 80
+        },
+        {
+          "kind": "function",
+          "name": "PageThumb",
+          "line": 122
+        },
+        {
+          "kind": "function",
+          "name": "PageGrid",
+          "line": 151
+        },
+        {
+          "kind": "function",
+          "name": "Result",
+          "line": 181
+        },
+        {
+          "kind": "function",
+          "name": "PageBoard",
+          "line": 200
+        },
+        {
+          "kind": "function",
+          "name": "download",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "baseOf",
+          "line": 15
+        },
+        {
+          "kind": "function",
+          "name": "prettySize",
+          "line": 17
+        },
+        {
+          "kind": "function",
+          "name": "take",
+          "line": 48
+        },
+        {
+          "kind": "function",
+          "name": "rotate",
+          "line": 203
+        },
+        {
+          "kind": "function",
+          "name": "remove",
+          "line": 206
+        },
+        {
+          "kind": "function",
+          "name": "move",
+          "line": 211
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfjs",
+        "../../lib/workspace",
+        "react"
+      ]
+    },
+    "src/components/tools/SigVerifyTool.jsx": {
+      "path": "src/components/tools/SigVerifyTool.jsx",
+      "extension": ".jsx",
+      "size": 7508,
+      "hash": "19639243105131b0b021083208f876fd4b3a0eac0a934c929382f329e71e6d12",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "inspectSignatures",
+          "line": 3
+        },
+        {
+          "kind": "function",
+          "name": "SigVerifyTool",
+          "line": 68
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 84
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/SmallTools.jsx": {
+      "path": "src/components/tools/SmallTools.jsx",
+      "extension": ".jsx",
+      "size": 11169,
+      "hash": "e30988dc1f5c318195cc354e1e70edd79699143737e4b4b3a50135377e3b8ca1",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "NUpTool",
+          "line": 6
+        },
+        {
+          "kind": "function",
+          "name": "FlattenTool",
+          "line": 71
+        },
+        {
+          "kind": "function",
+          "name": "ImagesToPdfTool",
+          "line": 126
+        },
+        {
+          "kind": "function",
+          "name": "MetadataTool",
+          "line": 230
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 13
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 15
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 77
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 79
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 134
+        },
+        {
+          "kind": "function",
+          "name": "add",
+          "line": 136
+        },
+        {
+          "kind": "function",
+          "name": "move",
+          "line": 146
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 151
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 242
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 244
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfops",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/SplitMoreTools.jsx": {
+      "path": "src/components/tools/SplitMoreTools.jsx",
+      "extension": ".jsx",
+      "size": 12033,
+      "hash": "7d155abe40e8fbd844c4de69baade825f22b4d3499b0f1a679817891998b98bd",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "FileCard",
+          "line": 5
+        },
+        {
+          "kind": "function",
+          "name": "SplitHalfTool",
+          "line": 17
+        },
+        {
+          "kind": "function",
+          "name": "SplitSizeTool",
+          "line": 67
+        },
+        {
+          "kind": "function",
+          "name": "SplitTextTool",
+          "line": 125
+        },
+        {
+          "kind": "function",
+          "name": "SplitBookmarksTool",
+          "line": 197
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 24
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 26
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 75
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 77
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 133
+        },
+        {
+          "kind": "function",
+          "name": "look",
+          "line": 135
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 143
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 209
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 215
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/outline",
+        "../../lib/pdfops",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/SplitTool.jsx": {
+      "path": "src/components/tools/SplitTool.jsx",
+      "extension": ".jsx",
+      "size": 3398,
+      "hash": "60d103bb1cff28dce0ae26fedc9fa2a0312035e6b984d1237557a515589105bb",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "SplitTool",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 12
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 14
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfops",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/StampTool.jsx": {
+      "path": "src/components/tools/StampTool.jsx",
+      "extension": ".jsx",
+      "size": 6896,
+      "hash": "e33bb6a67ef0a044aa22125a6efe3b30b3a591522876526373e3bf72c3f119ce",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "StampTool",
+          "line": 16
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 35
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 37
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/pdfops",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/WordTool.jsx": {
+      "path": "src/components/tools/WordTool.jsx",
+      "extension": ".jsx",
+      "size": 3673,
+      "hash": "f201b206283782c1604d245d4493e6604e6d6c73ce6a4cd80536c0b15140a221",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "WordTool",
+          "line": 6
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 13
+        },
+        {
+          "kind": "function",
+          "name": "run",
+          "line": 15
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/docx",
+        "../../lib/extract",
+        "../../utils/misc",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/components/tools/WorkflowTool.jsx": {
+      "path": "src/components/tools/WorkflowTool.jsx",
+      "extension": ".jsx",
+      "size": 15419,
+      "hash": "23e87d444160638401d2bafd085286258bc5fb23c36b8fb50d4b0b4b456f41f9",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "WorkflowTool",
+          "line": 63
+        },
+        {
+          "kind": "function",
+          "name": "addStep",
+          "line": 77
+        },
+        {
+          "kind": "function",
+          "name": "removeStep",
+          "line": 83
+        },
+        {
+          "kind": "function",
+          "name": "moveStep",
+          "line": 87
+        },
+        {
+          "kind": "function",
+          "name": "updateStepParam",
+          "line": 98
+        },
+        {
+          "kind": "function",
+          "name": "handleSaveCustom",
+          "line": 102
+        },
+        {
+          "kind": "function",
+          "name": "executeWorkflow",
+          "line": 115
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 194
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../lib/db",
+        "../../lib/imageproc",
+        "../../lib/ocrpdf",
+        "../../lib/pdfa",
+        "../../lib/pdfops",
+        "../../lib/security",
+        "../../lib/workspace",
+        "./shell",
+        "react"
+      ]
+    },
+    "src/lib/colors.js": {
+      "path": "src/lib/colors.js",
+      "extension": ".js",
+      "size": 2135,
+      "hash": "6953c2096dd60000c9c983b5a2fb6989eb64094eac734b6a3f7c76d5856f2cf4",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "histogram",
+          "line": 2
+        },
+        {
+          "kind": "function",
+          "name": "sampleTextColor",
+          "line": 32
+        },
+        {
+          "kind": "function",
+          "name": "sampleBgColor",
+          "line": 46
+        },
+        {
+          "kind": "function",
+          "name": "hex",
+          "line": 23
+        },
+        {
+          "kind": "function",
+          "name": "lum",
+          "line": 25
+        },
+        {
+          "kind": "function",
+          "name": "dist",
+          "line": 26
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/db.js": {
+      "path": "src/lib/db.js",
+      "extension": ".js",
+      "size": 3614,
+      "hash": "5cd4b65cf11d39a67e9c4d6e53d64a9d1d4cb0ea8b5c72602ae4d493b021a403",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "openDB",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "saveDocumentVersion",
+          "line": 23
+        },
+        {
+          "kind": "function",
+          "name": "getDocumentVersions",
+          "line": 47
+        },
+        {
+          "kind": "function",
+          "name": "deleteDocumentVersion",
+          "line": 65
+        },
+        {
+          "kind": "function",
+          "name": "saveCustomWorkflow",
+          "line": 79
+        },
+        {
+          "kind": "function",
+          "name": "getCustomWorkflows",
+          "line": 93
+        },
+        {
+          "kind": "function",
+          "name": "deleteCustomWorkflow",
+          "line": 107
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/docx.js": {
+      "path": "src/lib/docx.js",
+      "extension": ".js",
+      "size": 3793,
+      "hash": "29d0fffdc24072123821631140949720abd1aa724678fe5c0fbf11a2b9cbc726",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "paragraph",
+          "line": 17
+        },
+        {
+          "kind": "function",
+          "name": "buildDocx",
+          "line": 50
+        },
+        {
+          "kind": "function",
+          "name": "esc",
+          "line": 2
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./zip"
+      ]
+    },
+    "src/lib/exporter.js": {
+      "path": "src/lib/exporter.js",
+      "extension": ".js",
+      "size": 17230,
+      "hash": "26dc8488c136eaafd2a8681e2c4dd2afe1ffb206161414017a3e7053df66dc03",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "embedImage",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "convertToPng",
+          "line": 18
+        },
+        {
+          "kind": "function",
+          "name": "tokenize",
+          "line": 30
+        },
+        {
+          "kind": "function",
+          "name": "exportEditedPdf",
+          "line": 40
+        },
+        {
+          "kind": "function",
+          "name": "applyPageOrder",
+          "line": 333
+        },
+        {
+          "kind": "function",
+          "name": "writeLinks",
+          "line": 368
+        },
+        {
+          "kind": "function",
+          "name": "writeNewFields",
+          "line": 397
+        },
+        {
+          "kind": "function",
+          "name": "applyFormValues",
+          "line": 432
+        },
+        {
+          "kind": "function",
+          "name": "embedStd",
+          "line": 51
+        },
+        {
+          "kind": "function",
+          "name": "getFont",
+          "line": 60
+        },
+        {
+          "kind": "function",
+          "name": "measure",
+          "line": 107
+        },
+        {
+          "kind": "function",
+          "name": "X",
+          "line": 127
+        },
+        {
+          "kind": "function",
+          "name": "Y",
+          "line": 128
+        },
+        {
+          "kind": "function",
+          "name": "cover",
+          "line": 131
+        },
+        {
+          "kind": "function",
+          "name": "wrapWidthOf",
+          "line": 140
+        },
+        {
+          "kind": "function",
+          "name": "layout",
+          "line": 148
+        },
+        {
+          "kind": "function",
+          "name": "newRow",
+          "line": 162
+        },
+        {
+          "kind": "function",
+          "name": "draw",
+          "line": 185
+        },
+        {
+          "kind": "function",
+          "name": "patchRect",
+          "line": 223
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../utils/misc",
+        "./colors",
+        "./fonts"
+      ]
+    },
+    "src/lib/extract.js": {
+      "path": "src/lib/extract.js",
+      "extension": ".js",
+      "size": 9721,
+      "hash": "da69aafb4a1579685bec6dbdadeab2660904967fa1bad6985499dd84e2e5e728",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "mul",
+          "line": 3
+        },
+        {
+          "kind": "function",
+          "name": "normFam",
+          "line": 14
+        },
+        {
+          "kind": "function",
+          "name": "pageSegments",
+          "line": 29
+        },
+        {
+          "kind": "function",
+          "name": "groupRows",
+          "line": 87
+        },
+        {
+          "kind": "function",
+          "name": "extractLines",
+          "line": 105
+        },
+        {
+          "kind": "function",
+          "name": "overlapPct",
+          "line": 172
+        },
+        {
+          "kind": "function",
+          "name": "groupParagraphs",
+          "line": 177
+        },
+        {
+          "kind": "function",
+          "name": "joinFlowing",
+          "line": 214
+        },
+        {
+          "kind": "function",
+          "name": "buildPara",
+          "line": 224
+        },
+        {
+          "kind": "function",
+          "name": "isBoldName",
+          "line": 24
+        },
+        {
+          "kind": "function",
+          "name": "isItalicName",
+          "line": 25
+        },
+        {
+          "kind": "function",
+          "name": "flush",
+          "line": 181
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../utils/misc",
+        "./fonts"
+      ]
+    },
+    "src/lib/fonts.js": {
+      "path": "src/lib/fonts.js",
+      "extension": ".js",
+      "size": 4546,
+      "hash": "b9c0f2e257a7a08187d8969ca536ec166b188fd1801a9f859c8e76d40118901e",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "winAnsiCanEncode",
+          "line": 24
+        },
+        {
+          "kind": "function",
+          "name": "fontUrl",
+          "line": 35
+        },
+        {
+          "kind": "function",
+          "name": "cleanFontFamilyName",
+          "line": 42
+        },
+        {
+          "kind": "function",
+          "name": "ensureFontLoadedInBrowser",
+          "line": 54
+        },
+        {
+          "kind": "function",
+          "name": "fetchTtfBuffer",
+          "line": 83
+        },
+        {
+          "kind": "function",
+          "name": "styleIndex",
+          "line": 33
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/imageproc.js": {
+      "path": "src/lib/imageproc.js",
+      "extension": ".js",
+      "size": 4681,
+      "hash": "b2bc14758fe9583a10bdc1800abb9e1921481b90b15ce15ee7b8613cce14c333",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "autoCropCanvas",
+          "line": 2
+        },
+        {
+          "kind": "function",
+          "name": "rotateCanvas",
+          "line": 46
+        },
+        {
+          "kind": "function",
+          "name": "deskewCanvas",
+          "line": 64
+        },
+        {
+          "kind": "function",
+          "name": "cleanDocumentCanvas",
+          "line": 120
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/markdown.js": {
+      "path": "src/lib/markdown.js",
+      "extension": ".js",
+      "size": 4522,
+      "hash": "fb65b7aa8e9de7b91791d3fae54bd4240e920f4212741248d20eef5807fa496a",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "escapeCell",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "rowCells",
+          "line": 10
+        },
+        {
+          "kind": "function",
+          "name": "pdfToMarkdown",
+          "line": 32
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../utils/misc",
+        "./extract",
+        "./pdfjs"
+      ]
+    },
+    "src/lib/ocr.js": {
+      "path": "src/lib/ocr.js",
+      "extension": ".js",
+      "size": 4207,
+      "hash": "ac7bcef2d78827b81481fed5642876585a9afd08e1558d732c486e4845879e3a",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "ocrScaleFor",
+          "line": 10
+        },
+        {
+          "kind": "function",
+          "name": "renderForOcr",
+          "line": 18
+        },
+        {
+          "kind": "function",
+          "name": "toLines",
+          "line": 33
+        },
+        {
+          "kind": "function",
+          "name": "ocrPage",
+          "line": 83
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../utils/misc",
+        "./extract"
+      ]
+    },
+    "src/lib/ocrpdf.js": {
+      "path": "src/lib/ocrpdf.js",
+      "extension": ".js",
+      "size": 8640,
+      "hash": "b16c4ff9d637577383b6475551dcae42aa36328e54c66f799c07d3145e7611c2",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "ocrToSearchablePdf",
+          "line": 10
+        },
+        {
+          "kind": "function",
+          "name": "ocrToWord",
+          "line": 105
+        },
+        {
+          "kind": "function",
+          "name": "ocrToMarkdown",
+          "line": 170
+        },
+        {
+          "kind": "function",
+          "name": "fontFor",
+          "line": 36
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./../utils/misc",
+        "./fonts",
+        "./ocr",
+        "./pdfjs"
+      ]
+    },
+    "src/lib/outline.js": {
+      "path": "src/lib/outline.js",
+      "extension": ".js",
+      "size": 3179,
+      "hash": "0f442a38c257d138863403ac6ca4edc554ed6418f9d0f3abc2cc90977e48fc41",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "destinationPage",
+          "line": 3
+        },
+        {
+          "kind": "function",
+          "name": "readOutline",
+          "line": 14
+        },
+        {
+          "kind": "function",
+          "name": "detectHeadings",
+          "line": 33
+        },
+        {
+          "kind": "function",
+          "name": "pageKeys",
+          "line": 64
+        },
+        {
+          "kind": "function",
+          "name": "firstLines",
+          "line": 84
+        },
+        {
+          "kind": "function",
+          "name": "walk",
+          "line": 20
+        },
+        {
+          "kind": "function",
+          "name": "boundariesOf",
+          "line": 82
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../utils/misc",
+        "./extract"
+      ]
+    },
+    "src/lib/pdfa.js": {
+      "path": "src/lib/pdfa.js",
+      "extension": ".js",
+      "size": 2597,
+      "hash": "6a51717b385a774af73932e61afbcbe38cde5bc2eecdd51046a0ab16b367de15",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "convertToPdfA",
+          "line": 1
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/pdfjs.js": {
+      "path": "src/lib/pdfjs.js",
+      "extension": ".js",
+      "size": 186,
+      "hash": "a7f4215a18e45e160692345c78a6d4a55eef0f5835d4a0fd3b84e2aa19e6dace",
+      "symbols": [],
+      "routes": [],
+      "imports": [
+        "pdfjs-dist",
+        "pdfjs-dist/build/pdf.worker.min.mjs?url"
+      ]
+    },
+    "src/lib/pdfops.js": {
+      "path": "src/lib/pdfops.js",
+      "extension": ".js",
+      "size": 26769,
+      "hash": "f32a8830d602695c2a819ad0c210beb8ebb627f7d462e6b43414e8dfc175d047",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "embedRaster",
+          "line": 9
+        },
+        {
+          "kind": "function",
+          "name": "deletePages",
+          "line": 27
+        },
+        {
+          "kind": "function",
+          "name": "extractPages",
+          "line": 54
+        },
+        {
+          "kind": "function",
+          "name": "parseRanges",
+          "line": 69
+        },
+        {
+          "kind": "function",
+          "name": "splitPdf",
+          "line": 90
+        },
+        {
+          "kind": "function",
+          "name": "zipFiles",
+          "line": 112
+        },
+        {
+          "kind": "function",
+          "name": "mergeDocuments",
+          "line": 118
+        },
+        {
+          "kind": "function",
+          "name": "cropPdf",
+          "line": 151
+        },
+        {
+          "kind": "function",
+          "name": "reencodeJpeg",
+          "line": 186
+        },
+        {
+          "kind": "function",
+          "name": "compressPdf",
+          "line": 208
+        },
+        {
+          "kind": "function",
+          "name": "organisePages",
+          "line": 250
+        },
+        {
+          "kind": "function",
+          "name": "nUpPdf",
+          "line": 267
+        },
+        {
+          "kind": "function",
+          "name": "placeText",
+          "line": 307
+        },
+        {
+          "kind": "function",
+          "name": "stampPdf",
+          "line": 318
+        },
+        {
+          "kind": "function",
+          "name": "flattenPdf",
+          "line": 397
+        },
+        {
+          "kind": "function",
+          "name": "imagesToPdf",
+          "line": 413
+        },
+        {
+          "kind": "function",
+          "name": "readMetadata",
+          "line": 437
+        },
+        {
+          "kind": "function",
+          "name": "writeMetadata",
+          "line": 450
+        },
+        {
+          "kind": "function",
+          "name": "mixDocuments",
+          "line": 464
+        },
+        {
+          "kind": "function",
+          "name": "splitInHalf",
+          "line": 489
+        },
+        {
+          "kind": "function",
+          "name": "splitBySize",
+          "line": 517
+        },
+        {
+          "kind": "function",
+          "name": "flipPdf",
+          "line": 563
+        },
+        {
+          "kind": "function",
+          "name": "removeAnnotations",
+          "line": 585
+        },
+        {
+          "kind": "function",
+          "name": "batesNumber",
+          "line": 612
+        },
+        {
+          "kind": "function",
+          "name": "addBookmarks",
+          "line": 645
+        },
+        {
+          "kind": "function",
+          "name": "splitAt",
+          "line": 679
+        },
+        {
+          "kind": "function",
+          "name": "load",
+          "line": 2
+        },
+        {
+          "kind": "function",
+          "name": "asBlob",
+          "line": 7
+        },
+        {
+          "kind": "function",
+          "name": "hex",
+          "line": 326
+        },
+        {
+          "kind": "function",
+          "name": "fill",
+          "line": 332
+        },
+        {
+          "kind": "function",
+          "name": "safe",
+          "line": 440
+        },
+        {
+          "kind": "function",
+          "name": "set",
+          "line": 453
+        },
+        {
+          "kind": "function",
+          "name": "build",
+          "line": 527
+        },
+        {
+          "kind": "function",
+          "name": "push",
+          "line": 533
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./zip"
+      ]
+    },
+    "src/lib/pdfraster.js": {
+      "path": "src/lib/pdfraster.js",
+      "extension": ".js",
+      "size": 6727,
+      "hash": "e1b1b41eee0b01b456f49fbb8338a65e5086315016ba90efa8b2dbc62f9fdfa3",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "renderPage",
+          "line": 2
+        },
+        {
+          "kind": "function",
+          "name": "pagesToImages",
+          "line": 19
+        },
+        {
+          "kind": "function",
+          "name": "pdfToText",
+          "line": 37
+        },
+        {
+          "kind": "function",
+          "name": "extractImages",
+          "line": 70
+        },
+        {
+          "kind": "function",
+          "name": "redactPdf",
+          "line": 125
+        },
+        {
+          "kind": "function",
+          "name": "toBytes",
+          "line": 14
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./pdfjs"
+      ]
+    },
+    "src/lib/pptx.js": {
+      "path": "src/lib/pptx.js",
+      "extension": ".js",
+      "size": 9690,
+      "hash": "2c1985bb349fc79ad6aea201d076927cdad54059a9f9a233236f7ab06659ac2c",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "slideXml",
+          "line": 15
+        },
+        {
+          "kind": "function",
+          "name": "buildPptx",
+          "line": 76
+        },
+        {
+          "kind": "function",
+          "name": "esc",
+          "line": 8
+        },
+        {
+          "kind": "function",
+          "name": "slideRels",
+          "line": 30
+        },
+        {
+          "kind": "function",
+          "name": "colour",
+          "line": 58
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./zip"
+      ]
+    },
+    "src/lib/runs.js": {
+      "path": "src/lib/runs.js",
+      "extension": ".js",
+      "size": 3835,
+      "hash": "fae2d969810c8c4cf4c7a9765eb0a45119063760b005c7c3473db211da5140cf",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "cssColorToHex",
+          "line": 7
+        },
+        {
+          "kind": "function",
+          "name": "mergeRuns",
+          "line": 25
+        },
+        {
+          "kind": "function",
+          "name": "runsText",
+          "line": 36
+        },
+        {
+          "kind": "function",
+          "name": "isPlain",
+          "line": 40
+        },
+        {
+          "kind": "function",
+          "name": "domToRuns",
+          "line": 44
+        },
+        {
+          "kind": "function",
+          "name": "runsToHtml",
+          "line": 77
+        },
+        {
+          "kind": "function",
+          "name": "stripRunProp",
+          "line": 95
+        },
+        {
+          "kind": "function",
+          "name": "runsForText",
+          "line": 106
+        },
+        {
+          "kind": "function",
+          "name": "hex2",
+          "line": 5
+        },
+        {
+          "kind": "function",
+          "name": "sameStyle",
+          "line": 21
+        },
+        {
+          "kind": "function",
+          "name": "walk",
+          "line": 47
+        },
+        {
+          "kind": "function",
+          "name": "escapeHtml",
+          "line": 74
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/sample.js": {
+      "path": "src/lib/sample.js",
+      "extension": ".js",
+      "size": 5281,
+      "hash": "ac52ad531f4a5761323cbccb00df7fe7f08311a3444d165120955ec4c2172d39",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "wrap",
+          "line": 1
+        },
+        {
+          "kind": "function",
+          "name": "makeSamplePdf",
+          "line": 15
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/security.js": {
+      "path": "src/lib/security.js",
+      "extension": ".js",
+      "size": 1949,
+      "hash": "00ff48eb22e6a7a7989327ecdbdf62bff87bd5dd1edde5d59626779b589f479c",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "protectPdf",
+          "line": 8
+        },
+        {
+          "kind": "function",
+          "name": "unlockPdf",
+          "line": 27
+        },
+        {
+          "kind": "function",
+          "name": "repairPdf",
+          "line": 45
+        },
+        {
+          "kind": "function",
+          "name": "lib",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "asBlob",
+          "line": 5
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/tables.js": {
+      "path": "src/lib/tables.js",
+      "extension": ".js",
+      "size": 2532,
+      "hash": "83fb126713f354ed84da66fce941917b84505077e44065789b63662e85b84c4e",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "rowToCells",
+          "line": 6
+        },
+        {
+          "kind": "function",
+          "name": "buildColumns",
+          "line": 30
+        },
+        {
+          "kind": "function",
+          "name": "readTable",
+          "line": 54
+        },
+        {
+          "kind": "function",
+          "name": "columnOf",
+          "line": 44
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./extract"
+      ]
+    },
+    "src/lib/textfont.js": {
+      "path": "src/lib/textfont.js",
+      "extension": ".js",
+      "size": 1018,
+      "hash": "bd6f22413879011e9c546c626d2a9e3dc9c5ba14ac6ddf3feefbe6ab0f9fc027",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "pickFont",
+          "line": 6
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../utils/misc",
+        "./fonts"
+      ]
+    },
+    "src/lib/workspace.js": {
+      "path": "src/lib/workspace.js",
+      "extension": ".js",
+      "size": 1528,
+      "hash": "9055833024006cc8c46bc0ad2c1a73016ea97921016c0162646c96079529dd9c",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "notify",
+          "line": 7
+        },
+        {
+          "kind": "function",
+          "name": "getActiveDocument",
+          "line": 12
+        },
+        {
+          "kind": "function",
+          "name": "setActiveDocument",
+          "line": 16
+        },
+        {
+          "kind": "function",
+          "name": "updateActiveDocument",
+          "line": 44
+        },
+        {
+          "kind": "function",
+          "name": "clearActiveDocument",
+          "line": 54
+        },
+        {
+          "kind": "function",
+          "name": "useWorkspaceDoc",
+          "line": 59
+        },
+        {
+          "kind": "function",
+          "name": "handler",
+          "line": 64
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./db",
+        "./pdfjs",
+        "react"
+      ]
+    },
+    "src/lib/xlsx.js": {
+      "path": "src/lib/xlsx.js",
+      "extension": ".js",
+      "size": 3871,
+      "hash": "44395f5fd71342a50d082d8210ec84b1cc8e6b59c925ad12e0add2d23031a274",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "colName",
+          "line": 11
+        },
+        {
+          "kind": "function",
+          "name": "cell",
+          "line": 24
+        },
+        {
+          "kind": "function",
+          "name": "sheetXml",
+          "line": 35
+        },
+        {
+          "kind": "function",
+          "name": "buildXlsx",
+          "line": 44
+        },
+        {
+          "kind": "function",
+          "name": "esc",
+          "line": 2
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./zip"
+      ]
+    },
+    "src/lib/zip.js": {
+      "path": "src/lib/zip.js",
+      "extension": ".js",
+      "size": 2911,
+      "hash": "75c9a55393d5628a331a8ed468e8822eeccf4037e56a3b56b766c57aec79436b",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "crc32",
+          "line": 14
+        },
+        {
+          "kind": "function",
+          "name": "zipSync",
+          "line": 22
+        },
+        {
+          "kind": "function",
+          "name": "CRC_TABLE",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "utf8",
+          "line": 20
+        },
+        {
+          "kind": "function",
+          "name": "push",
+          "line": 27
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/utils/misc.js": {
+      "path": "src/utils/misc.js",
+      "extension": ".js",
+      "size": 3375,
+      "hash": "067f1ffb72873dfb5cee33d20cc55efffd171aafa550a9905f535fb485ebe008",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "hexToRgb01",
+          "line": 18
+        },
+        {
+          "kind": "function",
+          "name": "sanitizeWinAnsi",
+          "line": 29
+        },
+        {
+          "kind": "function",
+          "name": "familyMetrics",
+          "line": 66
+        },
+        {
+          "kind": "function",
+          "name": "topForBaseline",
+          "line": 83
+        },
+        {
+          "kind": "function",
+          "name": "uid",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "clamp",
+          "line": 6
+        },
+        {
+          "kind": "function",
+          "name": "slackOf",
+          "line": 8
+        },
+        {
+          "kind": "function",
+          "name": "famCss",
+          "line": 16
+        },
+        {
+          "kind": "function",
+          "name": "baseName",
+          "line": 39
+        },
+        {
+          "kind": "function",
+          "name": "fontCssOf",
+          "line": 44
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../lib/fonts"
+      ]
+    }
+  }
+}

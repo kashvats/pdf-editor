@@ -1,0 +1,194 @@
+export const EMPTY_PAGE = { lines: [], objects: [] }
+
+export const initialState = {
+  phase: 'landing',
+  fileName: '',
+  numPages: 0,
+  pages: {},
+  pageOrder: [],
+  tool: 'select',
+  activeText: null,
+  selection: null,
+  zoom: 1,
+  currentPage: 1,
+  thumbsOpen: true,
+  pendingImage: null,
+  panel: null,
+  formValues: {},
+  hint: null,
+  busy: null,
+  error: null,
+  dirty: false,
+  past: [],
+  future: []
+}
+
+export const ACT = {
+  OPEN_START: 'OPEN_START',
+  OPEN_DONE: 'OPEN_DONE',
+  OPEN_FAIL: 'OPEN_FAIL',
+  SET_LINES: 'SET_LINES',
+  SET_TOOL: 'SET_TOOL',
+  PUSH: 'PUSH',
+  UNDO: 'UNDO',
+  REDO: 'REDO',
+  UNDO_REVERT: 'UNDO_REVERT',
+  TEXT_ACTIVATE: 'TEXT_ACTIVATE',
+  TEXT_DEACTIVATE: 'TEXT_DEACTIVATE',
+  TEXT_PATCH: 'TEXT_PATCH',
+  TEXT_META: 'TEXT_META',
+  TEXT_MERGE: 'TEXT_MERGE',
+  OBJ_ADD: 'OBJ_ADD',
+  OBJ_PATCH: 'OBJ_PATCH',
+  OBJ_REMOVE: 'OBJ_REMOVE',
+  SELECT: 'SELECT',
+  ZOOM: 'ZOOM',
+  PAGE: 'PAGE',
+  PAGES_SET: 'PAGES_SET',
+  THUMBS: 'THUMBS',
+  PENDING_IMG: 'PENDING_IMG',
+  PANEL: 'PANEL',
+  FORM_SET: 'FORM_SET',
+  FORM_SEED: 'FORM_SEED',
+  OBJ_SEED: 'OBJ_SEED',
+  HINT: 'HINT',
+  BUSY: 'BUSY',
+  RESET: 'RESET'
+}
+
+const withPage = (s, i, fn) => {
+  const pages = { ...s.pages }
+  const p = pages[i] || { lines: [], objects: [] }
+  pages[i] = { ...p, ...fn(p) }
+  return { ...s, pages }
+}
+
+export function reducer(s, a) {
+  switch (a.type) {
+    case ACT.OPEN_START:
+      return { ...initialState, phase: 'landing', busy: 'Opening document…' }
+    case ACT.OPEN_DONE:
+      return {
+        ...initialState,
+        phase: 'editor',
+        fileName: a.fileName,
+        numPages: a.numPages,
+        pages: Object.fromEntries(Array.from({ length: a.numPages }, (_, i) => [i, { lines: [], objects: [] }])),
+        pageOrder: Array.from({ length: a.numPages }, (_, i) => ({ key: i, src: i, rotate: 0 }))
+      }
+    case ACT.OPEN_FAIL:
+      return { ...initialState, phase: 'landing', error: a.error }
+    case ACT.RESET:
+      return { ...initialState }
+    case ACT.SET_LINES:
+      return withPage(s, a.page, p => ({ lines: a.lines }))
+    case ACT.SET_TOOL:
+      return { ...s, tool: a.tool, selection: null, activeText: null }
+    case ACT.PUSH: {
+      const top = s.past[s.past.length - 1]
+      const snap = { pages: s.pages, pageOrder: s.pageOrder, formValues: s.formValues }
+      if (top && top.pages === snap.pages && top.pageOrder === snap.pageOrder && top.formValues === snap.formValues) return s
+      return { ...s, past: [...s.past.slice(-59), snap], future: [] }
+    }
+    case ACT.UNDO: {
+      if (!s.past.length) return s
+      const snap = s.past[s.past.length - 1]
+      const now = { pages: s.pages, pageOrder: s.pageOrder, formValues: s.formValues }
+      return { ...s, ...snap, past: s.past.slice(0, -1), future: [now, ...s.future].slice(0, 60), activeText: null, selection: null }
+    }
+    case ACT.REDO: {
+      if (!s.future.length) return s
+      const snap = s.future[0]
+      const now = { pages: s.pages, pageOrder: s.pageOrder, formValues: s.formValues }
+      return { ...s, ...snap, future: s.future.slice(1), past: [...s.past, now].slice(-60), activeText: null, selection: null }
+    }
+    case ACT.UNDO_REVERT: {
+      if (!s.past.length) return s
+      return { ...s, past: s.past.slice(0, -1) }
+    }
+    case ACT.TEXT_ACTIVATE:
+      return { ...s, activeText: a.target, selection: null }
+    case ACT.TEXT_DEACTIVATE:
+      return { ...s, activeText: null }
+    case ACT.TEXT_PATCH:
+      return {
+        ...withPage(s, a.page, p => ({
+          lines: p.lines.map(ln => (a.kind === 'line' && ln.id === a.id ? { ...ln, ...a.patch, dirty: true } : ln)),
+          objects: p.objects.map(o => (a.kind === 'obj' && o.id === a.id ? { ...o, ...a.patch, dirty: true } : o))
+        })),
+        dirty: true
+      }
+    case ACT.TEXT_META:
+      return withPage(s, a.page, p => ({
+        lines: p.lines.map(ln => (a.kind === 'line' && ln.id === a.id ? { ...ln, ...a.patch } : ln)),
+        objects: p.objects.map(o => (a.kind === 'obj' && o.id === a.id ? { ...o, ...a.patch } : o))
+      }))
+    case ACT.TEXT_MERGE: {
+      const st = withPage(s, a.page, p => ({
+        lines: p.lines.map(ln => {
+          if (ln.id === a.dstId) return { ...ln, text: a.text, runs: a.runs, dirty: true }
+          if (ln.id === a.srcId) return { ...ln, deleted: true, dirty: true }
+          return ln
+        })
+      }))
+      return { ...st, dirty: true, activeText: { kind: 'line', page: a.page, id: a.dstId } }
+    }
+    case ACT.OBJ_ADD:
+      return {
+        ...withPage(s, a.page, p => ({ objects: [...p.objects, a.obj] })),
+        dirty: true
+      }
+    case ACT.OBJ_PATCH:
+      return {
+        ...withPage(s, a.page, p => ({
+          objects: p.objects.map(o => (o.id === a.id ? { ...o, ...a.patch } : o))
+        })),
+        dirty: true
+      }
+    case ACT.OBJ_REMOVE:
+      return {
+        ...withPage(s, a.page, p => ({
+          objects: p.objects.filter(o => o.id !== a.id),
+          lines: a.lineId ? p.lines.map(ln => (ln.id === a.lineId ? { ...ln, deleted: true, dirty: true } : ln)) : p.lines
+        })),
+        selection: null,
+        dirty: true
+      }
+    case ACT.SELECT:
+      return { ...s, selection: a.sel, activeText: null }
+    case ACT.ZOOM:
+      return { ...s, zoom: Math.min(3, Math.max(0.4, Math.round(a.zoom * 100) / 100)) }
+    case ACT.PAGE:
+      return { ...s, currentPage: a.page }
+    case ACT.PAGES_SET: {
+      const pages = a.addKey ? { ...s.pages, [a.addKey]: { lines: [], objects: [] } } : s.pages
+      return {
+        ...s,
+        pageOrder: a.order,
+        pages,
+        dirty: a.seed ? s.dirty : true,
+        activeText: a.seed ? s.activeText : null,
+        selection: a.seed ? s.selection : null,
+        currentPage: Math.max(1, Math.min(a.current ?? s.currentPage, a.order.length))
+      }
+    }
+    case ACT.THUMBS:
+      return { ...s, thumbsOpen: !s.thumbsOpen }
+    case ACT.PANEL:
+      return { ...s, panel: a.panel, activeText: null, selection: null }
+    case ACT.FORM_SET:
+      return { ...s, formValues: { ...s.formValues, [a.key]: a.value }, dirty: true }
+    case ACT.FORM_SEED:
+      return { ...s, formValues: { ...a.values, ...s.formValues } }
+    case ACT.OBJ_SEED:
+      return withPage(s, a.page, p => ({ objects: [...a.objects, ...p.objects] }))
+    case ACT.PENDING_IMG:
+      return { ...s, pendingImage: a.img, hint: a.img ? 'Click anywhere on the page to place the image' : null, tool: a.img ? 'image' : 'select' }
+    case ACT.HINT:
+      return { ...s, hint: a.hint }
+    case ACT.BUSY:
+      return { ...s, busy: a.msg }
+    default:
+      return s
+  }
+}
