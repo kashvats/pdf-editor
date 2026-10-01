@@ -156,6 +156,71 @@ export default function FormatBar({ state, dispatch }) {
         </>
       )}
 
+      {selObj && selObj.kind === 'image' && (
+        <>
+          <span className="fb-label">Image ({Math.round(selObj.w)} × {Math.round(selObj.h)}px)</span>
+          <label className="fb-btn" style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '4px' }} title="Replace image">
+            <span>🔄 Replace</span>
+            <input
+              type="file"
+              accept="image/*"
+              style={{ display: 'none' }}
+              onChange={e => {
+                const file = e.target.files?.[0]
+                if (file) {
+                  const rd = new FileReader()
+                  rd.onload = () => {
+                    patchObj({ src: rd.result, originalSrc: rd.result, rotate: 0, filter: 'none', dirty: true })
+                  }
+                  rd.readAsDataURL(file)
+                }
+                e.target.value = ''
+              }}
+            />
+          </label>
+          <button
+            className="fb-btn"
+            onClick={async () => {
+              const nextRot = ((selObj.rotate || 0) + 90) % 360
+              const baseSrc = selObj.originalSrc || selObj.src
+              const { processImageEdit } = await import('../lib/imageproc')
+              const newSrc = await processImageEdit(baseSrc, { rotateDeg: nextRot, filter: selObj.filter || 'none' })
+              patchObj({ src: newSrc, rotate: nextRot, dirty: true })
+            }}
+            title="Rotate 90°"
+          >
+            ↻ Rotate 90°
+          </button>
+          <select
+            className="fb-select"
+            value={selObj.filter || 'none'}
+            onChange={async e => {
+              const filter = e.target.value
+              const baseSrc = selObj.originalSrc || selObj.src
+              const { processImageEdit } = await import('../lib/imageproc')
+              const newSrc = await processImageEdit(baseSrc, { rotateDeg: selObj.rotate || 0, filter })
+              patchObj({ src: newSrc, filter, dirty: true })
+            }}
+            title="Filter"
+          >
+            <option value="none">Filter: Normal</option>
+            <option value="grayscale">Grayscale</option>
+            <option value="bw">B&W</option>
+            <option value="sepia">Warm</option>
+            <option value="invert">Invert</option>
+          </select>
+          <button
+            className="fb-btn"
+            style={{ color: '#dc2626' }}
+            onClick={remove}
+            title="Delete Image"
+          >
+            🗑️ Delete
+          </button>
+          <div className="fb-sep" />
+        </>
+      )}
+
       {selObj && selObj.kind === 'field' && (
         <>
           <span className="fb-label">Field name</span>

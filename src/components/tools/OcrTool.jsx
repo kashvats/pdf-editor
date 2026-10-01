@@ -4,12 +4,12 @@ import { pdfToText } from '../../lib/pdfraster'
 import { DropArea, PageThumb, Result, ToolShell, baseOf, download, usePdf } from './shell'
 
 const LANGS = [
-  ['eng', 'English'], ['hin', 'Hindi'], ['tel', 'Telugu'],
-  ['tam', 'Tamil'], ['ben', 'Bengali'], ['mar', 'Marathi'],
-  ['spa', 'Spanish'], ['fra', 'French'], ['deu', 'German'],
-  ['ara', 'Arabic'], ['por', 'Portuguese'], ['ita', 'Italian'],
-  ['nld', 'Dutch'], ['ind', 'Indonesian'], ['msa', 'Malay'],
-  ['chi_sim', 'Chinese'], ['jpn', 'Japanese']
+  ['eng', 'English'], ['rus', 'Russian'], ['deu', 'German'],
+  ['hin', 'Hindi'], ['tel', 'Telugu'], ['tam', 'Tamil'],
+  ['ben', 'Bengali'], ['mar', 'Marathi'], ['spa', 'Spanish'],
+  ['fra', 'French'], ['ara', 'Arabic'], ['por', 'Portuguese'],
+  ['ita', 'Italian'], ['nld', 'Dutch'], ['ind', 'Indonesian'],
+  ['msa', 'Malay'], ['chi_sim', 'Chinese'], ['jpn', 'Japanese']
 ]
 
 export default function OcrTool({ tool, onBack }) {

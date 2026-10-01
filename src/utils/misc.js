@@ -1,4 +1,4 @@
-import { winAnsiCanEncode } from '../lib/fonts'
+import { winAnsiCanEncode } from '../lib/fonts.js'
 
 export const BASE_SCALE = 2
 

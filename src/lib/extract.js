@@ -1,5 +1,5 @@
-import { slackOf } from '../utils/misc'
-import { cleanFontFamilyName, ensureFontLoadedInBrowser } from './fonts'
+import { slackOf } from '../utils/misc.js'
+import { cleanFontFamilyName, ensureFontLoadedInBrowser } from './fonts.js'
 
 function mul(m1, m2) {
   return [
@@ -42,8 +42,8 @@ export async function pageSegments(page, scale) {
     const m = mul(vt, it.transform)
     const hy = Math.hypot(m[2], m[3])
     const hx = Math.hypot(m[0], m[1])
-    if (hy < 0.5) return
-    if (hx < hy * 0.5) return
+    const effectiveH = Math.max(hy, hx)
+    if (effectiveH < 0.2) return
     const st = tc.styles[it.fontName] || {}
     const fontObj = common && common.has(it.fontName) ? common.get(it.fontName) : null
     const rawFontName = fontObj?.loadedName || fontObj?.name || st.fontFamily || ''
@@ -110,61 +110,81 @@ export async function extractLines(page, scale, pageNo) {
   const lines = []
   let li = 0
   for (const g of groups) {
-    // pdf.js emits synthetic whitespace-only items to represent horizontal
-    // gaps. Keeping them would hide the real distance between two runs, so the
-    // spacing is rebuilt from geometry over the solid runs only.
     const ss = g.segs.filter(s => s.str.trim()).sort((a, b) => a.x - b.x)
     if (!ss.length) continue
-    let text = ''
+
+    // Break horizontal runs into distinct clusters if there is a gap (separate diagram boxes/labels)
+    const clusters = []
+    let currentCluster = []
     let pen = null
-    let wideGap = false
+
     for (const s of ss) {
       if (pen) {
         const gap = s.x - (pen.x + pen.w)
-        if (gap > Math.max(pen.h, s.h) * 1.4) wideGap = true
-        if (gap > pen.h * 0.12 && !/\s$/.test(text) && !/^\s/.test(s.str)) text += ' '
+        if (gap > Math.max(pen.h, s.h) * 2.2 && gap > 18) {
+          if (currentCluster.length) clusters.push(currentCluster)
+          currentCluster = [s]
+          pen = s
+          continue
+        }
       }
-      text += s.str
+      currentCluster.push(s)
       pen = s
     }
-    const trimmed = text.replace(/\s+$/g, '')
-    if (!trimmed.trim()) continue
-    const x = Math.min(...ss.map(s => s.x))
-    const xe = Math.max(...ss.map(s => s.x + s.w))
-    const top = Math.min(...ss.map(s => s.y - s.asc * s.h))
-    const bot = Math.max(...ss.map(s => s.y - s.desc * s.h))
-    const dom = ss.reduce((a, b) => (b.str.length > a.str.length ? b : a), ss[0])
-    const wsum = ss.reduce((a, s) => a + s.str.length, 0) || 1
-    const fs = ss.reduce((a, s) => a + s.h * s.str.length, 0) / wsum
-    const rectH = Math.max(bot - top, fs * 1.05, fs + fs * (-dom.desc))
-    const w = Math.max(xe - x, 6)
-    lines.push({
-      id: `L${pageNo}_${li++}`,
-      text: trimmed,
-      x,
-      w,
-      wrapW: w + slackOf(w),
-      baselineY: dom.y,
-      lineHeight: Math.round(rectH),
-      rectH,
-      fontSize: fs,
-      asc: dom.asc,
-      desc: dom.desc,
-      family: dom.fam,
-      exactFont: dom.exactFont || null,
-      pdfFont: dom.font || null,
-      pdfFontName: dom.pdfFontName || null,
-      bold: !!dom.bold,
-      italic: !!dom.italic,
-      fontWeight: dom.fontWeight || (dom.bold ? 700 : 400),
-      wideGap,
-      rect: { x: x - 1, y: top - 1, w: (xe - x) + 2, h: rectH + 2 },
-      dirty: false,
-      deleted: false,
-      color: null,
-      bg: null,
-      underline: false
-    })
+    if (currentCluster.length) clusters.push(currentCluster)
+
+    for (const cluster of clusters) {
+      let text = ''
+      let cPen = null
+      let wideGap = false
+      for (const s of cluster) {
+        if (cPen) {
+          const gap = s.x - (cPen.x + cPen.w)
+          if (gap > Math.max(cPen.h, s.h) * 1.4) wideGap = true
+          if (gap > cPen.h * 0.12 && !/\s$/.test(text) && !/^\s/.test(s.str)) text += ' '
+        }
+        text += s.str
+        cPen = s
+      }
+      const trimmed = text.replace(/\s+$/g, '')
+      if (!trimmed.trim()) continue
+      const x = Math.min(...cluster.map(s => s.x))
+      const xe = Math.max(...cluster.map(s => s.x + s.w))
+      const top = Math.min(...cluster.map(s => s.y - s.asc * s.h))
+      const bot = Math.max(...cluster.map(s => s.y - s.desc * s.h))
+      const dom = cluster.reduce((a, b) => (b.str.length > a.str.length ? b : a), cluster[0])
+      const wsum = cluster.reduce((a, s) => a + s.str.length, 0) || 1
+      const fs = cluster.reduce((a, s) => a + s.h * s.str.length, 0) / wsum
+      const rectH = Math.max(bot - top, fs * 1.05, fs + fs * (-dom.desc))
+      const w = Math.max(xe - x, 8)
+      lines.push({
+        id: `L${pageNo}_${li++}`,
+        text: trimmed,
+        x,
+        w,
+        wrapW: w + slackOf(w),
+        baselineY: dom.y,
+        lineHeight: Math.round(rectH),
+        rectH,
+        fontSize: fs,
+        asc: dom.asc,
+        desc: dom.desc,
+        family: dom.fam,
+        exactFont: dom.exactFont || null,
+        pdfFont: dom.font || null,
+        pdfFontName: dom.pdfFontName || null,
+        bold: !!dom.bold,
+        italic: !!dom.italic,
+        fontWeight: dom.fontWeight || (dom.bold ? 700 : 400),
+        wideGap,
+        rect: { x: x - 1, y: top - 1, w: (xe - x) + 2, h: rectH + 2 },
+        dirty: false,
+        deleted: false,
+        color: null,
+        bg: null,
+        underline: false
+      })
+    }
   }
 
   return groupParagraphs(lines, pageNo)
@@ -189,11 +209,11 @@ export function groupParagraphs(lines, pageNo) {
     const gap = ln.baselineY - L.baselineY
     const lh = Math.max(L.rectH, L.fontSize * 1.05)
     const ratio = gap / lh
-    // Loose leading plus a finished sentence is what separates list items and
-    // stacked one-liners from the lines of a single wrapped paragraph.
+    // Diagram labels or wide gaps should never be merged into running text
+    const isDiagram = L.wideGap || ln.wideGap || (Math.abs(L.x - ln.x) > 40 && (L.w < 220 || ln.w < 220))
     const listy = ratio > 1.3 && /[.!?:;]["')\]]?\s*$/.test(L.text) && /^[A-Z0-9\u2022(\-\u2013\u2014]/.test(ln.text)
     const ok =
-      !L.wideGap && !ln.wideGap && !listy &&
+      !isDiagram && !listy &&
       ln.family === L.family &&
       !!ln.bold === !!L.bold &&
       !!ln.italic === !!L.italic &&
@@ -265,3 +285,67 @@ function buildPara(ls, pageNo, pi) {
     underline: false
   }
 }
+
+// Extracts positions, dimensions, and metadata for all embedded raster images on a page
+export async function extractPageImages(page, scale, pageNo) {
+  let ops
+  try {
+    ops = await page.getOperatorList()
+  } catch {
+    return []
+  }
+  if (!ops || !ops.fnArray) return []
+  const vp = page.getViewport({ scale, rotation: 0 })
+  let ctm = [1, 0, 0, 1, 0, 0]
+  const stack = []
+  const images = []
+  let imgIdx = 0
+
+  for (let i = 0; i < ops.fnArray.length; i++) {
+    const fn = ops.fnArray[i]
+    const args = ops.argsArray[i]
+
+    if (fn === 10 /* OPS.save */) {
+      stack.push([...ctm])
+    } else if (fn === 11 /* OPS.restore */) {
+      if (stack.length) ctm = stack.pop()
+    } else if (fn === 12 /* OPS.transform */) {
+      ctm = mul(ctm, args)
+    } else if (fn === 85 /* paintImageXObject */ || fn === 82 /* paintJpegXObject */ || fn === 86 /* paintInlineImageXObject */) {
+      const imgName = args && args[0]
+      if (typeof imgName !== 'string') continue
+
+      const m = mul(vp.transform, ctm)
+      const x = m[4]
+      const y = m[5]
+      const w = Math.hypot(m[0], m[1])
+      const h = Math.hypot(m[2], m[3])
+
+      if (w < 14 || h < 14) continue
+
+      const rectY = Math.round(y - h)
+      const box = {
+        x: Math.round(x),
+        y: Math.max(0, rectY),
+        w: Math.round(w),
+        h: Math.round(h)
+      }
+
+      images.push({
+        id: `IMG_${pageNo}_${imgIdx++}`,
+        kind: 'image',
+        isOriginal: true,
+        imgName,
+        originalSrc: '',
+        src: '',
+        originalRect: { ...box },
+        ...box,
+        rotate: 0,
+        filter: 'none'
+      })
+    }
+  }
+
+  return images
+}
+

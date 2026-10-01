@@ -1,8 +1,9 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { BASE_SCALE, fontCssOf, uid, slackOf, topForBaseline } from '../utils/misc'
-import { sampleTextColor, sampleBgColor } from '../lib/colors'
+import { sampleTextColor, sampleBgColor, sampleImageFromCanvas } from '../lib/colors'
 import { domToRuns, runsToHtml, runsText, isPlain } from '../lib/runs'
 import { ensureFontLoadedInBrowser } from '../lib/fonts'
+import { processImageEdit } from '../lib/imageproc'
 
 // While the box has focus the browser owns its DOM - rewriting it there would
 // throw the caret away - so state is only pushed back into a box that is idle.
@@ -41,6 +42,7 @@ function LineBox({ ln, isActive, handlers }) {
     left: ln.x,
     top: topForBaseline(ln.baselineY, fs, lh, fam),
     width: ln.wrapW || ln.w + slackOf(ln.w),
+    minWidth: Math.max(16, ln.w),
     minHeight: Math.max(ln.rectH, fs * 1.2),
     fontSize: fs,
     lineHeight: lh + 'px',
@@ -142,13 +144,73 @@ function ObjBox({ ob, isSel, isActive, idx, handlers }) {
   }
 
   if (ob.kind === 'image') {
+    const fileRef = useRef(null)
+
     return (
       <div
         className={`pobj image ${isSel ? 'selected' : ''}`}
         style={{ ...base, cursor: 'move' }}
         data-id={ob.id}
         onPointerDown={e => handlers.objDown(e, ob)}
+        title="Click to edit, replace, or move image"
       >
+        <span className="img-hover-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <path d="m21 15-5-5L5 21" />
+          </svg>
+          Edit image
+        </span>
+
+        {isSel && (
+          <div className="img-floating-bar" onPointerDown={e => e.stopPropagation()}>
+            <input
+              ref={fileRef}
+              type="file"
+              accept="image/*"
+              style={{ display: 'none' }}
+              onChange={e => {
+                if (e.target.files?.[0]) handlers.replaceImg(ob, e.target.files[0])
+                e.target.value = ''
+              }}
+            />
+            <button
+              className="img-bar-btn"
+              onClick={() => fileRef.current?.click()}
+              title="Replace image with new photo"
+            >
+              �� Replace
+            </button>
+            <button
+              className="img-bar-btn"
+              onClick={() => handlers.rotateImg(ob)}
+              title="Rotate image 90°"
+            >
+              ↻ Rotate
+            </button>
+            <select
+              className="img-bar-select"
+              value={ob.filter || 'none'}
+              onChange={e => handlers.filterImg(ob, e.target.value)}
+              title="Filter"
+            >
+              <option value="none">Normal</option>
+              <option value="grayscale">Grayscale</option>
+              <option value="bw">B&W</option>
+              <option value="sepia">Warm</option>
+              <option value="invert">Invert</option>
+            </select>
+            <button
+              className="img-bar-btn delete"
+              onClick={() => handlers.removeObj(ob)}
+              title="Delete and whiteout image"
+            >
+              🗑️
+            </button>
+          </div>
+        )}
+
         <img src={ob.src} alt="" draggable={false} />
         {isSel && <span className="handle" onPointerDown={e => handlers.resizeDown(e, ob)} />}
       </div>
@@ -551,6 +613,15 @@ export default function PageView({ idx, src, size, pos, rotate = 0, pdfPage, zoo
   const objDown = (e, ob) => {
     if (e.button !== 0) return
     e.stopPropagation()
+    // Snapshot image from canvas if it's an original PDF image without cached src yet
+    if (ob.kind === 'image' && !ob.src && docRef.canvases[idx]) {
+      const snap = sampleImageFromCanvas(docRef.canvases[idx], ob, docRef.dpr || 1)
+      if (snap) {
+        ob.src = snap
+        ob.originalSrc = snap
+        dispatch({ type: ACT.OBJ_PATCH, page: idx, id: ob.id, patch: { src: snap, originalSrc: snap } })
+      }
+    }
     dispatch({ type: ACT.SELECT, sel: { kind: 'obj', page: idx, id: ob.id } })
     push()
     const p = toBase(e.clientX, e.clientY)
@@ -722,11 +793,57 @@ export default function PageView({ idx, src, size, pos, rotate = 0, pdfPage, zoo
     document.execCommand('insertText', false, t)
   }
 
+  const replaceImg = (ob, file) => {
+    if (!file) return
+    const rd = new FileReader()
+    rd.onload = () => {
+      push()
+      dispatch({
+        type: ACT.OBJ_PATCH,
+        page: idx,
+        id: ob.id,
+        patch: { src: rd.result, originalSrc: rd.result, rotate: 0, filter: 'none', dirty: true }
+      })
+    }
+    rd.readAsDataURL(file)
+  }
+
+  const rotateImg = async ob => {
+    push()
+    const nextRot = ((ob.rotate || 0) + 90) % 360
+    const baseSrc = ob.originalSrc || ob.src
+    const newSrc = await processImageEdit(baseSrc, { rotateDeg: nextRot, filter: ob.filter || 'none' })
+    dispatch({
+      type: ACT.OBJ_PATCH,
+      page: idx,
+      id: ob.id,
+      patch: { src: newSrc, rotate: nextRot, dirty: true }
+    })
+  }
+
+  const filterImg = async (ob, filterType) => {
+    push()
+    const baseSrc = ob.originalSrc || ob.src
+    const newSrc = await processImageEdit(baseSrc, { rotateDeg: ob.rotate || 0, filter: filterType })
+    dispatch({
+      type: ACT.OBJ_PATCH,
+      page: idx,
+      id: ob.id,
+      patch: { src: newSrc, filter: filterType, dirty: true }
+    })
+  }
+
+  const removeObj = ob => {
+    push()
+    dispatch({ type: ACT.OBJ_REMOVE, page: idx, id: ob.id })
+  }
+
   const handlers = {
     lineDown, objDown, resizeDown, textObjDown, onFocus, onBlur,
     onInput: lineInputHandlers.onInput,
     onInputObj: objInputHandlers.onInput,
-    onKeyDown, onPaste
+    onKeyDown, onPaste,
+    replaceImg, rotateImg, filterImg, removeObj
   }
 
   const onOverlayDown = e => {
@@ -873,6 +990,20 @@ export default function PageView({ idx, src, size, pos, rotate = 0, pdfPage, zoo
                 style={{ left: ln.rect.x, top: ln.rect.y, width: ln.rect.w, height: ln.rect.h, background: ln.bg || '#fff' }}
               />
             ))}
+            {(pageState?.objects || []).filter(o => o.kind === 'image' && o.isOriginal && (o.dirty || o.deleted) && o.originalRect).map(o => (
+              <div
+                key={`img_orig_cover_${o.id}`}
+                className="pline-patch"
+                style={{
+                  left: o.originalRect.x - 1,
+                  top: o.originalRect.y - 1,
+                  width: o.originalRect.w + 2,
+                  height: o.originalRect.h + 2,
+                  background: '#fff',
+                  zIndex: 1
+                }}
+              />
+            ))}
             {(docRef.widgets?.[src] || []).map(wd => (
               <Widget
                 key={wd.id}
@@ -884,7 +1015,7 @@ export default function PageView({ idx, src, size, pos, rotate = 0, pdfPage, zoo
             {liveLines.map(ln => (
               <LineBox key={ln.id} ln={ln} isActive={!!(activeText && activeText.kind === 'line' && activeText.id === ln.id)} handlers={handlers} />
             ))}
-            {(pageState?.objects || []).map(ob => (
+            {(pageState?.objects || []).filter(ob => !ob.deleted).map(ob => (
               <ObjBox key={ob.id} ob={ob} idx={idx} isSel={!!(selection && selection.page === idx && selection.id === ob.id)} isActive={!!(activeText && activeText.kind === 'obj' && activeText.id === ob.id)} handlers={handlers} />
             ))}
             {band && bandStyle && <div className="band" style={bandStyle} />}

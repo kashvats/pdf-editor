@@ -2,16 +2,16 @@
 
 > Start here. Open only the module relevant to the current task.
 
-- Generated: `2026-10-01T05:04:15.384447+00:00`
+- Generated: `2026-10-01T06:41:19.592457+00:00`
 - Repository: `pdfeditor`
-- Files indexed: **81**
-- Symbols indexed: **496**
+- Files indexed: **94**
+- Symbols indexed: **541**
 - Routes indexed: **0**
 
 ## File Types
 
-- `.jsx`: 48
-- `.js`: 28
+- `.jsx`: 49
+- `.js`: 40
 - `.json`: 3
 - `.css`: 1
 - `.html`: 1
@@ -20,7 +20,7 @@
 
 - [public](modules/public.md) — 2 files
 - [root](modules/root.md) — 4 files
-- [src](modules/src.md) — 75 files
+- [src](modules/src.md) — 88 files
 
 ## Cross-cutting Knowledge
 

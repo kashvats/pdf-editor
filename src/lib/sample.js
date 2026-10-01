@@ -96,6 +96,13 @@ export async function makeSamplePdf() {
   p2.drawText('Product Lead', { x: 50, y: 142, size: 9.5, font: helv, color: gray })
   p2.drawLine({ start: { x: 330, y: 160 }, end: { x: 545, y: 160 }, thickness: 1, color: gray })
   p2.drawText('Date', { x: 330, y: 142, size: 9.5, font: helv, color: gray })
+
+  // Embed an image logo/badge on Page 2
+  const pngBase64 = 'iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA7SURBVGhD7c4xEQAgDAOxq2o495g4cDCwN/e3a893L4GIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIh4qT8uBwJ11y1/9wAAAABJRU5ErkJggg=='
+  const pngBytes = Uint8Array.from(atob(pngBase64), c => c.charCodeAt(0))
+  const sampleImg = await doc.embedPng(pngBytes)
+  p2.drawImage(sampleImg, { x: 50, y: 350, width: 90, height: 90 })
+
   p2.drawText('EditPDF - page 2 of 2', { x: 50, y: 30, size: 9, font: helv, color: gray })
 
   return doc.save()

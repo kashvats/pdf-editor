@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react'
+import { useI18n } from '../lib/i18n'
 
 export default function Landing({ onFile, onSample, error, onBack }) {
+  const { t } = useI18n()
   const inputRef = useRef(null)
   const [over, setOver] = useState(false)
 
@@ -14,15 +16,15 @@ export default function Landing({ onFile, onSample, error, onBack }) {
       {onBack && (
         <button className="tool-back landing-back" onClick={onBack}>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m14 6-6 6 6 6" /></svg>
-          All tools
+          {t('allTools', 'All tools')}
         </button>
       )}
       <div className="brand">
         <div className="brand-logo">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
             <path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" fill="#fff" />
-            <path d="M14 3l4 4h-4z" fill="#c9e8ce" />
-            <path d="M8.6 15.2l5-5 1.7 1.7-5 5-2 .3z" fill="#3fa54a" />
+            <path d="M14 3l4 4h-4z" fill="#10b981" />
+            <path d="M8.6 15.2l5-5 1.7 1.7-5 5-2 .3z" fill="#10b981" />
           </svg>
         </div>
         <div className="brand-name">Edit<span>PDF</span></div>
@@ -48,15 +50,15 @@ export default function Landing({ onFile, onSample, error, onBack }) {
             <path d="M12 16V4" /><path d="m7 9 5-5 5 5" /><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
           </svg>
         </div>
-        <div className="dz-title">Drop your PDF here</div>
-        <div className="dz-sub">or click to browse your computer</div>
+        <div className="dz-title">{t('dropPdf', 'Drop your PDF here')}</div>
+        <div className="dz-sub">{t('dropPdfOrClick', 'or click to browse your computer')}</div>
         <button className="btn btn-primary" onClick={e => { e.stopPropagation(); inputRef.current?.click() }}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M12 5v14M5 12h14" /></svg>
-          Choose PDF file
+          {t('choosePdf', 'Choose PDF file')}
         </button>
         <div className="or">— or —</div>
         <button className="btn btn-ghost" onClick={e => { e.stopPropagation(); onSample() }}>
-          Try a sample document
+          {t('trySample', 'Try a sample document')}
         </button>
       </div>
 
@@ -64,7 +66,7 @@ export default function Landing({ onFile, onSample, error, onBack }) {
 
       <div className="privacy">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="10" width="16" height="11" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
-        100% private — files are processed in your browser and never uploaded
+        {t('privacyNote', '100% private — files are processed in your browser and never uploaded')}
       </div>
 
       <input ref={inputRef} type="file" accept="application/pdf,.pdf" className="hidden-input" onChange={pick} />

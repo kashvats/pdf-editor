@@ -150,3 +150,52 @@ export function cleanDocumentCanvas(canvas, { removeShadows = true, cleanBg = tr
   ctx.putImageData(imgData, 0, 0)
   return canvas
 }
+
+export function processImageEdit(src, { rotateDeg = 0, filter = 'none' } = {}) {
+  return new Promise((resolve) => {
+    if (!src) return resolve(src)
+    const img = new Image()
+    img.onload = () => {
+      const is90 = Math.abs(rotateDeg) % 180 === 90
+      const canvas = document.createElement('canvas')
+      canvas.width = is90 ? img.naturalHeight : img.naturalWidth
+      canvas.height = is90 ? img.naturalWidth : img.naturalHeight
+      const ctx = canvas.getContext('2d')
+
+      if (rotateDeg) {
+        ctx.translate(canvas.width / 2, canvas.height / 2)
+        ctx.rotate((rotateDeg * Math.PI) / 180)
+        ctx.drawImage(img, -img.naturalWidth / 2, -img.naturalHeight / 2)
+      } else {
+        ctx.drawImage(img, 0, 0)
+      }
+
+      if (filter && filter !== 'none') {
+        const idata = ctx.getImageData(0, 0, canvas.width, canvas.height)
+        const d = idata.data
+        for (let i = 0; i < d.length; i += 4) {
+          const r = d[i], g = d[i + 1], b = d[i + 2]
+          const lum = r * 0.299 + g * 0.587 + b * 0.114
+          if (filter === 'grayscale') {
+            d[i] = lum; d[i + 1] = lum; d[i + 2] = lum
+          } else if (filter === 'bw') {
+            const v = lum > 135 ? 255 : 0
+            d[i] = v; d[i + 1] = v; d[i + 2] = v
+          } else if (filter === 'invert') {
+            d[i] = 255 - r; d[i + 1] = 255 - g; d[i + 2] = 255 - b
+          } else if (filter === 'sepia') {
+            d[i] = Math.min(255, lum * 1.25)
+            d[i + 1] = Math.min(255, lum * 1.05)
+            d[i + 2] = Math.min(255, lum * 0.8)
+          }
+        }
+        ctx.putImageData(idata, 0, 0)
+      }
+
+      resolve(canvas.toDataURL('image/png'))
+    }
+    img.onerror = () => resolve(src)
+    img.src = src
+  })
+}
+

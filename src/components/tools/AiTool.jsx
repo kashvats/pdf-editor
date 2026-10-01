@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { pdfToText } from '../../lib/pdfraster'
+import { TRANSLATE_LANGUAGES, translateDocumentText } from '../../lib/translate'
 import { DropArea, PageThumb, ToolShell, baseOf, download, prettySize, usePdf } from './shell'
 
 // Local extractive algorithm (100% offline, zero network, zero API key)
@@ -160,7 +161,17 @@ export default function AiTool({ tool, onBack }) {
     }
   }
 
-  const reset = () => { clear(); setChatMessages([]); setSummaryResult('') }
+  const handleTranslate = async () => {
+    if (!pagesText.length) return
+    setBusy(true)
+    try {
+      const translated = await translateDocumentText(pagesText, targetLang)
+      setTranslateResult(translated.join('\n\n---\n\n'))
+    } catch {}
+    setBusy(false)
+  }
+
+  const reset = () => { clear(); setChatMessages([]); setSummaryResult(''); setTranslateResult('') }
 
   return (
     <ToolShell tool={tool} onBack={onBack}>
@@ -189,6 +200,12 @@ export default function AiTool({ tool, onBack }) {
                 onClick={() => setTab('summarize')}
               >
                 📝 Summarizer
+              </button>
+              <button
+                className={`btn sm ${tab === 'translate' ? 'btn-primary' : 'btn-white'}`}
+                onClick={() => setTab('translate')}
+              >
+                🌐 Translate PDF
               </button>
               <button className="btn btn-white sm" onClick={reset}>
                 Change Document
@@ -285,6 +302,63 @@ export default function AiTool({ tool, onBack }) {
                   {summaryResult}
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* Translate Tab */}
+          {tab === 'translate' && (
+            <div>
+              <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '13px', fontWeight: '600' }}>Translate document to:</span>
+                <select
+                  className="tool-select"
+                  value={targetLang}
+                  onChange={e => setTargetLang(e.target.value)}
+                  style={{ minWidth: '180px' }}
+                >
+                  {TRANSLATE_LANGUAGES.map(l => (
+                    <option key={l.code} value={l.code}>{l.name}</option>
+                  ))}
+                </select>
+                <button
+                  className="btn btn-primary sm"
+                  onClick={handleTranslate}
+                  disabled={busy}
+                >
+                  {busy ? 'Translating…' : 'Translate Document'}
+                </button>
+              </div>
+
+              {translateResult ? (
+                <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: '10px', padding: '20px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', paddingBottom: '10px', borderBottom: '1px solid var(--line)' }}>
+                    <span style={{ fontSize: '13px', fontWeight: '700', color: 'var(--sub)' }}>
+                      TRANSLATION RESULT ({TRANSLATE_LANGUAGES.find(l => l.code === targetLang)?.name})
+                    </span>
+                    <div style={{ display: 'flex', gap: '8px' }}>
+                      <button
+                        className="btn btn-white sm"
+                        onClick={() => download(new Blob([translateResult], { type: 'text/markdown;charset=utf-8' }), `${baseOf(pdf.name)}-translated-${targetLang}.md`)}
+                      >
+                        💾 Download Markdown (.md)
+                      </button>
+                      <button
+                        className="btn btn-white sm"
+                        onClick={() => download(new Blob([translateResult], { type: 'text/plain;charset=utf-8' }), `${baseOf(pdf.name)}-translated-${targetLang}.txt`)}
+                      >
+                        💾 Download Text (.txt)
+                      </button>
+                    </div>
+                  </div>
+                  <div style={{ whiteSpace: 'pre-wrap', lineHeight: '1.7', fontSize: '14px', fontFamily: 'inherit' }}>
+                    {translateResult}
+                  </div>
+                </div>
+              ) : (
+                <div style={{ border: '2px dashed var(--line)', borderRadius: '10px', padding: '40px', textAlign: 'center', color: 'var(--sub)', fontSize: '13px' }}>
+                  Select your target language above and click <strong>Translate Document</strong> to translate all pages while preserving paragraph breaks.
+                </div>
+              )}
             </div>
           )}
         </div>

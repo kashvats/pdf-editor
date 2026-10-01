@@ -148,7 +148,7 @@ export function reducer(s, a) {
     case ACT.OBJ_REMOVE:
       return {
         ...withPage(s, a.page, p => ({
-          objects: p.objects.filter(o => o.id !== a.id),
+          objects: p.objects.map(o => (o.id === a.id && o.isOriginal ? { ...o, deleted: true, dirty: true } : o)).filter(o => o.id !== a.id || o.isOriginal),
           lines: a.lineId ? p.lines.map(ln => (ln.id === a.lineId ? { ...ln, deleted: true, dirty: true } : ln)) : p.lines
         })),
         selection: null,

@@ -2,7 +2,7 @@ import React, { lazy, Suspense, useEffect, useReducer, useRef, useState } from '
 import { reducer, initialState, ACT } from './store'
 import { BASE_SCALE, baseName, uid } from './utils/misc'
 import pdfjs from './lib/pdfjs'
-import { extractLines } from './lib/extract'
+import { extractLines, extractPageImages } from './lib/extract'
 import { exportEditedPdf } from './lib/exporter'
 import { makeSamplePdf } from './lib/sample'
 import Landing from './components/Landing'
@@ -50,6 +50,7 @@ const SigVerifyTool = lazy(() => import('./components/tools/SigVerifyTool'))
 const AiTool = lazy(() => import('./components/tools/AiTool'))
 const ExtractDataTool = lazy(() => import('./components/tools/ExtractDataTool'))
 const MindMapTool = lazy(() => import('./components/tools/MindMapTool'))
+const IntelligenceTool = lazy(() => import('./components/tools/IntelligenceTool'))
 import { toolById } from './tools'
 import Header from './components/Header'
 import Toolbar from './components/Toolbar'
@@ -61,9 +62,11 @@ import CommandPalette from './components/CommandPalette'
 import NaturalLanguageBar from './components/NaturalLanguageBar'
 import DocumentHistoryModal from './components/DocumentHistoryModal'
 import { setActiveDocument, useWorkspaceDoc } from './lib/workspace'
+import { useI18n } from './lib/i18n'
 import { ocrPage } from './lib/ocr'
 
 export default function App() {
+  const { lang, setLanguage, languages, t } = useI18n()
   const [state, dispatch] = useReducer(reducer, initialState)
   const [view, setView] = useState('home')
   const [intent, setIntent] = useState(null)
@@ -101,6 +104,7 @@ export default function App() {
         if (docRef.current !== myDoc) return
         dispatch({ type: ACT.SET_LINES, page: i - 1, lines })
         await importAnnotations(page, vp, i - 1, myDoc)
+        await importImages(page, vp, i - 1, myDoc)
       }
       if (Object.keys(rotations).length) {
         const order = stateRef.current.pageOrder.map(e =>
@@ -168,6 +172,17 @@ export default function App() {
     myDoc.linkPages[pi] = true
     if (Object.keys(values).length) dispatch({ type: ACT.FORM_SEED, values })
     if (links.length) dispatch({ type: ACT.OBJ_SEED, page: pi, objects: links })
+  }
+
+  const importImages = async (page, vp, pi, myDoc) => {
+    let images = []
+    try {
+      images = await extractPageImages(page, BASE_SCALE, pi)
+    } catch { return }
+    if (docRef.current !== myDoc) return
+    if (images && images.length) {
+      dispatch({ type: ACT.OBJ_SEED, page: pi, objects: images })
+    }
   }
 
   const openFile = async file => {
@@ -455,6 +470,7 @@ export default function App() {
       case 'ai': return <AiTool tool={tool} onBack={goHome} />
       case 'extractdata': return <ExtractDataTool tool={tool} onBack={goHome} />
       case 'mindmap': return <MindMapTool tool={tool} onBack={goHome} />
+      case 'intelligence': return <IntelligenceTool tool={tool} onBack={goHome} />
       default: return null
     }
   }
@@ -500,8 +516,31 @@ export default function App() {
             onClick={() => setCmdPaletteOpen(true)}
             title="Search actions (Ctrl+K)"
           >
-            ⌘K Command Palette
+            ⌘K {t('cmdPalette', 'Command Palette')}
           </button>
+
+          <select
+            value={lang}
+            onChange={e => setLanguage(e.target.value)}
+            style={{
+              padding: '2px 6px',
+              fontSize: '11px',
+              height: '24px',
+              borderRadius: '4px',
+              background: '#2c352f',
+              color: '#fff',
+              border: '1px solid #414d44',
+              cursor: 'pointer',
+              outline: 'none'
+            }}
+            title="Language / Idioma / Sprache / Язык / भाषा"
+          >
+            {languages.map(l => (
+              <option key={l.code} value={l.code} style={{ background: '#1c221e', color: '#fff' }}>
+                🌐 {l.native}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 

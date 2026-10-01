@@ -1,4 +1,4 @@
-import { groupRows, pageSegments } from './extract'
+import { groupRows, pageSegments } from './extract.js'
 
 // A cell boundary is a horizontal gap much wider than the spaces inside a
 // phrase. Below this the runs belong to the same cell.

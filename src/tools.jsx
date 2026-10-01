@@ -79,6 +79,11 @@ export const TOOLS = [
     icon: svg(<><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A8 8 0 1 1 20 12a1 1 0 0 1-2 0 6 6 0 1 0-5 4.93z" /><circle cx="12" cy="12" r="2" /></>)
   },
   {
+    id: 'intelligence', group: 'AI & Workflows', ...GREEN,
+    name: 'PDF Intelligence Layer', blurb: 'Local vector embeddings, Knowledge Graph, Semantic Search & Quiz',
+    icon: svg(<><circle cx="12" cy="12" r="3" /><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" /></>)
+  },
+  {
     id: 'workflow', group: 'AI & Workflows', ...GREEN,
     name: 'Workflow Builder', blurb: 'Chain multiple actions into an automated recipe',
     icon: svg(<><rect x="3" y="3" width="6" height="6" rx="1" /><rect x="15" y="15" width="6" height="6" rx="1" /><path d="M6 9v3a3 3 0 0 0 3 3h6" /></>)

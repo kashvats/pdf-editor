@@ -56,3 +56,23 @@ export function sampleBgColor(canvas, rect, dpr = 1) {
     return null
   }
 }
+
+export function sampleImageFromCanvas(canvas, rect, dpr = 1) {
+  if (!canvas || !rect) return null
+  try {
+    const x = Math.max(0, Math.floor(rect.x * dpr))
+    const y = Math.max(0, Math.floor(rect.y * dpr))
+    const w = Math.min(Math.floor(rect.w * dpr), canvas.width - x)
+    const h = Math.min(Math.floor(rect.h * dpr), canvas.height - y)
+    if (w < 4 || h < 4) return null
+    const c = document.createElement('canvas')
+    c.width = w
+    c.height = h
+    const ctx = c.getContext('2d')
+    ctx.drawImage(canvas, x, y, w, h, 0, 0, w, h)
+    return c.toDataURL('image/png')
+  } catch {
+    return null
+  }
+}
+

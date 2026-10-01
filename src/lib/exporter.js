@@ -232,6 +232,9 @@ export async function exportEditedPdf({
 
     for (const o of pe.objects) {
       if (o.kind === 'whiteout') cover(o, '#ffffff')
+      if (o.kind === 'image' && o.isOriginal && (o.dirty || o.deleted) && o.originalRect) {
+        cover(o.originalRect, '#ffffff')
+      }
     }
     for (const ln of pe.lines) {
       if (ln.deleted) cover(ln.rect, ln.bg)
@@ -262,7 +265,9 @@ export async function exportEditedPdf({
         const rows = await layout(o)
         if (rows.some(r => r.some(s => s.text.trim()))) draw(o, rows)
       } else if (o.kind === 'image') {
-        await embedImage(doc, page, o, X, Y, k)
+        if (!o.deleted && (!o.isOriginal || o.dirty)) {
+          await embedImage(doc, page, o, X, Y, k)
+        }
       } else if (o.kind === 'rect') {
         const st = hexToRgb01(o.stroke)
         const opts = {

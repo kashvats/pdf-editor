@@ -45,6 +45,7 @@ pdfeditor/
         ExcelTool.jsx
         ExportTool.jsx
         ExtractDataTool.jsx
+        IntelligenceTool.jsx
         MarkdownTool.jsx
         MergeTool.jsx
         MindMapTool.jsx
@@ -73,6 +74,7 @@ pdfeditor/
       exporter.js
       extract.js
       fonts.js
+      i18n.js
       imageproc.js
       markdown.js
       ocr.js
@@ -88,8 +90,20 @@ pdfeditor/
       security.js
       tables.js
       textfont.js
+      translate.js
       workspace.js
       xlsx.js
       zip.js
+      intelligence/
+        classifier.js
+        embeddings.js
+        index.js
+        knowledge.js
+        localLlm.js
+        models.js
+        ner.js
+        processor.js
+        relations.js
+        search.js
     utils/
       misc.js

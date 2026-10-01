@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-01T05:04:15.384447+00:00",
+  "generated_at": "2026-10-01T06:41:19.592457+00:00",
   "repository": "C:\\Users\\human-bot\\projects\\pdfeditor",
   "fingerprints": {
     "index.html": {
@@ -34,9 +34,9 @@
       "sha256": "d180f63d74da567892a2eb5a101ec2c9a30c969d1d175ad7ab0ce769b6e38183"
     },
     "src/App.jsx": {
-      "size": 26664,
-      "mtime_ns": 1790828038236344600,
-      "sha256": "29fa7d3aa2297b55c6dafb25819c533985e918197747c7e22014d700ce729157"
+      "size": 28127,
+      "mtime_ns": 1790836152082390400,
+      "sha256": "5b9f33a3553b0e2a3f66aef92d17d2b6464589e809ebfec2027ca175faaacc01"
     },
     "src/main.jsx": {
       "size": 435,
@@ -44,19 +44,19 @@
       "sha256": "c29f9f9ce4635a2732f496a53441604db5fab435a622253da6504887d0f12b76"
     },
     "src/store.js": {
-      "size": 6808,
-      "mtime_ns": 1790825117862169200,
-      "sha256": "ddc2b7bb1917981105afc5cca0455b6f1f6191e833cd063933992e9981a0ac1b"
+      "size": 6909,
+      "mtime_ns": 1790832317582490800,
+      "sha256": "b055eaef2fbffa59829de05d15d71ac82fe469991a1df9e5d04cd1d47ff3145a"
     },
     "src/styles.css": {
-      "size": 35139,
-      "mtime_ns": 1790829411591286700,
-      "sha256": "00894228c7d106e0839b573070fff4db7e128c0d3e54b6b28b81e8e64f73c9ae"
+      "size": 36786,
+      "mtime_ns": 1790832418447602100,
+      "sha256": "9b6dbadc5be0008d8c291e636ed8da3b76c65c7271f4c0a6f6d82d429bbb4ea4"
     },
     "src/tools.jsx": {
-      "size": 15767,
-      "mtime_ns": 1790827904977192500,
-      "sha256": "add3977476490d72df913ae2933dfc28ee267fccd88419a5da1075cafccaef71"
+      "size": 16131,
+      "mtime_ns": 1790836119234632400,
+      "sha256": "16b7dfc44f8741c30c99c4b3b08813a2f3d0c11a73ee5bd9b41245eb72f48279"
     },
     "src/components/BottomBar.jsx": {
       "size": 2038,
@@ -79,24 +79,24 @@
       "sha256": "ac0daa39fafe8f113297bd2c8bb3232e4f2820ac953f5abab6e4559f1283f4b1"
     },
     "src/components/FormatBar.jsx": {
-      "size": 9428,
-      "mtime_ns": 1790830510638607900,
-      "sha256": "3a7a4c5971b1c6e422ca1332ce39c2761935a7ca240d81cc6954bf8822ed334a"
+      "size": 12089,
+      "mtime_ns": 1790832535592363800,
+      "sha256": "9b5729f587be0da5414c371ad82288a738a1401bbb87b04ff7e5b2d86d5052f7"
     },
     "src/components/Header.jsx": {
-      "size": 1436,
-      "mtime_ns": 1790825117845289000,
-      "sha256": "08af4846b0f01a73d924f2c7ca2c155b63b309b7e28c6b3d49b4f14f8191aeb1"
+      "size": 1583,
+      "mtime_ns": 1790835674299970900,
+      "sha256": "4b464a1c8b987a584486a62b84af3958f7f6f1f58c5f497ee7f4ada5d71ec540"
     },
     "src/components/Home.jsx": {
-      "size": 5590,
-      "mtime_ns": 1790829249936477800,
-      "sha256": "32d8ae7d77dd04ac90134e0ec55caa9a3a1e2eac66b653e894a4bd95bb6beb8c"
+      "size": 5769,
+      "mtime_ns": 1790835654315151300,
+      "sha256": "0e3a3c1a384ce63a7cb2ddc4a962f6f6da7375a6defe7bc1d08d957d3a92625d"
     },
     "src/components/Landing.jsx": {
-      "size": 3414,
-      "mtime_ns": 1790825117845289000,
-      "sha256": "4324a8b0551c9064c5206901ddcbe2b994d6f44916666b26bc98e3c78f1479b8"
+      "size": 3604,
+      "mtime_ns": 1790835699994182000,
+      "sha256": "7685b12479a39a62986b8526c6291f178d1303ea7f8a471faaa586c7af6f80f0"
     },
     "src/components/Menu.jsx": {
       "size": 6721,
@@ -109,14 +109,14 @@
       "sha256": "7c19c4b62fd58921a8162dbe9a126e9163688c1d1a1dc3fb5ce5587e513e0a82"
     },
     "src/components/OcrModal.jsx": {
-      "size": 4372,
-      "mtime_ns": 1790825117845289000,
-      "sha256": "f16f351f8696b2b6063903ec2be08ad2095fdab85c87588e42578edcf219501b"
+      "size": 4590,
+      "mtime_ns": 1790835423892384500,
+      "sha256": "6957e2fc08a7ba7638f654c3f582e74025b57a17b1c91a82a983b46140d529f5"
     },
     "src/components/PageView.jsx": {
-      "size": 32651,
-      "mtime_ns": 1790830410830461500,
-      "sha256": "a35b4fa35b69b4193ae5192328be69852d5325c03961670fcd0cbc5c211df4b8"
+      "size": 37254,
+      "mtime_ns": 1790835890754070400,
+      "sha256": "d8f374c9130a7d99aa09bf349cfcb4c5890759f2f71fea9507effbbed3156279"
     },
     "src/components/SignModal.jsx": {
       "size": 6931,
@@ -139,9 +139,9 @@
       "sha256": "5f6928b4ceb7cd1238f6df2d88bc07081ef1febf817730d206462417bd966974"
     },
     "src/components/tools/AiTool.jsx": {
-      "size": 11859,
-      "mtime_ns": 1790827785736604300,
-      "sha256": "0712aad52de54891a04f879aff0f809de215b8ed38cd0fca8389f997e54c0186"
+      "size": 15585,
+      "mtime_ns": 1790835533229732800,
+      "sha256": "6683b6b234b7d9dfe9af88fb71b5d36e62e2317fac1509bbfb8d645454c01488"
     },
     "src/components/tools/BatchTool.jsx": {
       "size": 11638,
@@ -178,6 +178,11 @@
       "mtime_ns": 1790828158392993300,
       "sha256": "51b414513467cc7cb945939766994125565fec98ea4524e245217eac65122e21"
     },
+    "src/components/tools/IntelligenceTool.jsx": {
+      "size": 40780,
+      "mtime_ns": 1790836784424929600,
+      "sha256": "bfc2a8c1394ff883a5915aa7f40d4cfd57b12cf3428b4b6c2395af48b6baafe3"
+    },
     "src/components/tools/MarkdownTool.jsx": {
       "size": 5173,
       "mtime_ns": 1790826994083335000,
@@ -194,9 +199,9 @@
       "sha256": "885870d529383c41f2e99201b65f37d0fed8218fc4259dce7272df4f417dc303"
     },
     "src/components/tools/OcrTool.jsx": {
-      "size": 7727,
-      "mtime_ns": 1790827662312479700,
-      "sha256": "36cd1ec70d8cc24f930b7da0944fe6177da3f3a1f03930b6ca22e09beffdb36a"
+      "size": 7747,
+      "mtime_ns": 1790835412192399600,
+      "sha256": "1e4d23d785e481aa1359cb635ad1647adbe2401b109e3abc75dc963aa9f6535e"
     },
     "src/components/tools/OrganiseTool.jsx": {
       "size": 2989,
@@ -284,9 +289,9 @@
       "sha256": "23e87d444160638401d2bafd085286258bc5fb23c36b8fb50d4b0b4b456f41f9"
     },
     "src/lib/colors.js": {
-      "size": 2135,
-      "mtime_ns": 1790825117862169200,
-      "sha256": "6953c2096dd60000c9c983b5a2fb6989eb64094eac734b6a3f7c76d5856f2cf4"
+      "size": 2774,
+      "mtime_ns": 1790832876260724300,
+      "sha256": "809dfbae7acfb72c8b727c1a21ca0aa3e889e9aebd00e4bf26c20717d379e3ff"
     },
     "src/lib/db.js": {
       "size": 3614,
@@ -299,24 +304,29 @@
       "sha256": "29d0fffdc24072123821631140949720abd1aa724678fe5c0fbf11a2b9cbc726"
     },
     "src/lib/exporter.js": {
-      "size": 17230,
-      "mtime_ns": 1790830483809565300,
-      "sha256": "26dc8488c136eaafd2a8681e2c4dd2afe1ffb206161414017a3e7053df66dc03"
+      "size": 17444,
+      "mtime_ns": 1790832354409150000,
+      "sha256": "f20b0b306bd6ebe115b955368b1491bcb373e39b149f067e54aa340ce82513d6"
     },
     "src/lib/extract.js": {
-      "size": 9721,
-      "mtime_ns": 1790830849772389900,
-      "sha256": "da69aafb4a1579685bec6dbdadeab2660904967fa1bad6985499dd84e2e5e728"
+      "size": 12054,
+      "mtime_ns": 1790836507737852500,
+      "sha256": "98ad2545ed336067a628faba61aa691be9faaee4df7450fd88dcd43059e2a067"
     },
     "src/lib/fonts.js": {
       "size": 4546,
       "mtime_ns": 1790830260317421500,
       "sha256": "b9c0f2e257a7a08187d8969ca536ec166b188fd1801a9f859c8e76d40118901e"
     },
+    "src/lib/i18n.js": {
+      "size": 19648,
+      "mtime_ns": 1790835393104059800,
+      "sha256": "c72625cc2f18b445798d273d7eb9c517610498d289d0d7d6b23430e20115988b"
+    },
     "src/lib/imageproc.js": {
-      "size": 4681,
-      "mtime_ns": 1790827595715790500,
-      "sha256": "b2bc14758fe9583a10bdc1800abb9e1921481b90b15ce15ee7b8613cce14c333"
+      "size": 6482,
+      "mtime_ns": 1790832195079880000,
+      "sha256": "3d7ab5e2484007f33dc9492465ef6cd791d63cb9a2c167999817bac2e02308cc"
     },
     "src/lib/markdown.js": {
       "size": 4522,
@@ -369,9 +379,9 @@
       "sha256": "fae2d969810c8c4cf4c7a9765eb0a45119063760b005c7c3473db211da5140cf"
     },
     "src/lib/sample.js": {
-      "size": 5281,
-      "mtime_ns": 1790825304513473700,
-      "sha256": "ac52ad531f4a5761323cbccb00df7fe7f08311a3444d165120955ec4c2172d39"
+      "size": 5769,
+      "mtime_ns": 1790832712326429700,
+      "sha256": "73e707ef9c286a487d97e217a4bda597ec4d4d3d7e18447b69e87d55064d5607"
     },
     "src/lib/security.js": {
       "size": 1949,
@@ -379,14 +389,19 @@
       "sha256": "00ff48eb22e6a7a7989327ecdbdf62bff87bd5dd1edde5d59626779b589f479c"
     },
     "src/lib/tables.js": {
-      "size": 2532,
-      "mtime_ns": 1790825117862169200,
-      "sha256": "83fb126713f354ed84da66fce941917b84505077e44065789b63662e85b84c4e"
+      "size": 2535,
+      "mtime_ns": 1790836553713321600,
+      "sha256": "025f2a1724d54185226d0c2dd0f856ca31f7aa70ab50742cf9171a76321811e4"
     },
     "src/lib/textfont.js": {
       "size": 1018,
       "mtime_ns": 1790825117862169200,
       "sha256": "bd6f22413879011e9c546c626d2a9e3dc9c5ba14ac6ddf3feefbe6ab0f9fc027"
+    },
+    "src/lib/translate.js": {
+      "size": 1790,
+      "mtime_ns": 1790835448707694100,
+      "sha256": "4efb737889f001bcb69b1286839e260b35ff5b6322a63b064841e11f668f2eb6"
     },
     "src/lib/workspace.js": {
       "size": 1528,
@@ -403,10 +418,60 @@
       "mtime_ns": 1790825117862169200,
       "sha256": "75c9a55393d5628a331a8ed468e8822eeccf4037e56a3b56b766c57aec79436b"
     },
+    "src/lib/intelligence/classifier.js": {
+      "size": 7438,
+      "mtime_ns": 1790836317666757400,
+      "sha256": "a678edf59a8de898c5eb509c0bd2a957a5dafde16cd83a75e8253455e83ecb45"
+    },
+    "src/lib/intelligence/embeddings.js": {
+      "size": 4171,
+      "mtime_ns": 1790835953011770900,
+      "sha256": "ad1c6371dd343c67add2358c8f3066315fe86e3dc091fb830f84d087ca5e343e"
+    },
+    "src/lib/intelligence/index.js": {
+      "size": 277,
+      "mtime_ns": 1790836336776719800,
+      "sha256": "9d5c740350d04a85480e5946a26e67975e0a64e2428f636452bf0c6fb2d159da"
+    },
+    "src/lib/intelligence/knowledge.js": {
+      "size": 3933,
+      "mtime_ns": 1790836285223171700,
+      "sha256": "378da270f052142883546a2d8c35c3b5891d0a078c7e4f23fb9188f1f8490bcd"
+    },
+    "src/lib/intelligence/localLlm.js": {
+      "size": 3498,
+      "mtime_ns": 1790836031374438300,
+      "sha256": "6a98ef614202b6073a8515a76c7e7b724b44dc46f759c47dbbeadba8bd30c5d4"
+    },
+    "src/lib/intelligence/models.js": {
+      "size": 2201,
+      "mtime_ns": 1790836008488176400,
+      "sha256": "89c06e920a8addd2d52302ca56c4513d1cfa268a97b024d30d24534b0d53fcff"
+    },
+    "src/lib/intelligence/ner.js": {
+      "size": 4502,
+      "mtime_ns": 1790835970080622400,
+      "sha256": "121c802b15b0291ecb6497ba75efd570b0cfa367e5f0a3df2c539b6aa350e0e0"
+    },
+    "src/lib/intelligence/processor.js": {
+      "size": 4104,
+      "mtime_ns": 1790836299260270000,
+      "sha256": "75d770c8d309ce7fcbc66ae9009c3ee0fa855e161e77e083009066535d085494"
+    },
+    "src/lib/intelligence/relations.js": {
+      "size": 3545,
+      "mtime_ns": 1790835982647886600,
+      "sha256": "bb3e6082e54fc651c7005bb07f1f32a451bff46b6808e3f9100dc8fe0bd24108"
+    },
+    "src/lib/intelligence/search.js": {
+      "size": 1126,
+      "mtime_ns": 1790836267536868100,
+      "sha256": "b2e1a63a64fa52dec6c0a25462f6fad8ddb192fe413ca25f5553a411402ef178"
+    },
     "src/utils/misc.js": {
-      "size": 3375,
-      "mtime_ns": 1790830351073337600,
-      "sha256": "067f1ffb72873dfb5cee33d20cc55efffd171aafa550a9905f535fb485ebe008"
+      "size": 3378,
+      "mtime_ns": 1790836366461235400,
+      "sha256": "82d686140b6f376d05b99ecd12bdee3d77ded235981b9f614c55b136f2220813"
     }
   },
   "files": {
@@ -470,98 +535,103 @@
     "src/App.jsx": {
       "path": "src/App.jsx",
       "extension": ".jsx",
-      "size": 26664,
-      "hash": "29fa7d3aa2297b55c6dafb25819c533985e918197747c7e22014d700ce729157",
+      "size": 28127,
+      "hash": "5b9f33a3553b0e2a3f66aef92d17d2b6464589e809ebfec2027ca175faaacc01",
       "symbols": [
         {
           "kind": "function",
           "name": "App",
-          "line": 65
+          "line": 67
         },
         {
           "kind": "function",
           "name": "loadBytes",
-          "line": 77
+          "line": 80
         },
         {
           "kind": "function",
           "name": "importAnnotations",
-          "line": 118
-        },
-        {
-          "kind": "function",
-          "name": "toBox",
           "line": 122
         },
         {
           "kind": "function",
+          "name": "toBox",
+          "line": 126
+        },
+        {
+          "kind": "function",
+          "name": "importImages",
+          "line": 176
+        },
+        {
+          "kind": "function",
           "name": "openFile",
-          "line": 172
+          "line": 187
         },
         {
           "kind": "function",
           "name": "openSample",
-          "line": 182
+          "line": 197
         },
         {
           "kind": "function",
           "name": "emptyPages",
-          "line": 227
+          "line": 242
         },
         {
           "kind": "function",
           "name": "runOcr",
-          "line": 232
+          "line": 247
         },
         {
           "kind": "function",
           "name": "dropDoc",
-          "line": 277
+          "line": 292
         },
         {
           "kind": "function",
           "name": "applyChanges",
-          "line": 282
+          "line": 297
         },
         {
           "kind": "function",
           "name": "typingInField",
-          "line": 317
+          "line": 332
         },
         {
           "kind": "function",
           "name": "onKey",
-          "line": 329
+          "line": 344
         },
         {
           "kind": "function",
           "name": "onBeforeUnload",
-          "line": 364
+          "line": 379
         },
         {
           "kind": "function",
           "name": "leaveEditor",
-          "line": 373
+          "line": 388
         },
         {
           "kind": "function",
           "name": "restart",
-          "line": 380
+          "line": 395
         },
         {
           "kind": "function",
           "name": "goHome",
-          "line": 381
+          "line": 396
         },
         {
           "kind": "function",
           "name": "openTool",
-          "line": 386
+          "line": 401
         },
         {
           "kind": "function",
           "name": "toolScreen",
-          "line": 404
+          "line": 419
         }
       ],
       "routes": [],
@@ -579,6 +649,7 @@
         "./components/Workspace",
         "./lib/exporter",
         "./lib/extract",
+        "./lib/i18n",
         "./lib/ocr",
         "./lib/pdfjs",
         "./lib/sample",
@@ -605,8 +676,8 @@
     "src/store.js": {
       "path": "src/store.js",
       "extension": ".js",
-      "size": 6808,
-      "hash": "ddc2b7bb1917981105afc5cca0455b6f1f6191e833cd063933992e9981a0ac1b",
+      "size": 6909,
+      "hash": "b055eaef2fbffa59829de05d15d71ac82fe469991a1df9e5d04cd1d47ff3145a",
       "symbols": [
         {
           "kind": "function",
@@ -625,8 +696,8 @@
     "src/styles.css": {
       "path": "src/styles.css",
       "extension": ".css",
-      "size": 35139,
-      "hash": "00894228c7d106e0839b573070fff4db7e128c0d3e54b6b28b81e8e64f73c9ae",
+      "size": 36786,
+      "hash": "9b6dbadc5be0008d8c291e636ed8da3b76c65c7271f4c0a6f6d82d429bbb4ea4",
       "symbols": [],
       "routes": [],
       "imports": []
@@ -634,8 +705,8 @@
     "src/tools.jsx": {
       "path": "src/tools.jsx",
       "extension": ".jsx",
-      "size": 15767,
-      "hash": "add3977476490d72df913ae2933dfc28ee267fccd88419a5da1075cafccaef71",
+      "size": 16131,
+      "hash": "16b7dfc44f8741c30c99c4b3b08813a2f3d0c11a73ee5bd9b41245eb72f48279",
       "symbols": [
         {
           "kind": "function",
@@ -645,7 +716,7 @@
         {
           "kind": "function",
           "name": "toolById",
-          "line": 299
+          "line": 304
         }
       ],
       "routes": [],
@@ -775,8 +846,8 @@
     "src/components/FormatBar.jsx": {
       "path": "src/components/FormatBar.jsx",
       "extension": ".jsx",
-      "size": 9428,
-      "hash": "3a7a4c5971b1c6e422ca1332ce39c2761935a7ca240d81cc6954bf8822ed334a",
+      "size": 12089,
+      "hash": "9b5729f587be0da5414c371ad82288a738a1401bbb87b04ff7e5b2d86d5052f7",
       "symbols": [
         {
           "kind": "function",
@@ -834,17 +905,18 @@
     "src/components/Header.jsx": {
       "path": "src/components/Header.jsx",
       "extension": ".jsx",
-      "size": 1436,
-      "hash": "08af4846b0f01a73d924f2c7ca2c155b63b309b7e28c6b3d49b4f14f8191aeb1",
+      "size": 1583,
+      "hash": "4b464a1c8b987a584486a62b84af3958f7f6f1f58c5f497ee7f4ada5d71ec540",
       "symbols": [
         {
           "kind": "function",
           "name": "Header",
-          "line": 3
+          "line": 4
         }
       ],
       "routes": [],
       "imports": [
+        "../lib/i18n",
         "../utils/misc",
         "react"
       ]
@@ -852,22 +924,23 @@
     "src/components/Home.jsx": {
       "path": "src/components/Home.jsx",
       "extension": ".jsx",
-      "size": 5590,
-      "hash": "32d8ae7d77dd04ac90134e0ec55caa9a3a1e2eac66b653e894a4bd95bb6beb8c",
+      "size": 5769,
+      "hash": "0e3a3c1a384ce63a7cb2ddc4a962f6f6da7375a6defe7bc1d08d957d3a92625d",
       "symbols": [
         {
           "kind": "function",
           "name": "Home",
-          "line": 3
+          "line": 4
         },
         {
           "kind": "function",
           "name": "matchesSearch",
-          "line": 9
+          "line": 11
         }
       ],
       "routes": [],
       "imports": [
+        "../lib/i18n",
         "../tools",
         "react"
       ]
@@ -875,22 +948,23 @@
     "src/components/Landing.jsx": {
       "path": "src/components/Landing.jsx",
       "extension": ".jsx",
-      "size": 3414,
-      "hash": "4324a8b0551c9064c5206901ddcbe2b994d6f44916666b26bc98e3c78f1479b8",
+      "size": 3604,
+      "hash": "7685b12479a39a62986b8526c6291f178d1303ea7f8a471faaa586c7af6f80f0",
       "symbols": [
         {
           "kind": "function",
           "name": "Landing",
-          "line": 2
+          "line": 3
         },
         {
           "kind": "function",
           "name": "pick",
-          "line": 6
+          "line": 8
         }
       ],
       "routes": [],
       "imports": [
+        "../lib/i18n",
         "react"
       ]
     },
@@ -986,23 +1060,23 @@
     "src/components/OcrModal.jsx": {
       "path": "src/components/OcrModal.jsx",
       "extension": ".jsx",
-      "size": 4372,
-      "hash": "f16f351f8696b2b6063903ec2be08ad2095fdab85c87588e42578edcf219501b",
+      "size": 4590,
+      "hash": "6957e2fc08a7ba7638f654c3f582e74025b57a17b1c91a82a983b46140d529f5",
       "symbols": [
         {
           "kind": "function",
           "name": "OcrModal",
-          "line": 13
-        },
-        {
-          "kind": "function",
-          "name": "toggle",
           "line": 19
         },
         {
           "kind": "function",
+          "name": "toggle",
+          "line": 25
+        },
+        {
+          "kind": "function",
           "name": "run",
-          "line": 22
+          "line": 28
         }
       ],
       "routes": [],
@@ -1013,184 +1087,205 @@
     "src/components/PageView.jsx": {
       "path": "src/components/PageView.jsx",
       "extension": ".jsx",
-      "size": 32651,
-      "hash": "a35b4fa35b69b4193ae5192328be69852d5325c03961670fcd0cbc5c211df4b8",
+      "size": 37254,
+      "hash": "d8f374c9130a7d99aa09bf349cfcb4c5890759f2f71fea9507effbbed3156279",
       "symbols": [
         {
           "kind": "function",
           "name": "useSyncText",
-          "line": 9
+          "line": 10
         },
         {
           "kind": "function",
           "name": "readBack",
-          "line": 21
+          "line": 22
         },
         {
           "kind": "function",
           "name": "LineBox",
-          "line": 33
+          "line": 34
         },
         {
           "kind": "function",
           "name": "ObjBox",
-          "line": 80
+          "line": 82
         },
         {
           "kind": "function",
           "name": "Widget",
-          "line": 283
+          "line": 345
         },
         {
           "kind": "function",
           "name": "caretInfo",
-          "line": 331
+          "line": 393
         },
         {
           "kind": "function",
           "name": "setCaretAt",
-          "line": 352
+          "line": 414
         },
         {
           "kind": "function",
           "name": "caretFromPoint",
-          "line": 372
+          "line": 434
         },
         {
           "kind": "function",
           "name": "PageView",
-          "line": 388
+          "line": 450
         },
         {
           "kind": "function",
           "name": "toBase",
-          "line": 447
+          "line": 509
         },
         {
           "kind": "function",
           "name": "marksOverText",
-          "line": 461
+          "line": 523
         },
         {
           "kind": "function",
           "name": "push",
-          "line": 489
+          "line": 551
         },
         {
           "kind": "function",
           "name": "bindWindow",
-          "line": 521
+          "line": 583
         },
         {
           "kind": "function",
           "name": "mv",
-          "line": 524
-        },
-        {
-          "kind": "function",
-          "name": "up",
-          "line": 542
-        },
-        {
-          "kind": "function",
-          "name": "objDown",
-          "line": 550
-        },
-        {
-          "kind": "function",
-          "name": "resizeDown",
-          "line": 563
-        },
-        {
-          "kind": "function",
-          "name": "textObjDown",
-          "line": 571
-        },
-        {
-          "kind": "function",
-          "name": "lineDown",
-          "line": 578
-        },
-        {
-          "kind": "function",
-          "name": "onFocus",
           "line": 586
         },
         {
           "kind": "function",
-          "name": "onBlur",
-          "line": 588
-        },
-        {
-          "kind": "function",
-          "name": "makeInputHandlers",
-          "line": 592
-        },
-        {
-          "kind": "function",
-          "name": "lineIndexOf",
+          "name": "up",
           "line": 604
         },
         {
           "kind": "function",
-          "name": "joinRuns",
-          "line": 606
+          "name": "objDown",
+          "line": 612
         },
         {
           "kind": "function",
-          "name": "moveCaretToSibling",
-          "line": 613
+          "name": "resizeDown",
+          "line": 634
         },
         {
           "kind": "function",
-          "name": "ensureBg",
-          "line": 632
+          "name": "textObjDown",
+          "line": 642
         },
         {
           "kind": "function",
-          "name": "joinWithPrev",
-          "line": 637
-        },
-        {
-          "kind": "function",
-          "name": "joinWithNext",
+          "name": "lineDown",
           "line": 649
         },
         {
           "kind": "function",
+          "name": "onFocus",
+          "line": 657
+        },
+        {
+          "kind": "function",
+          "name": "onBlur",
+          "line": 659
+        },
+        {
+          "kind": "function",
+          "name": "makeInputHandlers",
+          "line": 663
+        },
+        {
+          "kind": "function",
+          "name": "lineIndexOf",
+          "line": 675
+        },
+        {
+          "kind": "function",
+          "name": "joinRuns",
+          "line": 677
+        },
+        {
+          "kind": "function",
+          "name": "moveCaretToSibling",
+          "line": 684
+        },
+        {
+          "kind": "function",
+          "name": "ensureBg",
+          "line": 703
+        },
+        {
+          "kind": "function",
+          "name": "joinWithPrev",
+          "line": 708
+        },
+        {
+          "kind": "function",
+          "name": "joinWithNext",
+          "line": 720
+        },
+        {
+          "kind": "function",
           "name": "onKeyDown",
-          "line": 667
+          "line": 738
         },
         {
           "kind": "function",
           "name": "onPaste",
-          "line": 718
+          "line": 789
+        },
+        {
+          "kind": "function",
+          "name": "replaceImg",
+          "line": 795
+        },
+        {
+          "kind": "function",
+          "name": "rotateImg",
+          "line": 810
+        },
+        {
+          "kind": "function",
+          "name": "filterImg",
+          "line": 823
+        },
+        {
+          "kind": "function",
+          "name": "removeObj",
+          "line": 835
         },
         {
           "kind": "function",
           "name": "onOverlayDown",
-          "line": 731
+          "line": 848
         },
         {
           "kind": "function",
           "name": "mv",
-          "line": 769
+          "line": 886
         },
         {
           "kind": "function",
           "name": "up",
-          "line": 774
+          "line": 891
         },
         {
           "kind": "function",
           "name": "tiny",
-          "line": 784
+          "line": 901
         }
       ],
       "routes": [],
       "imports": [
         "../lib/colors",
         "../lib/fonts",
+        "../lib/imageproc",
         "../lib/runs",
         "../utils/misc",
         "react"
@@ -1349,48 +1444,54 @@
     "src/components/tools/AiTool.jsx": {
       "path": "src/components/tools/AiTool.jsx",
       "extension": ".jsx",
-      "size": 11859,
-      "hash": "0712aad52de54891a04f879aff0f809de215b8ed38cd0fca8389f997e54c0186",
+      "size": 15585,
+      "hash": "6683b6b234b7d9dfe9af88fb71b5d36e62e2317fac1509bbfb8d645454c01488",
       "symbols": [
         {
           "kind": "function",
           "name": "localExtractiveSummary",
-          "line": 6
+          "line": 7
         },
         {
           "kind": "function",
           "name": "searchDocumentAnswer",
-          "line": 57
+          "line": 58
         },
         {
           "kind": "function",
           "name": "AiTool",
-          "line": 91
+          "line": 92
         },
         {
           "kind": "function",
           "name": "extract",
-          "line": 115
+          "line": 116
         },
         {
           "kind": "function",
           "name": "handleAsk",
-          "line": 139
+          "line": 140
         },
         {
           "kind": "function",
           "name": "handleRegenerateSummary",
-          "line": 155
+          "line": 156
+        },
+        {
+          "kind": "function",
+          "name": "handleTranslate",
+          "line": 163
         },
         {
           "kind": "function",
           "name": "reset",
-          "line": 162
+          "line": 173
         }
       ],
       "routes": [],
       "imports": [
         "../../lib/pdfraster",
+        "../../lib/translate",
         "./shell",
         "react"
       ]
@@ -1700,6 +1801,54 @@
         "react"
       ]
     },
+    "src/components/tools/IntelligenceTool.jsx": {
+      "path": "src/components/tools/IntelligenceTool.jsx",
+      "extension": ".jsx",
+      "size": 40780,
+      "hash": "bfc2a8c1394ff883a5915aa7f40d4cfd57b12cf3428b4b6c2395af48b6baafe3",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "IntelligenceTool",
+          "line": 25
+        },
+        {
+          "kind": "function",
+          "name": "runPipeline",
+          "line": 83
+        },
+        {
+          "kind": "function",
+          "name": "handleSearch",
+          "line": 175
+        },
+        {
+          "kind": "function",
+          "name": "handleNodeClick",
+          "line": 183
+        },
+        {
+          "kind": "function",
+          "name": "handleExplainSimply",
+          "line": 187
+        },
+        {
+          "kind": "function",
+          "name": "handleOverrideType",
+          "line": 194
+        },
+        {
+          "kind": "function",
+          "name": "reset",
+          "line": 215
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./shell",
+        "react"
+      ]
+    },
     "src/components/tools/MarkdownTool.jsx": {
       "path": "src/components/tools/MarkdownTool.jsx",
       "extension": ".jsx",
@@ -1841,8 +1990,8 @@
     "src/components/tools/OcrTool.jsx": {
       "path": "src/components/tools/OcrTool.jsx",
       "extension": ".jsx",
-      "size": 7727,
-      "hash": "36cd1ec70d8cc24f930b7da0944fe6177da3f3a1f03930b6ca22e09beffdb36a",
+      "size": 7747,
+      "hash": "1e4d23d785e481aa1359cb635ad1647adbe2401b109e3abc75dc963aa9f6535e",
       "symbols": [
         {
           "kind": "function",
@@ -2808,8 +2957,8 @@
     "src/lib/colors.js": {
       "path": "src/lib/colors.js",
       "extension": ".js",
-      "size": 2135,
-      "hash": "6953c2096dd60000c9c983b5a2fb6989eb64094eac734b6a3f7c76d5856f2cf4",
+      "size": 2774,
+      "hash": "809dfbae7acfb72c8b727c1a21ca0aa3e889e9aebd00e4bf26c20717d379e3ff",
       "symbols": [
         {
           "kind": "function",
@@ -2825,6 +2974,11 @@
           "kind": "function",
           "name": "sampleBgColor",
           "line": 46
+        },
+        {
+          "kind": "function",
+          "name": "sampleImageFromCanvas",
+          "line": 59
         },
         {
           "kind": "function",
@@ -2920,8 +3074,8 @@
     "src/lib/exporter.js": {
       "path": "src/lib/exporter.js",
       "extension": ".js",
-      "size": 17230,
-      "hash": "26dc8488c136eaafd2a8681e2c4dd2afe1ffb206161414017a3e7053df66dc03",
+      "size": 17444,
+      "hash": "f20b0b306bd6ebe115b955368b1491bcb373e39b149f067e54aa340ce82513d6",
       "symbols": [
         {
           "kind": "function",
@@ -2946,22 +3100,22 @@
         {
           "kind": "function",
           "name": "applyPageOrder",
-          "line": 333
+          "line": 338
         },
         {
           "kind": "function",
           "name": "writeLinks",
-          "line": 368
+          "line": 373
         },
         {
           "kind": "function",
           "name": "writeNewFields",
-          "line": 397
+          "line": 402
         },
         {
           "kind": "function",
           "name": "applyFormValues",
-          "line": 432
+          "line": 437
         },
         {
           "kind": "function",
@@ -3029,8 +3183,8 @@
     "src/lib/extract.js": {
       "path": "src/lib/extract.js",
       "extension": ".js",
-      "size": 9721,
-      "hash": "da69aafb4a1579685bec6dbdadeab2660904967fa1bad6985499dd84e2e5e728",
+      "size": 12054,
+      "hash": "98ad2545ed336067a628faba61aa691be9faaee4df7450fd88dcd43059e2a067",
       "symbols": [
         {
           "kind": "function",
@@ -3060,22 +3214,27 @@
         {
           "kind": "function",
           "name": "overlapPct",
-          "line": 172
+          "line": 192
         },
         {
           "kind": "function",
           "name": "groupParagraphs",
-          "line": 177
+          "line": 197
         },
         {
           "kind": "function",
           "name": "joinFlowing",
-          "line": 214
+          "line": 234
         },
         {
           "kind": "function",
           "name": "buildPara",
-          "line": 224
+          "line": 244
+        },
+        {
+          "kind": "function",
+          "name": "extractPageImages",
+          "line": 290
         },
         {
           "kind": "function",
@@ -3090,13 +3249,13 @@
         {
           "kind": "function",
           "name": "flush",
-          "line": 181
+          "line": 201
         }
       ],
       "routes": [],
       "imports": [
-        "../utils/misc",
-        "./fonts"
+        "../utils/misc.js",
+        "./fonts.js"
       ]
     },
     "src/lib/fonts.js": {
@@ -3139,11 +3298,48 @@
       "routes": [],
       "imports": []
     },
+    "src/lib/i18n.js": {
+      "path": "src/lib/i18n.js",
+      "extension": ".js",
+      "size": 19648,
+      "hash": "c72625cc2f18b445798d273d7eb9c517610498d289d0d7d6b23430e20115988b",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "getLanguage",
+          "line": 407
+        },
+        {
+          "kind": "function",
+          "name": "setLanguage",
+          "line": 411
+        },
+        {
+          "kind": "function",
+          "name": "t",
+          "line": 427
+        },
+        {
+          "kind": "function",
+          "name": "useI18n",
+          "line": 432
+        },
+        {
+          "kind": "function",
+          "name": "handler",
+          "line": 437
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "react"
+      ]
+    },
     "src/lib/imageproc.js": {
       "path": "src/lib/imageproc.js",
       "extension": ".js",
-      "size": 4681,
-      "hash": "b2bc14758fe9583a10bdc1800abb9e1921481b90b15ce15ee7b8613cce14c333",
+      "size": 6482,
+      "hash": "3d7ab5e2484007f33dc9492465ef6cd791d63cb9a2c167999817bac2e02308cc",
       "symbols": [
         {
           "kind": "function",
@@ -3164,6 +3360,11 @@
           "kind": "function",
           "name": "cleanDocumentCanvas",
           "line": 120
+        },
+        {
+          "kind": "function",
+          "name": "processImageEdit",
+          "line": 153
         }
       ],
       "routes": [],
@@ -3675,8 +3876,8 @@
     "src/lib/sample.js": {
       "path": "src/lib/sample.js",
       "extension": ".js",
-      "size": 5281,
-      "hash": "ac52ad531f4a5761323cbccb00df7fe7f08311a3444d165120955ec4c2172d39",
+      "size": 5769,
+      "hash": "73e707ef9c286a487d97e217a4bda597ec4d4d3d7e18447b69e87d55064d5607",
       "symbols": [
         {
           "kind": "function",
@@ -3730,8 +3931,8 @@
     "src/lib/tables.js": {
       "path": "src/lib/tables.js",
       "extension": ".js",
-      "size": 2532,
-      "hash": "83fb126713f354ed84da66fce941917b84505077e44065789b63662e85b84c4e",
+      "size": 2535,
+      "hash": "025f2a1724d54185226d0c2dd0f856ca31f7aa70ab50742cf9171a76321811e4",
       "symbols": [
         {
           "kind": "function",
@@ -3756,7 +3957,7 @@
       ],
       "routes": [],
       "imports": [
-        "./extract"
+        "./extract.js"
       ]
     },
     "src/lib/textfont.js": {
@@ -3776,6 +3977,21 @@
         "../utils/misc",
         "./fonts"
       ]
+    },
+    "src/lib/translate.js": {
+      "path": "src/lib/translate.js",
+      "extension": ".js",
+      "size": 1790,
+      "hash": "4efb737889f001bcb69b1286839e260b35ff5b6322a63b064841e11f668f2eb6",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "translateDocumentText",
+          "line": 13
+        }
+      ],
+      "routes": [],
+      "imports": []
     },
     "src/lib/workspace.js": {
       "path": "src/lib/workspace.js",
@@ -3898,11 +4114,234 @@
       "routes": [],
       "imports": []
     },
+    "src/lib/intelligence/classifier.js": {
+      "path": "src/lib/intelligence/classifier.js",
+      "extension": ".js",
+      "size": 7438,
+      "hash": "a678edf59a8de898c5eb509c0bd2a957a5dafde16cd83a75e8253455e83ecb45",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "classifyDocument",
+          "line": 77
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/intelligence/embeddings.js": {
+      "path": "src/lib/intelligence/embeddings.js",
+      "extension": ".js",
+      "size": 4171,
+      "hash": "ad1c6371dd343c67add2358c8f3066315fe86e3dc091fb830f84d087ca5e343e",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "openIntelligenceDB",
+          "line": 7
+        },
+        {
+          "kind": "function",
+          "name": "hashTokenToBucket",
+          "line": 28
+        },
+        {
+          "kind": "function",
+          "name": "generateEmbedding",
+          "line": 36
+        },
+        {
+          "kind": "function",
+          "name": "cosineSimilarity",
+          "line": 80
+        },
+        {
+          "kind": "function",
+          "name": "batchEmbedChunks",
+          "line": 89
+        },
+        {
+          "kind": "function",
+          "name": "saveDocumentEmbeddings",
+          "line": 106
+        },
+        {
+          "kind": "function",
+          "name": "getDocumentEmbeddings",
+          "line": 122
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/intelligence/index.js": {
+      "path": "src/lib/intelligence/index.js",
+      "extension": ".js",
+      "size": 277,
+      "hash": "9d5c740350d04a85480e5946a26e67975e0a64e2428f636452bf0c6fb2d159da",
+      "symbols": [],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/intelligence/knowledge.js": {
+      "path": "src/lib/intelligence/knowledge.js",
+      "extension": ".js",
+      "size": 3933,
+      "hash": "378da270f052142883546a2d8c35c3b5891d0a078c7e4f23fb9188f1f8490bcd",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "createKnowledgePackage",
+          "line": 4
+        },
+        {
+          "kind": "function",
+          "name": "exportKnowledgeJson",
+          "line": 40
+        },
+        {
+          "kind": "function",
+          "name": "exportNodesCsv",
+          "line": 44
+        },
+        {
+          "kind": "function",
+          "name": "exportEdgesCsv",
+          "line": 56
+        },
+        {
+          "kind": "function",
+          "name": "exportMarkdownOutline",
+          "line": 72
+        },
+        {
+          "kind": "function",
+          "name": "exportCompleteZip",
+          "line": 104
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../zip.js"
+      ]
+    },
+    "src/lib/intelligence/localLlm.js": {
+      "path": "src/lib/intelligence/localLlm.js",
+      "extension": ".js",
+      "size": 3498,
+      "hash": "6a98ef614202b6073a8515a76c7e7b724b44dc46f759c47dbbeadba8bd30c5d4",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "generateQuizFromKnowledge",
+          "line": 3
+        },
+        {
+          "kind": "function",
+          "name": "generateFlashcards",
+          "line": 62
+        },
+        {
+          "kind": "function",
+          "name": "explainConceptSimply",
+          "line": 81
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/intelligence/models.js": {
+      "path": "src/lib/intelligence/models.js",
+      "extension": ".js",
+      "size": 2201,
+      "hash": "89c06e920a8addd2d52302ca56c4513d1cfa268a97b024d30d24534b0d53fcff",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "detectHardwareCapabilities",
+          "line": 2
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/intelligence/ner.js": {
+      "path": "src/lib/intelligence/ner.js",
+      "extension": ".js",
+      "size": 4502,
+      "hash": "121c802b15b0291ecb6497ba75efd570b0cfa367e5f0a3df2c539b6aa350e0e0",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "extractEntities",
+          "line": 24
+        },
+        {
+          "kind": "function",
+          "name": "addEntity",
+          "line": 27
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/intelligence/processor.js": {
+      "path": "src/lib/intelligence/processor.js",
+      "extension": ".js",
+      "size": 4104,
+      "hash": "75d770c8d309ce7fcbc66ae9009c3ee0fa855e161e77e083009066535d085494",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "processDocumentStructure",
+          "line": 15
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "../../utils/misc.js",
+        "../extract.js",
+        "../pdfjs.js",
+        "../tables.js"
+      ]
+    },
+    "src/lib/intelligence/relations.js": {
+      "path": "src/lib/intelligence/relations.js",
+      "extension": ".js",
+      "size": 3545,
+      "hash": "bb3e6082e54fc651c7005bb07f1f32a451bff46b6808e3f9100dc8fe0bd24108",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "extractRelationships",
+          "line": 15
+        }
+      ],
+      "routes": [],
+      "imports": []
+    },
+    "src/lib/intelligence/search.js": {
+      "path": "src/lib/intelligence/search.js",
+      "extension": ".js",
+      "size": 1126,
+      "hash": "b2e1a63a64fa52dec6c0a25462f6fad8ddb192fe413ca25f5553a411402ef178",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "semanticSearch",
+          "line": 2
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./embeddings.js"
+      ]
+    },
     "src/utils/misc.js": {
       "path": "src/utils/misc.js",
       "extension": ".js",
-      "size": 3375,
-      "hash": "067f1ffb72873dfb5cee33d20cc55efffd171aafa550a9905f535fb485ebe008",
+      "size": 3378,
+      "hash": "82d686140b6f376d05b99ecd12bdee3d77ded235981b9f614c55b136f2220813",
       "symbols": [
         {
           "kind": "function",
@@ -3957,7 +4396,7 @@
       ],
       "routes": [],
       "imports": [
-        "../lib/fonts"
+        "../lib/fonts.js"
       ]
     }
   }

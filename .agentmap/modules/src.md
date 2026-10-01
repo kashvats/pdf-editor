@@ -5,27 +5,28 @@
 ## `src/App.jsx`
 
 - language: `jsx`
-- size: 26664 bytes
-- hash: `29fa7d3aa229`
+- size: 28127 bytes
+- hash: `5b9f33a3553b`
 - symbols:
-  - `function` `App` — line 65
-  - `function` `loadBytes` — line 77
-  - `function` `importAnnotations` — line 118
-  - `function` `toBox` — line 122
-  - `function` `openFile` — line 172
-  - `function` `openSample` — line 182
-  - `function` `emptyPages` — line 227
-  - `function` `runOcr` — line 232
-  - `function` `dropDoc` — line 277
-  - `function` `applyChanges` — line 282
-  - `function` `typingInField` — line 317
-  - `function` `onKey` — line 329
-  - `function` `onBeforeUnload` — line 364
-  - `function` `leaveEditor` — line 373
-  - `function` `restart` — line 380
-  - `function` `goHome` — line 381
-  - `function` `openTool` — line 386
-  - `function` `toolScreen` — line 404
+  - `function` `App` — line 67
+  - `function` `loadBytes` — line 80
+  - `function` `importAnnotations` — line 122
+  - `function` `toBox` — line 126
+  - `function` `importImages` — line 176
+  - `function` `openFile` — line 187
+  - `function` `openSample` — line 197
+  - `function` `emptyPages` — line 242
+  - `function` `runOcr` — line 247
+  - `function` `dropDoc` — line 292
+  - `function` `applyChanges` — line 297
+  - `function` `typingInField` — line 332
+  - `function` `onKey` — line 344
+  - `function` `onBeforeUnload` — line 379
+  - `function` `leaveEditor` — line 388
+  - `function` `restart` — line 395
+  - `function` `goHome` — line 396
+  - `function` `openTool` — line 401
+  - `function` `toolScreen` — line 419
 - imports:
   - `./components/CommandPalette`
   - `./components/DocumentHistoryModal`
@@ -40,6 +41,7 @@
   - `./components/Workspace`
   - `./lib/exporter`
   - `./lib/extract`
+  - `./lib/i18n`
   - `./lib/ocr`
   - `./lib/pdfjs`
   - `./lib/sample`
@@ -107,8 +109,8 @@
 ## `src/components/FormatBar.jsx`
 
 - language: `jsx`
-- size: 9428 bytes
-- hash: `3a7a4c5971b1`
+- size: 12089 bytes
+- hash: `9b5729f587be`
 - symbols:
   - `function` `FormatBar` — line 4
   - `function` `patch` — line 18
@@ -127,35 +129,38 @@
 ## `src/components/Header.jsx`
 
 - language: `jsx`
-- size: 1436 bytes
-- hash: `08af4846b0f0`
+- size: 1583 bytes
+- hash: `4b464a1c8b98`
 - symbols:
-  - `function` `Header` — line 3
+  - `function` `Header` — line 4
 - imports:
+  - `../lib/i18n`
   - `../utils/misc`
   - `react`
 
 ## `src/components/Home.jsx`
 
 - language: `jsx`
-- size: 5590 bytes
-- hash: `32d8ae7d77dd`
+- size: 5769 bytes
+- hash: `0e3a3c1a384c`
 - symbols:
-  - `function` `Home` — line 3
-  - `function` `matchesSearch` — line 9
+  - `function` `Home` — line 4
+  - `function` `matchesSearch` — line 11
 - imports:
+  - `../lib/i18n`
   - `../tools`
   - `react`
 
 ## `src/components/Landing.jsx`
 
 - language: `jsx`
-- size: 3414 bytes
-- hash: `4324a8b0551c`
+- size: 3604 bytes
+- hash: `7685b12479a3`
 - symbols:
-  - `function` `Landing` — line 2
-  - `function` `pick` — line 6
+  - `function` `Landing` — line 3
+  - `function` `pick` — line 8
 - imports:
+  - `../lib/i18n`
   - `react`
 
 ## `src/components/Menu.jsx`
@@ -196,58 +201,63 @@
 ## `src/components/OcrModal.jsx`
 
 - language: `jsx`
-- size: 4372 bytes
-- hash: `f16f351f8696`
+- size: 4590 bytes
+- hash: `6957e2fc08a7`
 - symbols:
-  - `function` `OcrModal` — line 13
-  - `function` `toggle` — line 19
-  - `function` `run` — line 22
+  - `function` `OcrModal` — line 19
+  - `function` `toggle` — line 25
+  - `function` `run` — line 28
 - imports:
   - `react`
 
 ## `src/components/PageView.jsx`
 
 - language: `jsx`
-- size: 32651 bytes
-- hash: `a35b4fa35b69`
+- size: 37254 bytes
+- hash: `d8f374c9130a`
 - symbols:
-  - `function` `useSyncText` — line 9
-  - `function` `readBack` — line 21
-  - `function` `LineBox` — line 33
-  - `function` `ObjBox` — line 80
-  - `function` `Widget` — line 283
-  - `function` `caretInfo` — line 331
-  - `function` `setCaretAt` — line 352
-  - `function` `caretFromPoint` — line 372
-  - `function` `PageView` — line 388
-  - `function` `toBase` — line 447
-  - `function` `marksOverText` — line 461
-  - `function` `push` — line 489
-  - `function` `bindWindow` — line 521
-  - `function` `mv` — line 524
-  - `function` `up` — line 542
-  - `function` `objDown` — line 550
-  - `function` `resizeDown` — line 563
-  - `function` `textObjDown` — line 571
-  - `function` `lineDown` — line 578
-  - `function` `onFocus` — line 586
-  - `function` `onBlur` — line 588
-  - `function` `makeInputHandlers` — line 592
-  - `function` `lineIndexOf` — line 604
-  - `function` `joinRuns` — line 606
-  - `function` `moveCaretToSibling` — line 613
-  - `function` `ensureBg` — line 632
-  - `function` `joinWithPrev` — line 637
-  - `function` `joinWithNext` — line 649
-  - `function` `onKeyDown` — line 667
-  - `function` `onPaste` — line 718
-  - `function` `onOverlayDown` — line 731
-  - `function` `mv` — line 769
-  - `function` `up` — line 774
-  - `function` `tiny` — line 784
+  - `function` `useSyncText` — line 10
+  - `function` `readBack` — line 22
+  - `function` `LineBox` — line 34
+  - `function` `ObjBox` — line 82
+  - `function` `Widget` — line 345
+  - `function` `caretInfo` — line 393
+  - `function` `setCaretAt` — line 414
+  - `function` `caretFromPoint` — line 434
+  - `function` `PageView` — line 450
+  - `function` `toBase` — line 509
+  - `function` `marksOverText` — line 523
+  - `function` `push` — line 551
+  - `function` `bindWindow` — line 583
+  - `function` `mv` — line 586
+  - `function` `up` — line 604
+  - `function` `objDown` — line 612
+  - `function` `resizeDown` — line 634
+  - `function` `textObjDown` — line 642
+  - `function` `lineDown` — line 649
+  - `function` `onFocus` — line 657
+  - `function` `onBlur` — line 659
+  - `function` `makeInputHandlers` — line 663
+  - `function` `lineIndexOf` — line 675
+  - `function` `joinRuns` — line 677
+  - `function` `moveCaretToSibling` — line 684
+  - `function` `ensureBg` — line 703
+  - `function` `joinWithPrev` — line 708
+  - `function` `joinWithNext` — line 720
+  - `function` `onKeyDown` — line 738
+  - `function` `onPaste` — line 789
+  - `function` `replaceImg` — line 795
+  - `function` `rotateImg` — line 810
+  - `function` `filterImg` — line 823
+  - `function` `removeObj` — line 835
+  - `function` `onOverlayDown` — line 848
+  - `function` `mv` — line 886
+  - `function` `up` — line 891
+  - `function` `tiny` — line 901
 - imports:
   - `../lib/colors`
   - `../lib/fonts`
+  - `../lib/imageproc`
   - `../lib/runs`
   - `../utils/misc`
   - `react`
@@ -317,18 +327,20 @@
 ## `src/components/tools/AiTool.jsx`
 
 - language: `jsx`
-- size: 11859 bytes
-- hash: `0712aad52de5`
+- size: 15585 bytes
+- hash: `6683b6b234b7`
 - symbols:
-  - `function` `localExtractiveSummary` — line 6
-  - `function` `searchDocumentAnswer` — line 57
-  - `function` `AiTool` — line 91
-  - `function` `extract` — line 115
-  - `function` `handleAsk` — line 139
-  - `function` `handleRegenerateSummary` — line 155
-  - `function` `reset` — line 162
+  - `function` `localExtractiveSummary` — line 7
+  - `function` `searchDocumentAnswer` — line 58
+  - `function` `AiTool` — line 92
+  - `function` `extract` — line 116
+  - `function` `handleAsk` — line 140
+  - `function` `handleRegenerateSummary` — line 156
+  - `function` `handleTranslate` — line 163
+  - `function` `reset` — line 173
 - imports:
   - `../../lib/pdfraster`
+  - `../../lib/translate`
   - `./shell`
   - `react`
 
@@ -456,6 +468,23 @@
   - `./shell`
   - `react`
 
+## `src/components/tools/IntelligenceTool.jsx`
+
+- language: `jsx`
+- size: 40780 bytes
+- hash: `bfc2a8c1394f`
+- symbols:
+  - `function` `IntelligenceTool` — line 25
+  - `function` `runPipeline` — line 83
+  - `function` `handleSearch` — line 175
+  - `function` `handleNodeClick` — line 183
+  - `function` `handleExplainSimply` — line 187
+  - `function` `handleOverrideType` — line 194
+  - `function` `reset` — line 215
+- imports:
+  - `./shell`
+  - `react`
+
 ## `src/components/tools/MarkdownTool.jsx`
 
 - language: `jsx`
@@ -512,8 +541,8 @@
 ## `src/components/tools/OcrTool.jsx`
 
 - language: `jsx`
-- size: 7727 bytes
-- hash: `36cd1ec70d8c`
+- size: 7747 bytes
+- hash: `1e4d23d785e4`
 - symbols:
   - `function` `OcrTool` — line 14
   - `function` `reset` — line 25
@@ -861,12 +890,13 @@
 ## `src/lib/colors.js`
 
 - language: `js`
-- size: 2135 bytes
-- hash: `6953c2096dd6`
+- size: 2774 bytes
+- hash: `809dfbae7acf`
 - symbols:
   - `function` `histogram` — line 2
   - `function` `sampleTextColor` — line 32
   - `function` `sampleBgColor` — line 46
+  - `function` `sampleImageFromCanvas` — line 59
   - `function` `hex` — line 23
   - `function` `lum` — line 25
   - `function` `dist` — line 26
@@ -900,17 +930,17 @@
 ## `src/lib/exporter.js`
 
 - language: `js`
-- size: 17230 bytes
-- hash: `26dc8488c136`
+- size: 17444 bytes
+- hash: `f20b0b306bd6`
 - symbols:
   - `function` `embedImage` — line 4
   - `function` `convertToPng` — line 18
   - `function` `tokenize` — line 30
   - `function` `exportEditedPdf` — line 40
-  - `function` `applyPageOrder` — line 333
-  - `function` `writeLinks` — line 368
-  - `function` `writeNewFields` — line 397
-  - `function` `applyFormValues` — line 432
+  - `function` `applyPageOrder` — line 338
+  - `function` `writeLinks` — line 373
+  - `function` `writeNewFields` — line 402
+  - `function` `applyFormValues` — line 437
   - `function` `embedStd` — line 51
   - `function` `getFont` — line 60
   - `function` `measure` — line 107
@@ -930,24 +960,25 @@
 ## `src/lib/extract.js`
 
 - language: `js`
-- size: 9721 bytes
-- hash: `da69aafb4a15`
+- size: 12054 bytes
+- hash: `98ad2545ed33`
 - symbols:
   - `function` `mul` — line 3
   - `function` `normFam` — line 14
   - `function` `pageSegments` — line 29
   - `function` `groupRows` — line 87
   - `function` `extractLines` — line 105
-  - `function` `overlapPct` — line 172
-  - `function` `groupParagraphs` — line 177
-  - `function` `joinFlowing` — line 214
-  - `function` `buildPara` — line 224
+  - `function` `overlapPct` — line 192
+  - `function` `groupParagraphs` — line 197
+  - `function` `joinFlowing` — line 234
+  - `function` `buildPara` — line 244
+  - `function` `extractPageImages` — line 290
   - `function` `isBoldName` — line 24
   - `function` `isItalicName` — line 25
-  - `function` `flush` — line 181
+  - `function` `flush` — line 201
 - imports:
-  - `../utils/misc`
-  - `./fonts`
+  - `../utils/misc.js`
+  - `./fonts.js`
 
 ## `src/lib/fonts.js`
 
@@ -962,16 +993,132 @@
   - `function` `fetchTtfBuffer` — line 83
   - `function` `styleIndex` — line 33
 
+## `src/lib/i18n.js`
+
+- language: `js`
+- size: 19648 bytes
+- hash: `c72625cc2f18`
+- symbols:
+  - `function` `getLanguage` — line 407
+  - `function` `setLanguage` — line 411
+  - `function` `t` — line 427
+  - `function` `useI18n` — line 432
+  - `function` `handler` — line 437
+- imports:
+  - `react`
+
 ## `src/lib/imageproc.js`
 
 - language: `js`
-- size: 4681 bytes
-- hash: `b2bc14758fe9`
+- size: 6482 bytes
+- hash: `3d7ab5e24840`
 - symbols:
   - `function` `autoCropCanvas` — line 2
   - `function` `rotateCanvas` — line 46
   - `function` `deskewCanvas` — line 64
   - `function` `cleanDocumentCanvas` — line 120
+  - `function` `processImageEdit` — line 153
+
+## `src/lib/intelligence/classifier.js`
+
+- language: `js`
+- size: 7438 bytes
+- hash: `a678edf59a8d`
+- symbols:
+  - `function` `classifyDocument` — line 77
+
+## `src/lib/intelligence/embeddings.js`
+
+- language: `js`
+- size: 4171 bytes
+- hash: `ad1c6371dd34`
+- symbols:
+  - `function` `openIntelligenceDB` — line 7
+  - `function` `hashTokenToBucket` — line 28
+  - `function` `generateEmbedding` — line 36
+  - `function` `cosineSimilarity` — line 80
+  - `function` `batchEmbedChunks` — line 89
+  - `function` `saveDocumentEmbeddings` — line 106
+  - `function` `getDocumentEmbeddings` — line 122
+
+## `src/lib/intelligence/index.js`
+
+- language: `js`
+- size: 277 bytes
+- hash: `9d5c740350d0`
+
+## `src/lib/intelligence/knowledge.js`
+
+- language: `js`
+- size: 3933 bytes
+- hash: `378da270f052`
+- symbols:
+  - `function` `createKnowledgePackage` — line 4
+  - `function` `exportKnowledgeJson` — line 40
+  - `function` `exportNodesCsv` — line 44
+  - `function` `exportEdgesCsv` — line 56
+  - `function` `exportMarkdownOutline` — line 72
+  - `function` `exportCompleteZip` — line 104
+- imports:
+  - `../zip.js`
+
+## `src/lib/intelligence/localLlm.js`
+
+- language: `js`
+- size: 3498 bytes
+- hash: `6a98ef614202`
+- symbols:
+  - `function` `generateQuizFromKnowledge` — line 3
+  - `function` `generateFlashcards` — line 62
+  - `function` `explainConceptSimply` — line 81
+
+## `src/lib/intelligence/models.js`
+
+- language: `js`
+- size: 2201 bytes
+- hash: `89c06e920a8a`
+- symbols:
+  - `function` `detectHardwareCapabilities` — line 2
+
+## `src/lib/intelligence/ner.js`
+
+- language: `js`
+- size: 4502 bytes
+- hash: `121c802b15b0`
+- symbols:
+  - `function` `extractEntities` — line 24
+  - `function` `addEntity` — line 27
+
+## `src/lib/intelligence/processor.js`
+
+- language: `js`
+- size: 4104 bytes
+- hash: `75d770c8d309`
+- symbols:
+  - `function` `processDocumentStructure` — line 15
+- imports:
+  - `../../utils/misc.js`
+  - `../extract.js`
+  - `../pdfjs.js`
+  - `../tables.js`
+
+## `src/lib/intelligence/relations.js`
+
+- language: `js`
+- size: 3545 bytes
+- hash: `bb3e6082e54f`
+- symbols:
+  - `function` `extractRelationships` — line 15
+
+## `src/lib/intelligence/search.js`
+
+- language: `js`
+- size: 1126 bytes
+- hash: `b2e1a63a64fa`
+- symbols:
+  - `function` `semanticSearch` — line 2
+- imports:
+  - `./embeddings.js`
 
 ## `src/lib/markdown.js`
 
@@ -1145,8 +1292,8 @@
 ## `src/lib/sample.js`
 
 - language: `js`
-- size: 5281 bytes
-- hash: `ac52ad531f4a`
+- size: 5769 bytes
+- hash: `73e707ef9c28`
 - symbols:
   - `function` `wrap` — line 1
   - `function` `makeSamplePdf` — line 15
@@ -1166,15 +1313,15 @@
 ## `src/lib/tables.js`
 
 - language: `js`
-- size: 2532 bytes
-- hash: `83fb126713f3`
+- size: 2535 bytes
+- hash: `025f2a1724d5`
 - symbols:
   - `function` `rowToCells` — line 6
   - `function` `buildColumns` — line 30
   - `function` `readTable` — line 54
   - `function` `columnOf` — line 44
 - imports:
-  - `./extract`
+  - `./extract.js`
 
 ## `src/lib/textfont.js`
 
@@ -1186,6 +1333,14 @@
 - imports:
   - `../utils/misc`
   - `./fonts`
+
+## `src/lib/translate.js`
+
+- language: `js`
+- size: 1790 bytes
+- hash: `4efb737889f0`
+- symbols:
+  - `function` `translateDocumentText` — line 13
 
 ## `src/lib/workspace.js`
 
@@ -1244,8 +1399,8 @@
 ## `src/store.js`
 
 - language: `js`
-- size: 6808 bytes
-- hash: `ddc2b7bb1917`
+- size: 6909 bytes
+- hash: `b055eaef2fbf`
 - symbols:
   - `function` `reducer` — line 65
   - `function` `withPage` — line 58
@@ -1253,25 +1408,25 @@
 ## `src/styles.css`
 
 - language: `css`
-- size: 35139 bytes
-- hash: `00894228c7d1`
+- size: 36786 bytes
+- hash: `9b6dbadc5be0`
 
 ## `src/tools.jsx`
 
 - language: `jsx`
-- size: 15767 bytes
-- hash: `add397747649`
+- size: 16131 bytes
+- hash: `16b7dfc44f87`
 - symbols:
   - `function` `svg` — line 2
-  - `function` `toolById` — line 299
+  - `function` `toolById` — line 304
 - imports:
   - `react`
 
 ## `src/utils/misc.js`
 
 - language: `js`
-- size: 3375 bytes
-- hash: `067f1ffb7287`
+- size: 3378 bytes
+- hash: `82d686140b6f`
 - symbols:
   - `function` `hexToRgb01` — line 18
   - `function` `sanitizeWinAnsi` — line 29
@@ -1284,5 +1439,5 @@
   - `function` `baseName` — line 39
   - `function` `fontCssOf` — line 44
 - imports:
-  - `../lib/fonts`
+  - `../lib/fonts.js`
 

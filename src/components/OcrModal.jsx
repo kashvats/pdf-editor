@@ -2,13 +2,19 @@ import React, { useState } from 'react'
 
 const LANGS = [
   { id: 'eng', label: 'English' },
+  { id: 'rus', label: 'Russian' },
+  { id: 'deu', label: 'German' },
+  { id: 'hin', label: 'Hindi' },
+  { id: 'spa', label: 'Spanish' },
+  { id: 'fra', label: 'French' },
+  { id: 'ara', label: 'Arabic' },
+  { id: 'por', label: 'Portuguese' },
+  { id: 'ita', label: 'Italian' },
+  { id: 'nld', label: 'Dutch' },
   { id: 'ind', label: 'Indonesian' },
   { id: 'msa', label: 'Malay' },
-  { id: 'deu', label: 'German' },
-  { id: 'fra', label: 'French' },
-  { id: 'spa', label: 'Spanish' },
-  { id: 'nld', label: 'Dutch' },
-  { id: 'por', label: 'Portuguese' }
+  { id: 'chi_sim', label: 'Chinese' },
+  { id: 'jpn', label: 'Japanese' }
 ]
 
 export default function OcrModal({ pageCount, emptyPages, currentPage, onClose, onRun }) {

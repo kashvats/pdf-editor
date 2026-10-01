@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { GROUPS, TOOLS } from '../tools'
+import { useI18n } from '../lib/i18n'
 
 export default function Home({ onOpen }) {
+  const { t } = useI18n()
   const [filterQuery, setFilterQuery] = useState('')
   const [activeGroup, setActiveGroup] = useState('All')
 
@@ -30,10 +32,9 @@ export default function Home({ onOpen }) {
         <div className="brand-name">Edit<span>PDF</span></div>
       </div>
 
-      <h1>The Private Document Workspace</h1>
+      <h1>{t('tagline', 'The Private Document Workspace')}</h1>
       <p className="sub">
-        50+ client-side PDF tools running 100% locally in your browser.
-        Zero uploads, zero servers, and guaranteed document privacy.
+        {t('subTagline', '50+ client-side PDF tools running 100% locally in your browser. Zero uploads, zero servers, and guaranteed document privacy.')}
       </p>
 
       {/* Filter and Quick Search Bar */}
@@ -53,7 +54,7 @@ export default function Home({ onOpen }) {
           </svg>
           <input
             type="text"
-            placeholder="Search all 50+ tools (e.g. OCR, Compress, Redact, Word, Mind Map)..."
+            placeholder={t('searchPlaceholder', 'Search all 50+ tools (e.g. OCR, Compress, Redact, Word, Mind Map)...')}
             value={filterQuery}
             onChange={e => setFilterQuery(e.target.value)}
             style={{
@@ -98,7 +99,7 @@ export default function Home({ onOpen }) {
                 transition: 'all 0.12s'
               }}
             >
-              {g}
+              {g === 'All' ? t('all', 'All') : t(g, g)}
             </button>
           ))}
         </div>
@@ -110,9 +111,9 @@ export default function Home({ onOpen }) {
         return (
           <section className="home-section" key={group}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-              <h2 className="home-group" style={{ margin: 0 }}>{group}</h2>
+              <h2 className="home-group" style={{ margin: 0 }}>{t(group, group)}</h2>
               <span style={{ fontSize: '11px', color: 'var(--muted)', fontWeight: '600' }}>
-                {tools.length} {tools.length === 1 ? 'tool' : 'tools'}
+                {tools.length} {t('toolsCount', 'tools')}
               </span>
             </div>
             <div className="home-grid">
@@ -134,7 +135,7 @@ export default function Home({ onOpen }) {
 
       <div className="privacy">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="10" width="16" height="11" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
-        100% private — files are processed in your browser and never uploaded
+        {t('privacyNote', '100% private — files are processed in your browser and never uploaded')}
       </div>
     </div>
   )
