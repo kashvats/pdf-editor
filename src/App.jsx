@@ -47,10 +47,9 @@ const BatchTool = lazy(() => import('./components/tools/BatchTool'))
 const ScanCleanerTool = lazy(() => import('./components/tools/ScanCleanerTool'))
 const WorkflowTool = lazy(() => import('./components/tools/WorkflowTool'))
 const SigVerifyTool = lazy(() => import('./components/tools/SigVerifyTool'))
-const AiTool = lazy(() => import('./components/tools/AiTool'))
 const ExtractDataTool = lazy(() => import('./components/tools/ExtractDataTool'))
-const MindMapTool = lazy(() => import('./components/tools/MindMapTool'))
 const IntelligenceTool = lazy(() => import('./components/tools/IntelligenceTool'))
+const SecurityScannerTool = lazy(() => import('./components/tools/SecurityScannerTool'))
 import { toolById } from './tools'
 import Header from './components/Header'
 import Toolbar from './components/Toolbar'
@@ -61,14 +60,17 @@ import OcrModal from './components/OcrModal'
 import CommandPalette from './components/CommandPalette'
 import NaturalLanguageBar from './components/NaturalLanguageBar'
 import DocumentHistoryModal from './components/DocumentHistoryModal'
-import { setActiveDocument, useWorkspaceDoc } from './lib/workspace'
+import { setActiveDocument, rehydrateActiveDocument, useWorkspaceDoc } from './lib/workspace'
 import { useI18n } from './lib/i18n'
 import { ocrPage } from './lib/ocr'
+import { parseRoute, navigate, onRoute, getInternalTab, getCanonicalTab } from './lib/router'
 
 export default function App() {
   const { lang, setLanguage, languages, t } = useI18n()
   const [state, dispatch] = useReducer(reducer, initialState)
-  const [view, setView] = useState('home')
+  const [initialParsed] = useState(() => parseRoute(typeof window !== 'undefined' ? window.location : undefined))
+  const [view, setView] = useState(() => initialParsed.tool || 'home')
+  const [routeTab, setRouteTab] = useState(() => initialParsed.tab)
   const [intent, setIntent] = useState(null)
   const [cmdPaletteOpen, setCmdPaletteOpen] = useState(false)
   const [nlBarOpen, setNlBarOpen] = useState(false)
@@ -397,6 +399,7 @@ export default function App() {
     if (!leaveEditor()) return
     setIntent(null)
     setView('home')
+    navigate('home')
   }
 
   const openTool = id => {
@@ -404,10 +407,30 @@ export default function App() {
       dispatch({ type: ACT.RESET })
       setIntent(id === 'editor' ? null : id)
       setView('editor')
+      navigate('editor')
       return
     }
     setView(id)
+    navigate(id)
   }
+
+  // Subscribe to route changes
+  useEffect(() => {
+    const unbind = onRoute(r => {
+      setView(r.tool || 'home')
+      setRouteTab(r.tab)
+    })
+    return unbind
+  }, [])
+
+  // Rehydrate active document on page load / refresh
+  useEffect(() => {
+    rehydrateActiveDocument().then(doc => {
+      if (doc && doc.bytes && initialParsed.tool === 'editor') {
+        loadBytes(doc.bytes, doc.name)
+      }
+    })
+  }, [])
 
   // Fill & Sign is the editor with the signature panel already open.
   useEffect(() => {
@@ -419,7 +442,6 @@ export default function App() {
 
   const toolScreen = () => {
     const tool = toolById(view)
-    if (!tool) return null
     switch (view) {
       case 'delete': return <PagesTool tool={tool} mode="delete" onBack={goHome} />
       case 'extract': return <PagesTool tool={tool} mode="extract" onBack={goHome} />
@@ -467,11 +489,40 @@ export default function App() {
       case 'scanclean': return <ScanCleanerTool tool={tool} onBack={goHome} />
       case 'workflow': return <WorkflowTool tool={tool} onBack={goHome} />
       case 'sigverify': return <SigVerifyTool tool={tool} onBack={goHome} />
-      case 'ai': return <AiTool tool={tool} onBack={goHome} />
       case 'extractdata': return <ExtractDataTool tool={tool} onBack={goHome} />
-      case 'mindmap': return <MindMapTool tool={tool} onBack={goHome} />
-      case 'intelligence': return <IntelligenceTool tool={tool} onBack={goHome} />
-      default: return null
+      case 'scanner':
+      case 'sanitize':
+        return (
+          <SecurityScannerTool
+            tool={toolById(view) || toolById('scanner')}
+            initialTab={view === 'sanitize' ? 'sanitize' : 'scan'}
+            onBack={goHome}
+          />
+        )
+      case 'intelligence':
+      case 'ai':
+      case 'mindmap':
+        return (
+          <IntelligenceTool
+            tool={toolById('intelligence')}
+            initialTab={routeTab ? getInternalTab(routeTab) : (view === 'mindmap' ? 'mindmap' : (view === 'ai' ? 'ask' : 'overview'))}
+            onTabChange={t => navigate('intelligence', getCanonicalTab(t), { replace: true })}
+            onBack={goHome}
+          />
+        )
+      default:
+        return (
+          <div style={{ textAlign: 'center', padding: '60px 20px', background: '#fff', borderRadius: '12px', margin: '40px auto', maxWidth: '440px', border: '1px solid var(--line)', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+            <div style={{ fontSize: '32px', marginBottom: '8px' }}>🔍</div>
+            <h3 style={{ margin: '0 0 8px', fontSize: '18px' }}>Tool or Page Not Found</h3>
+            <p style={{ color: 'var(--sub)', fontSize: '13px', margin: '0 0 18px' }}>
+              The requested tool or page does not exist.
+            </p>
+            <button className="btn btn-primary" onClick={goHome}>
+              Return to Workspace
+            </button>
+          </div>
+        )
     }
   }
 

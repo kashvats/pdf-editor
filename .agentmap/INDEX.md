@@ -2,16 +2,16 @@
 
 > Start here. Open only the module relevant to the current task.
 
-- Generated: `2026-10-01T06:41:19.592457+00:00`
+- Generated: `2026-10-01T09:12:31.459442+00:00`
 - Repository: `pdfeditor`
 - Files indexed: **94**
-- Symbols indexed: **541**
+- Symbols indexed: **540**
 - Routes indexed: **0**
 
 ## File Types
 
-- `.jsx`: 49
-- `.js`: 40
+- `.jsx`: 47
+- `.js`: 42
 - `.json`: 3
 - `.css`: 1
 - `.html`: 1

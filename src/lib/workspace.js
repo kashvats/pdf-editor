@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react'
 import pdfjs from './pdfjs'
-import { saveDocumentVersion } from './db'
+import {
+  saveDocumentVersion,
+  saveActiveDocumentSession,
+  getActiveDocumentSession,
+  clearActiveDocumentSession
+} from './db'
 
 let currentDoc = null
 const listeners = new Set()
@@ -17,6 +22,7 @@ export function getActiveDocument() {
 export async function setActiveDocument({ name, bytes, saveVersion = true, label = 'Opened' }) {
   if (!bytes) {
     currentDoc = null
+    try { await clearActiveDocumentSession() } catch {}
     notify()
     return null
   }
@@ -38,8 +44,30 @@ export async function setActiveDocument({ name, bytes, saveVersion = true, label
     saveDocumentVersion(currentDoc.name, label, bytes)
   }
 
+  try {
+    await saveActiveDocumentSession(currentDoc.name, bytes, label)
+  } catch {}
+
   notify()
   return currentDoc
+}
+
+export async function rehydrateActiveDocument() {
+  if (currentDoc) return currentDoc
+  try {
+    const session = await getActiveDocumentSession()
+    if (session && session.bytes) {
+      return setActiveDocument({
+        name: session.name,
+        bytes: session.bytes,
+        saveVersion: false,
+        label: 'Restored from session'
+      })
+    }
+  } catch (err) {
+    console.warn('Could not rehydrate document session:', err)
+  }
+  return null
 }
 
 export async function updateActiveDocument(newBytes, label = 'Modified') {
@@ -54,6 +82,7 @@ export async function updateActiveDocument(newBytes, label = 'Modified') {
 
 export function clearActiveDocument() {
   currentDoc = null
+  try { clearActiveDocumentSession() } catch {}
   notify()
 }
 

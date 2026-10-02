@@ -3,6 +3,10 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  appType: 'spa',
   base: './',
+  worker: {
+    format: 'es'
+  },
   server: { port: 5173 }
 })

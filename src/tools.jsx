@@ -13,8 +13,9 @@ const ORANGE = { tint: '#ffeadb', ink: '#d2743a' }
 const VIOLET = { tint: '#ece6fd', ink: '#7250c8' }
 
 export const GROUPS = [
+  'Document Intelligence',
+  'Automation',
   'Most popular',
-  'AI & Workflows',
   'Split & mix',
   'Organise pages',
   'Edit & sign',
@@ -26,6 +27,32 @@ export const GROUPS = [
 ]
 
 export const TOOLS = [
+  {
+    id: 'intelligence', group: 'Document Intelligence', ...BLUE,
+    name: 'Document Intelligence',
+    blurb: 'Unified on-device intelligence: Overview, Ask PDF, Semantic Search, Knowledge Graph, Mind Map, and Learning Mode',
+    icon: svg(<><circle cx="12" cy="12" r="3" /><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" /></>)
+  },
+  {
+    id: 'extractdata', group: 'Document Intelligence', ...VIOLET,
+    name: 'Extract Data',
+    blurb: 'Extract structured fields and tables from invoices, statements, resumes and contracts',
+    icon: svg(<><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M7 8h10M7 12h7M7 16h4" /></>)
+  },
+
+  {
+    id: 'workflow', group: 'Automation', ...GREEN,
+    name: 'Workflow Builder',
+    blurb: 'Chain multiple actions into an automated recipe',
+    icon: svg(<><rect x="3" y="3" width="6" height="6" rx="1" /><rect x="15" y="15" width="6" height="6" rx="1" /><path d="M6 9v3a3 3 0 0 0 3 3h6" /></>)
+  },
+  {
+    id: 'batch', group: 'Automation', ...ORANGE,
+    name: 'Batch Processing',
+    blurb: 'Compress, OCR, watermark or convert multiple files at once',
+    icon: svg(<><rect x="2" y="7" width="14" height="14" rx="2" /><path d="M18 3H6a2 2 0 0 0-2 2v2h14a2 2 0 0 1 2 2v8h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z" /></>)
+  },
+
   {
     id: 'editor', group: 'Most popular', ...BLUE,
     name: 'PDF Editor',
@@ -71,37 +98,6 @@ export const TOOLS = [
     id: 'extract', group: 'Most popular', ...GREEN,
     name: 'Extract Pages', blurb: 'Get a new document containing only the desired pages',
     icon: svg(<><path d="M14 4h6v6" /><path d="M20 4 11 13" /><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" /></>)
-  },
-
-  {
-    id: 'ai', group: 'AI & Workflows', ...BLUE,
-    name: 'AI PDF Tools', blurb: 'Chat with PDF, instant summaries, and extractive Q&A',
-    icon: svg(<><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A8 8 0 1 1 20 12a1 1 0 0 1-2 0 6 6 0 1 0-5 4.93z" /><circle cx="12" cy="12" r="2" /></>)
-  },
-  {
-    id: 'intelligence', group: 'AI & Workflows', ...GREEN,
-    name: 'PDF Intelligence Layer', blurb: 'Local vector embeddings, Knowledge Graph, Semantic Search & Quiz',
-    icon: svg(<><circle cx="12" cy="12" r="3" /><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" /></>)
-  },
-  {
-    id: 'workflow', group: 'AI & Workflows', ...GREEN,
-    name: 'Workflow Builder', blurb: 'Chain multiple actions into an automated recipe',
-    icon: svg(<><rect x="3" y="3" width="6" height="6" rx="1" /><rect x="15" y="15" width="6" height="6" rx="1" /><path d="M6 9v3a3 3 0 0 0 3 3h6" /></>)
-  },
-  {
-    id: 'batch', group: 'AI & Workflows', ...ORANGE,
-    name: 'Batch Processing', blurb: 'Compress, OCR, watermark or convert multiple files at once',
-    icon: svg(<><rect x="2" y="7" width="14" height="14" rx="2" /><path d="M18 3H6a2 2 0 0 0-2 2v2h14a2 2 0 0 1 2 2v8h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z" /></>)
-  },
-  {
-    id: 'extractdata', group: 'AI & Workflows', ...VIOLET,
-    name: 'Extract Data', blurb: 'Extract structured fields and tables from invoices, statements and resumes',
-    icon: svg(<><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M7 8h10M7 12h7M7 16h4" /></>)
-  },
-  {
-    id: 'mindmap', group: 'AI & Workflows', ...PINK,
-    name: 'PDF to Mind Map', blurb: 'Convert document structure into an interactive hierarchical mind map',
-    icon: svg(<><circle cx="6" cy="12" r="3" /><circle cx="18" cy="6" r="3" /><circle cx="18" cy="18" r="3" /><path d="M9 12h3m0 0 3-4.5M12 12l3 4.5" /></>)
   },
 
   {
@@ -249,6 +245,16 @@ export const TOOLS = [
     id: 'protect', group: 'Security', ...VIOLET,
     name: 'Protect', blurb: 'Lock a PDF with a password and decide what readers may do',
     icon: svg(<><rect x="4" y="10" width="16" height="11" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></>)
+  },
+  {
+    id: 'scanner', group: 'Security', ...BLUE,
+    name: 'PDF Security Scanner', blurb: 'Inspect PDF structure for JavaScript, auto-actions, launch commands and embedded files',
+    icon: svg(<><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></>)
+  },
+  {
+    id: 'sanitize', group: 'Security', ...GREEN,
+    name: 'Sanitize PDF', blurb: 'Remove active content, scripts, and attachments or rebuild for maximum safety',
+    icon: svg(<><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M12 8v5M12 16h.01" /></>)
   },
   {
     id: 'unlock', group: 'Security', ...VIOLET,

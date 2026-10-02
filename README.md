@@ -88,16 +88,22 @@ your layout never shifts under you.
 ## 🧰 The 50+ tools
 
 <details open>
-<summary><b>🤖 AI &amp; Workflows</b> — 5 tools</summary>
+<summary><b>🧠 Document Intelligence</b> — 2 tools</summary>
 
 | Tool | What it does |
 |---|---|
-| 🧠 **PDF Intelligence Layer** | Adaptive classification, local vector embeddings, Knowledge Graph, Semantic Search, and Quiz |
-| 💬 **AI PDF Tools** | Chat with PDF, instant summaries (executive, bullets, action items), and PDF translation |
+| 🧠 **Document Intelligence** | Unified on-device intelligence: Overview, Ask PDF, Semantic Search, Knowledge Graph, Mind Map, Learning Mode (Quiz & Flashcards), and Models |
+| 🧾 **Extract Data** | Structured data extraction for Invoices, Bank Statements, Resumes and Contracts |
+
+</details>
+
+<details open>
+<summary><b>⚡ Automation</b> — 2 tools</summary>
+
+| Tool | What it does |
+|---|---|
 | ⚙️ **Workflow Builder** | Chain multiple PDF actions into automated recipes (presets for invoices, scans, contracts) |
 | 📦 **Batch Processing** | Multi-file compression, OCR, watermarking, page numbers, conversion and protection |
-| 🧾 **Extract Data** | Structured data extraction for Invoices, Bank Statements, Resumes and Contracts |
-| 🗺️ **PDF to Mind Map** | Hierarchical visual topic tree with node clicks jumping to source PDF pages |
 
 </details>
 

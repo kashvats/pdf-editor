@@ -7,6 +7,7 @@ pdfeditor/
   package-lock.json
   package.json
   vite.config.js
+  books/
   docs/
     assets/
   public/
@@ -37,7 +38,6 @@ pdfeditor/
       Toolbar.jsx
       Workspace.jsx
       tools/
-        AiTool.jsx
         BatchTool.jsx
         CompareTool.jsx
         CompressTool.jsx
@@ -48,7 +48,6 @@ pdfeditor/
         IntelligenceTool.jsx
         MarkdownTool.jsx
         MergeTool.jsx
-        MindMapTool.jsx
         OcrTool.jsx
         OrganiseTool.jsx
         PageTools.jsx
@@ -96,10 +95,12 @@ pdfeditor/
       zip.js
       intelligence/
         classifier.js
+        documentIntelligence.js
         embeddings.js
         index.js
         knowledge.js
         localLlm.js
+        mindmap.js
         models.js
         ner.js
         processor.js

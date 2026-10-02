@@ -5,28 +5,28 @@
 ## `src/App.jsx`
 
 - language: `jsx`
-- size: 28127 bytes
-- hash: `5b9f33a3553b`
+- size: 28004 bytes
+- hash: `839a669a4515`
 - symbols:
-  - `function` `App` — line 67
-  - `function` `loadBytes` — line 80
-  - `function` `importAnnotations` — line 122
-  - `function` `toBox` — line 126
-  - `function` `importImages` — line 176
-  - `function` `openFile` — line 187
-  - `function` `openSample` — line 197
-  - `function` `emptyPages` — line 242
-  - `function` `runOcr` — line 247
-  - `function` `dropDoc` — line 292
-  - `function` `applyChanges` — line 297
-  - `function` `typingInField` — line 332
-  - `function` `onKey` — line 344
-  - `function` `onBeforeUnload` — line 379
-  - `function` `leaveEditor` — line 388
-  - `function` `restart` — line 395
-  - `function` `goHome` — line 396
-  - `function` `openTool` — line 401
-  - `function` `toolScreen` — line 419
+  - `function` `App` — line 65
+  - `function` `loadBytes` — line 78
+  - `function` `importAnnotations` — line 120
+  - `function` `toBox` — line 124
+  - `function` `importImages` — line 174
+  - `function` `openFile` — line 185
+  - `function` `openSample` — line 195
+  - `function` `emptyPages` — line 240
+  - `function` `runOcr` — line 245
+  - `function` `dropDoc` — line 290
+  - `function` `applyChanges` — line 295
+  - `function` `typingInField` — line 330
+  - `function` `onKey` — line 342
+  - `function` `onBeforeUnload` — line 377
+  - `function` `leaveEditor` — line 386
+  - `function` `restart` — line 393
+  - `function` `goHome` — line 394
+  - `function` `openTool` — line 399
+  - `function` `toolScreen` — line 417
 - imports:
   - `./components/CommandPalette`
   - `./components/DocumentHistoryModal`
@@ -324,26 +324,6 @@
   - `./Thumbs`
   - `react`
 
-## `src/components/tools/AiTool.jsx`
-
-- language: `jsx`
-- size: 15585 bytes
-- hash: `6683b6b234b7`
-- symbols:
-  - `function` `localExtractiveSummary` — line 7
-  - `function` `searchDocumentAnswer` — line 58
-  - `function` `AiTool` — line 92
-  - `function` `extract` — line 116
-  - `function` `handleAsk` — line 140
-  - `function` `handleRegenerateSummary` — line 156
-  - `function` `handleTranslate` — line 163
-  - `function` `reset` — line 173
-- imports:
-  - `../../lib/pdfraster`
-  - `../../lib/translate`
-  - `./shell`
-  - `react`
-
 ## `src/components/tools/BatchTool.jsx`
 
 - language: `jsx`
@@ -471,16 +451,17 @@
 ## `src/components/tools/IntelligenceTool.jsx`
 
 - language: `jsx`
-- size: 40780 bytes
-- hash: `bfc2a8c1394f`
+- size: 84516 bytes
+- hash: `b6b9f24396b3`
 - symbols:
-  - `function` `IntelligenceTool` — line 25
-  - `function` `runPipeline` — line 83
-  - `function` `handleSearch` — line 175
-  - `function` `handleNodeClick` — line 183
-  - `function` `handleExplainSimply` — line 187
-  - `function` `handleOverrideType` — line 194
-  - `function` `reset` — line 215
+  - `function` `IntelligenceTool` — line 24
+  - `function` `handleAsk` — line 124
+  - `function` `handleSearch` — line 152
+  - `function` `handleOverrideType` — line 160
+  - `function` `handleExplainNode` — line 165
+  - `function` `reset` — line 172
+  - `function` `handleAnswerClick` — line 675
+  - `function` `handleGenerateCustomQuiz` — line 684
 - imports:
   - `./shell`
   - `react`
@@ -515,26 +496,6 @@
   - `function` `run` — line 44
 - imports:
   - `../../lib/pdfops`
-  - `./shell`
-  - `react`
-
-## `src/components/tools/MindMapTool.jsx`
-
-- language: `jsx`
-- size: 10041 bytes
-- hash: `885870d52938`
-- symbols:
-  - `function` `buildMindMapTree` — line 5
-  - `function` `MindMapTool` — line 56
-  - `function` `generate` — line 71
-  - `function` `handleNodeClick` — line 88
-  - `function` `exportMarkdown` — line 93
-  - `function` `exportJson` — line 106
-  - `function` `exportSvg` — line 111
-  - `function` `reset` — line 118
-- imports:
-  - `../../lib/extract`
-  - `../../utils/misc`
   - `./shell`
   - `react`
 
@@ -996,14 +957,14 @@
 ## `src/lib/i18n.js`
 
 - language: `js`
-- size: 19648 bytes
-- hash: `c72625cc2f18`
+- size: 19695 bytes
+- hash: `4c8edd9c7c56`
 - symbols:
-  - `function` `getLanguage` — line 407
-  - `function` `setLanguage` — line 411
-  - `function` `t` — line 427
-  - `function` `useI18n` — line 432
-  - `function` `handler` — line 437
+  - `function` `getLanguage` — line 408
+  - `function` `setLanguage` — line 412
+  - `function` `t` — line 428
+  - `function` `useI18n` — line 433
+  - `function` `handler` — line 438
 - imports:
   - `react`
 
@@ -1022,10 +983,30 @@
 ## `src/lib/intelligence/classifier.js`
 
 - language: `js`
-- size: 7438 bytes
-- hash: `a678edf59a8d`
+- size: 9637 bytes
+- hash: `9437d5b51e02`
 - symbols:
   - `function` `classifyDocument` — line 77
+
+## `src/lib/intelligence/documentIntelligence.js`
+
+- language: `js`
+- size: 6453 bytes
+- hash: `5e7de681228d`
+- symbols:
+  - `function` `getOrBuildDocumentIntelligence` — line 17
+  - `function` `compileIntelligencePipeline` — line 50
+  - `function` `adaptDocumentIntelligence` — line 129
+  - `function` `clearDocumentIntelligenceCache` — line 158
+- imports:
+  - `./classifier.js`
+  - `./embeddings.js`
+  - `./knowledge.js`
+  - `./localLlm.js`
+  - `./mindmap.js`
+  - `./ner.js`
+  - `./processor.js`
+  - `./relations.js`
 
 ## `src/lib/intelligence/embeddings.js`
 
@@ -1044,8 +1025,8 @@
 ## `src/lib/intelligence/index.js`
 
 - language: `js`
-- size: 277 bytes
-- hash: `9d5c740350d0`
+- size: 350 bytes
+- hash: `87ca4ac73ce1`
 
 ## `src/lib/intelligence/knowledge.js`
 
@@ -1065,12 +1046,28 @@
 ## `src/lib/intelligence/localLlm.js`
 
 - language: `js`
-- size: 3498 bytes
-- hash: `6a98ef614202`
+- size: 20660 bytes
+- hash: `79ceb6f6769f`
 - symbols:
-  - `function` `generateQuizFromKnowledge` — line 3
-  - `function` `generateFlashcards` — line 62
-  - `function` `explainConceptSimply` — line 81
+  - `function` `generateQuizFromKnowledge` — line 4
+  - `function` `generateFlashcards` — line 58
+  - `function` `explainConceptSimply` — line 86
+  - `function` `generateTopicSummary` — line 107
+  - `function` `generateQuestionsForTopic` — line 150
+  - `function` `generateTopicQuiz` — line 219
+  - `function` `getTopicMastery` — line 448
+  - `function` `saveTopicMastery` — line 458
+  - `function` `getAllTopicMastery` — line 489
+
+## `src/lib/intelligence/mindmap.js`
+
+- language: `js`
+- size: 4681 bytes
+- hash: `0278ccee8f3d`
+- symbols:
+  - `function` `buildHierarchicalMindMap` — line 5
+- imports:
+  - `./processor.js`
 
 ## `src/lib/intelligence/models.js`
 
@@ -1083,19 +1080,24 @@
 ## `src/lib/intelligence/ner.js`
 
 - language: `js`
-- size: 4502 bytes
-- hash: `121c802b15b0`
+- size: 5170 bytes
+- hash: `40ce96a031db`
 - symbols:
-  - `function` `extractEntities` — line 24
-  - `function` `addEntity` — line 27
+  - `function` `extractEntities` — line 33
+  - `function` `addEntity` — line 36
+- imports:
+  - `./processor.js`
 
 ## `src/lib/intelligence/processor.js`
 
 - language: `js`
-- size: 4104 bytes
-- hash: `75d770c8d309`
+- size: 7583 bytes
+- hash: `882f4fed4dc3`
 - symbols:
-  - `function` `processDocumentStructure` — line 15
+  - `function` `isTextNoise` — line 28
+  - `function` `cleanTextContent` — line 38
+  - `function` `processDocumentStructure` — line 47
+  - `function` `isRunningHeaderFooter` — line 89
 - imports:
   - `../../utils/misc.js`
   - `../extract.js`
@@ -1414,11 +1416,11 @@
 ## `src/tools.jsx`
 
 - language: `jsx`
-- size: 16131 bytes
-- hash: `16b7dfc44f87`
+- size: 15572 bytes
+- hash: `861884a7c7ce`
 - symbols:
   - `function` `svg` — line 2
-  - `function` `toolById` — line 304
+  - `function` `toolById` — line 300
 - imports:
   - `react`
 

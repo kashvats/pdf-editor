@@ -2,6 +2,8 @@
 // Uses deterministic rules, capital-sequence heuristics, and domain vocabularies
 // without relying on heavy external cloud models.
 
+import { isTextNoise, cleanTextContent } from './processor.js'
+
 const KNOWN_COMPANIES = new Set([
   'Apple', 'Google', 'Microsoft', 'Amazon', 'Meta', 'Netflix', 'Adobe', 'Oracle',
   'Salesforce', 'IBM', 'Intel', 'Cisco', 'Stripe', 'Spotify', 'Uber', 'Airbnb',
@@ -20,21 +22,30 @@ const KNOWN_LOCATIONS = new Set([
   'San Francisco', 'New York', 'London', 'Berlin', 'Tokyo', 'Paris', 'Singapore'
 ])
 
+const STOP_WORDS = new Set([
+  'the', 'this', 'that', 'these', 'those', 'with', 'from', 'into', 'about', 'above',
+  'below', 'after', 'before', 'between', 'under', 'over', 'during', 'through',
+  'each', 'more', 'most', 'other', 'some', 'such', 'only', 'own', 'same', 'so',
+  'than', 'too', 'very', 'just', 'page', 'document', 'section', 'item', 'details'
+])
+
 const HONORIFICS = /^(?:Mr\.|Mrs\.|Ms\.|Dr\.|Prof\.|Sir)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)/
 
 export function extractEntities(chunks, facts = {}) {
   const entityMap = new Map()
 
   const addEntity = (name, type, page, chunkId, confidence = 0.9) => {
-    const clean = String(name || '').trim().replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '')
-    if (!clean || clean.length < 2 || clean.length > 50) return
-    if (/^(The|This|That|These|Those|With|From|Into|About|Above|Below|After|Before|Between)$/i.test(clean)) return
+    if (!name) return
+    const cleaned = cleanTextContent(name).replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '')
+    if (!cleaned || cleaned.length < 2 || cleaned.length > 50) return
+    if (isTextNoise(cleaned)) return
+    if (STOP_WORDS.has(cleaned.toLowerCase())) return
 
-    const key = `${type.toLowerCase()}:${clean.toLowerCase()}`
+    const key = `${type.toLowerCase()}:${cleaned.toLowerCase()}`
     if (!entityMap.has(key)) {
       entityMap.set(key, {
-        id: `ent_${clean.toLowerCase().replace(/[^a-z0-9]/g, '_')}`,
-        name: clean,
+        id: `ent_${cleaned.toLowerCase().replace(/[^a-z0-9]/g, '_')}`,
+        name: cleaned,
         type,
         confidence,
         count: 0,
@@ -58,6 +69,7 @@ export function extractEntities(chunks, facts = {}) {
   // 2. Scan chunks for entities
   for (const chunk of chunks) {
     const text = chunk.text
+    if (!text || isTextNoise(text)) continue
     const page = chunk.page
     const chkId = chunk.id
 
@@ -93,16 +105,18 @@ export function extractEntities(chunks, facts = {}) {
       }
     }
 
-    // Key concepts from Headings
-    if (chunk.isHeading && text.length < 40) {
-      addEntity(text, 'Concept', page, chkId, 0.88)
+    // Key concepts from Headings (clean, non-noisy headings only)
+    if (chunk.isHeading && text.length > 3 && text.length < 50 && !isTextNoise(text)) {
+      addEntity(text, 'Concept', page, chkId, 0.9)
     }
   }
 
-  // Convert Sets to arrays for serialization
-  return Array.from(entityMap.values()).map(e => ({
-    ...e,
-    pages: Array.from(e.pages).sort((a, b) => a - b),
-    chunkIds: Array.from(e.chunkIds)
-  }))
+  // Convert Sets to arrays for serialization & filter out single-occurrence low-confidence noise
+  return Array.from(entityMap.values())
+    .filter(e => e.confidence >= 0.75)
+    .map(e => ({
+      ...e,
+      pages: Array.from(e.pages).sort((a, b) => a - b),
+      chunkIds: Array.from(e.chunkIds)
+    }))
 }

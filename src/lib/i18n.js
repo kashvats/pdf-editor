@@ -42,8 +42,9 @@ const TRANSLATIONS = {
     toolsCount: 'tools',
     all: 'All',
     // Groups
+    'Document Intelligence': 'Document Intelligence',
+    'Automation': 'Automation',
     'Most popular': 'Most popular',
-    'AI & Workflows': 'AI & Workflows',
     'Split & mix': 'Split & mix',
     'Organise pages': 'Organise pages',
     'Edit & sign': 'Edit & sign',

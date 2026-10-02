@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-01T06:41:19.592457+00:00",
+  "generated_at": "2026-10-01T09:12:31.459442+00:00",
   "repository": "C:\\Users\\human-bot\\projects\\pdfeditor",
   "fingerprints": {
     "index.html": {
@@ -34,9 +34,9 @@
       "sha256": "d180f63d74da567892a2eb5a101ec2c9a30c969d1d175ad7ab0ce769b6e38183"
     },
     "src/App.jsx": {
-      "size": 28127,
-      "mtime_ns": 1790836152082390400,
-      "sha256": "5b9f33a3553b0e2a3f66aef92d17d2b6464589e809ebfec2027ca175faaacc01"
+      "size": 28004,
+      "mtime_ns": 1790840619545591300,
+      "sha256": "839a669a451564445398b81d50f115fd93f06801ef7dc05a2af4dcf045b59601"
     },
     "src/main.jsx": {
       "size": 435,
@@ -54,9 +54,9 @@
       "sha256": "9b6dbadc5be0008d8c291e636ed8da3b76c65c7271f4c0a6f6d82d429bbb4ea4"
     },
     "src/tools.jsx": {
-      "size": 16131,
-      "mtime_ns": 1790836119234632400,
-      "sha256": "16b7dfc44f8741c30c99c4b3b08813a2f3d0c11a73ee5bd9b41245eb72f48279"
+      "size": 15572,
+      "mtime_ns": 1790840332309672200,
+      "sha256": "861884a7c7cecf78f10cd455636ef2645efb5ca7fd930bf69a1ad6f8866ab794"
     },
     "src/components/BottomBar.jsx": {
       "size": 2038,
@@ -138,11 +138,6 @@
       "mtime_ns": 1790825117845289000,
       "sha256": "5f6928b4ceb7cd1238f6df2d88bc07081ef1febf817730d206462417bd966974"
     },
-    "src/components/tools/AiTool.jsx": {
-      "size": 15585,
-      "mtime_ns": 1790835533229732800,
-      "sha256": "6683b6b234b7d9dfe9af88fb71b5d36e62e2317fac1509bbfb8d645454c01488"
-    },
     "src/components/tools/BatchTool.jsx": {
       "size": 11638,
       "mtime_ns": 1790827586612865400,
@@ -179,9 +174,9 @@
       "sha256": "51b414513467cc7cb945939766994125565fec98ea4524e245217eac65122e21"
     },
     "src/components/tools/IntelligenceTool.jsx": {
-      "size": 40780,
-      "mtime_ns": 1790836784424929600,
-      "sha256": "bfc2a8c1394ff883a5915aa7f40d4cfd57b12cf3428b4b6c2395af48b6baafe3"
+      "size": 84516,
+      "mtime_ns": 1790844217050475000,
+      "sha256": "b6b9f24396b315178aeef83b320cadf7a4c118770459fdb340d3d60fd71ca834"
     },
     "src/components/tools/MarkdownTool.jsx": {
       "size": 5173,
@@ -192,11 +187,6 @@
       "size": 4209,
       "mtime_ns": 1790825117845289000,
       "sha256": "a025f967f612c945b1f943c27adf0b6bb6188ef33163c99d2c0750dba3089fcb"
-    },
-    "src/components/tools/MindMapTool.jsx": {
-      "size": 10041,
-      "mtime_ns": 1790827811392512900,
-      "sha256": "885870d529383c41f2e99201b65f37d0fed8218fc4259dce7272df4f417dc303"
     },
     "src/components/tools/OcrTool.jsx": {
       "size": 7747,
@@ -319,9 +309,9 @@
       "sha256": "b9c0f2e257a7a08187d8969ca536ec166b188fd1801a9f859c8e76d40118901e"
     },
     "src/lib/i18n.js": {
-      "size": 19648,
-      "mtime_ns": 1790835393104059800,
-      "sha256": "c72625cc2f18b445798d273d7eb9c517610498d289d0d7d6b23430e20115988b"
+      "size": 19695,
+      "mtime_ns": 1790840357225815100,
+      "sha256": "4c8edd9c7c567de66948371a10fe11ee65608af8b5bc0b4d1261cf0b52a4b849"
     },
     "src/lib/imageproc.js": {
       "size": 6482,
@@ -419,9 +409,14 @@
       "sha256": "75c9a55393d5628a331a8ed468e8822eeccf4037e56a3b56b766c57aec79436b"
     },
     "src/lib/intelligence/classifier.js": {
-      "size": 7438,
-      "mtime_ns": 1790836317666757400,
-      "sha256": "a678edf59a8de898c5eb509c0bd2a957a5dafde16cd83a75e8253455e83ecb45"
+      "size": 9637,
+      "mtime_ns": 1790842232444728700,
+      "sha256": "9437d5b51e02ba9237b43fcf971586df93a69ba22ee88e6439394aa5974145a6"
+    },
+    "src/lib/intelligence/documentIntelligence.js": {
+      "size": 6453,
+      "mtime_ns": 1790840306974368000,
+      "sha256": "5e7de681228d853a5242b857795cbffac4033ebe880b02ec641a20540729fd24"
     },
     "src/lib/intelligence/embeddings.js": {
       "size": 4171,
@@ -429,9 +424,9 @@
       "sha256": "ad1c6371dd343c67add2358c8f3066315fe86e3dc091fb830f84d087ca5e343e"
     },
     "src/lib/intelligence/index.js": {
-      "size": 277,
-      "mtime_ns": 1790836336776719800,
-      "sha256": "9d5c740350d04a85480e5946a26e67975e0a64e2428f636452bf0c6fb2d159da"
+      "size": 350,
+      "mtime_ns": 1790840252001608000,
+      "sha256": "87ca4ac73ce17d354ec1f7a8ee831afbd0af7f33d1d974cb1cc185f178310b42"
     },
     "src/lib/intelligence/knowledge.js": {
       "size": 3933,
@@ -439,9 +434,14 @@
       "sha256": "378da270f052142883546a2d8c35c3b5891d0a078c7e4f23fb9188f1f8490bcd"
     },
     "src/lib/intelligence/localLlm.js": {
-      "size": 3498,
-      "mtime_ns": 1790836031374438300,
-      "sha256": "6a98ef614202b6073a8515a76c7e7b724b44dc46f759c47dbbeadba8bd30c5d4"
+      "size": 20660,
+      "mtime_ns": 1790844472267469700,
+      "sha256": "79ceb6f6769f55b2552f048623b7ad88a7283c76ce30051a60cadc13d5848fbe"
+    },
+    "src/lib/intelligence/mindmap.js": {
+      "size": 4681,
+      "mtime_ns": 1790840159719878700,
+      "sha256": "0278ccee8f3d9c6bf9d4f38cda8cbfc23402cce7411d6cae749148633a926f86"
     },
     "src/lib/intelligence/models.js": {
       "size": 2201,
@@ -449,14 +449,14 @@
       "sha256": "89c06e920a8addd2d52302ca56c4513d1cfa268a97b024d30d24534b0d53fcff"
     },
     "src/lib/intelligence/ner.js": {
-      "size": 4502,
-      "mtime_ns": 1790835970080622400,
-      "sha256": "121c802b15b0291ecb6497ba75efd570b0cfa367e5f0a3df2c539b6aa350e0e0"
+      "size": 5170,
+      "mtime_ns": 1790840214391304600,
+      "sha256": "40ce96a031db1ef7e93acc38471c0b8ea23c121ed3a325f14739285593d964be"
     },
     "src/lib/intelligence/processor.js": {
-      "size": 4104,
-      "mtime_ns": 1790836299260270000,
-      "sha256": "75d770c8d309ce7fcbc66ae9009c3ee0fa855e161e77e083009066535d085494"
+      "size": 7583,
+      "mtime_ns": 1790842440921339900,
+      "sha256": "882f4fed4dc38db5e66015b47e9cc3fd246cbdc131464766f5d407d569bb39c8"
     },
     "src/lib/intelligence/relations.js": {
       "size": 3545,
@@ -535,103 +535,103 @@
     "src/App.jsx": {
       "path": "src/App.jsx",
       "extension": ".jsx",
-      "size": 28127,
-      "hash": "5b9f33a3553b0e2a3f66aef92d17d2b6464589e809ebfec2027ca175faaacc01",
+      "size": 28004,
+      "hash": "839a669a451564445398b81d50f115fd93f06801ef7dc05a2af4dcf045b59601",
       "symbols": [
         {
           "kind": "function",
           "name": "App",
-          "line": 67
+          "line": 65
         },
         {
           "kind": "function",
           "name": "loadBytes",
-          "line": 80
+          "line": 78
         },
         {
           "kind": "function",
           "name": "importAnnotations",
-          "line": 122
+          "line": 120
         },
         {
           "kind": "function",
           "name": "toBox",
-          "line": 126
+          "line": 124
         },
         {
           "kind": "function",
           "name": "importImages",
-          "line": 176
+          "line": 174
         },
         {
           "kind": "function",
           "name": "openFile",
-          "line": 187
+          "line": 185
         },
         {
           "kind": "function",
           "name": "openSample",
-          "line": 197
+          "line": 195
         },
         {
           "kind": "function",
           "name": "emptyPages",
-          "line": 242
+          "line": 240
         },
         {
           "kind": "function",
           "name": "runOcr",
-          "line": 247
+          "line": 245
         },
         {
           "kind": "function",
           "name": "dropDoc",
-          "line": 292
+          "line": 290
         },
         {
           "kind": "function",
           "name": "applyChanges",
-          "line": 297
+          "line": 295
         },
         {
           "kind": "function",
           "name": "typingInField",
-          "line": 332
+          "line": 330
         },
         {
           "kind": "function",
           "name": "onKey",
-          "line": 344
+          "line": 342
         },
         {
           "kind": "function",
           "name": "onBeforeUnload",
-          "line": 379
+          "line": 377
         },
         {
           "kind": "function",
           "name": "leaveEditor",
-          "line": 388
+          "line": 386
         },
         {
           "kind": "function",
           "name": "restart",
-          "line": 395
+          "line": 393
         },
         {
           "kind": "function",
           "name": "goHome",
-          "line": 396
+          "line": 394
         },
         {
           "kind": "function",
           "name": "openTool",
-          "line": 401
+          "line": 399
         },
         {
           "kind": "function",
           "name": "toolScreen",
-          "line": 419
+          "line": 417
         }
       ],
       "routes": [],
@@ -705,8 +705,8 @@
     "src/tools.jsx": {
       "path": "src/tools.jsx",
       "extension": ".jsx",
-      "size": 16131,
-      "hash": "16b7dfc44f8741c30c99c4b3b08813a2f3d0c11a73ee5bd9b41245eb72f48279",
+      "size": 15572,
+      "hash": "861884a7c7cecf78f10cd455636ef2645efb5ca7fd930bf69a1ad6f8866ab794",
       "symbols": [
         {
           "kind": "function",
@@ -716,7 +716,7 @@
         {
           "kind": "function",
           "name": "toolById",
-          "line": 304
+          "line": 300
         }
       ],
       "routes": [],
@@ -1441,61 +1441,6 @@
         "react"
       ]
     },
-    "src/components/tools/AiTool.jsx": {
-      "path": "src/components/tools/AiTool.jsx",
-      "extension": ".jsx",
-      "size": 15585,
-      "hash": "6683b6b234b7d9dfe9af88fb71b5d36e62e2317fac1509bbfb8d645454c01488",
-      "symbols": [
-        {
-          "kind": "function",
-          "name": "localExtractiveSummary",
-          "line": 7
-        },
-        {
-          "kind": "function",
-          "name": "searchDocumentAnswer",
-          "line": 58
-        },
-        {
-          "kind": "function",
-          "name": "AiTool",
-          "line": 92
-        },
-        {
-          "kind": "function",
-          "name": "extract",
-          "line": 116
-        },
-        {
-          "kind": "function",
-          "name": "handleAsk",
-          "line": 140
-        },
-        {
-          "kind": "function",
-          "name": "handleRegenerateSummary",
-          "line": 156
-        },
-        {
-          "kind": "function",
-          "name": "handleTranslate",
-          "line": 163
-        },
-        {
-          "kind": "function",
-          "name": "reset",
-          "line": 173
-        }
-      ],
-      "routes": [],
-      "imports": [
-        "../../lib/pdfraster",
-        "../../lib/translate",
-        "./shell",
-        "react"
-      ]
-    },
     "src/components/tools/BatchTool.jsx": {
       "path": "src/components/tools/BatchTool.jsx",
       "extension": ".jsx",
@@ -1804,43 +1749,48 @@
     "src/components/tools/IntelligenceTool.jsx": {
       "path": "src/components/tools/IntelligenceTool.jsx",
       "extension": ".jsx",
-      "size": 40780,
-      "hash": "bfc2a8c1394ff883a5915aa7f40d4cfd57b12cf3428b4b6c2395af48b6baafe3",
+      "size": 84516,
+      "hash": "b6b9f24396b315178aeef83b320cadf7a4c118770459fdb340d3d60fd71ca834",
       "symbols": [
         {
           "kind": "function",
           "name": "IntelligenceTool",
-          "line": 25
+          "line": 24
         },
         {
           "kind": "function",
-          "name": "runPipeline",
-          "line": 83
+          "name": "handleAsk",
+          "line": 124
         },
         {
           "kind": "function",
           "name": "handleSearch",
-          "line": 175
-        },
-        {
-          "kind": "function",
-          "name": "handleNodeClick",
-          "line": 183
-        },
-        {
-          "kind": "function",
-          "name": "handleExplainSimply",
-          "line": 187
+          "line": 152
         },
         {
           "kind": "function",
           "name": "handleOverrideType",
-          "line": 194
+          "line": 160
+        },
+        {
+          "kind": "function",
+          "name": "handleExplainNode",
+          "line": 165
         },
         {
           "kind": "function",
           "name": "reset",
-          "line": 215
+          "line": 172
+        },
+        {
+          "kind": "function",
+          "name": "handleAnswerClick",
+          "line": 675
+        },
+        {
+          "kind": "function",
+          "name": "handleGenerateCustomQuiz",
+          "line": 684
         }
       ],
       "routes": [],
@@ -1928,61 +1878,6 @@
       "routes": [],
       "imports": [
         "../../lib/pdfops",
-        "./shell",
-        "react"
-      ]
-    },
-    "src/components/tools/MindMapTool.jsx": {
-      "path": "src/components/tools/MindMapTool.jsx",
-      "extension": ".jsx",
-      "size": 10041,
-      "hash": "885870d529383c41f2e99201b65f37d0fed8218fc4259dce7272df4f417dc303",
-      "symbols": [
-        {
-          "kind": "function",
-          "name": "buildMindMapTree",
-          "line": 5
-        },
-        {
-          "kind": "function",
-          "name": "MindMapTool",
-          "line": 56
-        },
-        {
-          "kind": "function",
-          "name": "generate",
-          "line": 71
-        },
-        {
-          "kind": "function",
-          "name": "handleNodeClick",
-          "line": 88
-        },
-        {
-          "kind": "function",
-          "name": "exportMarkdown",
-          "line": 93
-        },
-        {
-          "kind": "function",
-          "name": "exportJson",
-          "line": 106
-        },
-        {
-          "kind": "function",
-          "name": "exportSvg",
-          "line": 111
-        },
-        {
-          "kind": "function",
-          "name": "reset",
-          "line": 118
-        }
-      ],
-      "routes": [],
-      "imports": [
-        "../../lib/extract",
-        "../../utils/misc",
         "./shell",
         "react"
       ]
@@ -3301,33 +3196,33 @@
     "src/lib/i18n.js": {
       "path": "src/lib/i18n.js",
       "extension": ".js",
-      "size": 19648,
-      "hash": "c72625cc2f18b445798d273d7eb9c517610498d289d0d7d6b23430e20115988b",
+      "size": 19695,
+      "hash": "4c8edd9c7c567de66948371a10fe11ee65608af8b5bc0b4d1261cf0b52a4b849",
       "symbols": [
         {
           "kind": "function",
           "name": "getLanguage",
-          "line": 407
+          "line": 408
         },
         {
           "kind": "function",
           "name": "setLanguage",
-          "line": 411
+          "line": 412
         },
         {
           "kind": "function",
           "name": "t",
-          "line": 427
+          "line": 428
         },
         {
           "kind": "function",
           "name": "useI18n",
-          "line": 432
+          "line": 433
         },
         {
           "kind": "function",
           "name": "handler",
-          "line": 437
+          "line": 438
         }
       ],
       "routes": [],
@@ -4117,8 +4012,8 @@
     "src/lib/intelligence/classifier.js": {
       "path": "src/lib/intelligence/classifier.js",
       "extension": ".js",
-      "size": 7438,
-      "hash": "a678edf59a8de898c5eb509c0bd2a957a5dafde16cd83a75e8253455e83ecb45",
+      "size": 9637,
+      "hash": "9437d5b51e02ba9237b43fcf971586df93a69ba22ee88e6439394aa5974145a6",
       "symbols": [
         {
           "kind": "function",
@@ -4128,6 +4023,45 @@
       ],
       "routes": [],
       "imports": []
+    },
+    "src/lib/intelligence/documentIntelligence.js": {
+      "path": "src/lib/intelligence/documentIntelligence.js",
+      "extension": ".js",
+      "size": 6453,
+      "hash": "5e7de681228d853a5242b857795cbffac4033ebe880b02ec641a20540729fd24",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "getOrBuildDocumentIntelligence",
+          "line": 17
+        },
+        {
+          "kind": "function",
+          "name": "compileIntelligencePipeline",
+          "line": 50
+        },
+        {
+          "kind": "function",
+          "name": "adaptDocumentIntelligence",
+          "line": 129
+        },
+        {
+          "kind": "function",
+          "name": "clearDocumentIntelligenceCache",
+          "line": 158
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./classifier.js",
+        "./embeddings.js",
+        "./knowledge.js",
+        "./localLlm.js",
+        "./mindmap.js",
+        "./ner.js",
+        "./processor.js",
+        "./relations.js"
+      ]
     },
     "src/lib/intelligence/embeddings.js": {
       "path": "src/lib/intelligence/embeddings.js",
@@ -4177,8 +4111,8 @@
     "src/lib/intelligence/index.js": {
       "path": "src/lib/intelligence/index.js",
       "extension": ".js",
-      "size": 277,
-      "hash": "9d5c740350d04a85480e5946a26e67975e0a64e2428f636452bf0c6fb2d159da",
+      "size": 350,
+      "hash": "87ca4ac73ce17d354ec1f7a8ee831afbd0af7f33d1d974cb1cc185f178310b42",
       "symbols": [],
       "routes": [],
       "imports": []
@@ -4228,27 +4162,74 @@
     "src/lib/intelligence/localLlm.js": {
       "path": "src/lib/intelligence/localLlm.js",
       "extension": ".js",
-      "size": 3498,
-      "hash": "6a98ef614202b6073a8515a76c7e7b724b44dc46f759c47dbbeadba8bd30c5d4",
+      "size": 20660,
+      "hash": "79ceb6f6769f55b2552f048623b7ad88a7283c76ce30051a60cadc13d5848fbe",
       "symbols": [
         {
           "kind": "function",
           "name": "generateQuizFromKnowledge",
-          "line": 3
+          "line": 4
         },
         {
           "kind": "function",
           "name": "generateFlashcards",
-          "line": 62
+          "line": 58
         },
         {
           "kind": "function",
           "name": "explainConceptSimply",
-          "line": 81
+          "line": 86
+        },
+        {
+          "kind": "function",
+          "name": "generateTopicSummary",
+          "line": 107
+        },
+        {
+          "kind": "function",
+          "name": "generateQuestionsForTopic",
+          "line": 150
+        },
+        {
+          "kind": "function",
+          "name": "generateTopicQuiz",
+          "line": 219
+        },
+        {
+          "kind": "function",
+          "name": "getTopicMastery",
+          "line": 448
+        },
+        {
+          "kind": "function",
+          "name": "saveTopicMastery",
+          "line": 458
+        },
+        {
+          "kind": "function",
+          "name": "getAllTopicMastery",
+          "line": 489
         }
       ],
       "routes": [],
       "imports": []
+    },
+    "src/lib/intelligence/mindmap.js": {
+      "path": "src/lib/intelligence/mindmap.js",
+      "extension": ".js",
+      "size": 4681,
+      "hash": "0278ccee8f3d9c6bf9d4f38cda8cbfc23402cce7411d6cae749148633a926f86",
+      "symbols": [
+        {
+          "kind": "function",
+          "name": "buildHierarchicalMindMap",
+          "line": 5
+        }
+      ],
+      "routes": [],
+      "imports": [
+        "./processor.js"
+      ]
     },
     "src/lib/intelligence/models.js": {
       "path": "src/lib/intelligence/models.js",
@@ -4268,33 +4249,50 @@
     "src/lib/intelligence/ner.js": {
       "path": "src/lib/intelligence/ner.js",
       "extension": ".js",
-      "size": 4502,
-      "hash": "121c802b15b0291ecb6497ba75efd570b0cfa367e5f0a3df2c539b6aa350e0e0",
+      "size": 5170,
+      "hash": "40ce96a031db1ef7e93acc38471c0b8ea23c121ed3a325f14739285593d964be",
       "symbols": [
         {
           "kind": "function",
           "name": "extractEntities",
-          "line": 24
+          "line": 33
         },
         {
           "kind": "function",
           "name": "addEntity",
-          "line": 27
+          "line": 36
         }
       ],
       "routes": [],
-      "imports": []
+      "imports": [
+        "./processor.js"
+      ]
     },
     "src/lib/intelligence/processor.js": {
       "path": "src/lib/intelligence/processor.js",
       "extension": ".js",
-      "size": 4104,
-      "hash": "75d770c8d309ce7fcbc66ae9009c3ee0fa855e161e77e083009066535d085494",
+      "size": 7583,
+      "hash": "882f4fed4dc38db5e66015b47e9cc3fd246cbdc131464766f5d407d569bb39c8",
       "symbols": [
         {
           "kind": "function",
+          "name": "isTextNoise",
+          "line": 28
+        },
+        {
+          "kind": "function",
+          "name": "cleanTextContent",
+          "line": 38
+        },
+        {
+          "kind": "function",
           "name": "processDocumentStructure",
-          "line": 15
+          "line": 47
+        },
+        {
+          "kind": "function",
+          "name": "isRunningHeaderFooter",
+          "line": 89
         }
       ],
       "routes": [],
